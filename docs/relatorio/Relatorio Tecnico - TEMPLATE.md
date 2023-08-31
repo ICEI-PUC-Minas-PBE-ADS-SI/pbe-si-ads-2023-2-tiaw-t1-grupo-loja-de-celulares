@@ -58,17 +58,17 @@ Sistemas de Informação
 ## Problema
 
 Uma loja de celulares fora do mundo virtual trás vários problemas e impraticidades, problemas esses como:
--Vários clintes em potencial não alcançados, pois moram distante da loja física;
--Dificuldade no agendamento de clinetes, e não possui uma lista de prioridade;
+-Vários clientes em potencial não alcançados, pois moram distante da loja física;
+-Dificuldade no agendamento de clientes, além de não possuir uma lista de prioridade;
 -É necessário que o cliente se desloque até a loja para que seja prontamente atendido;
 
 ## Objetivos
 
-Desenvolver uma interface Web para a loja de conserto de celulares, para que assi clientes possam comprar celulares e componentes online, além disso também a possibilidae de criar um cadastro para o cliente, para que ele possa se comunicar com os vendedores e manutentores, e acumular pontos em suas compras. Outra possibilidae será monitorar o inventório, criar uma lista de agendamento para os clientes.
+Desenvolver uma interface Web para a loja de conserto de celulares, para que assim clientes possam comprar celulares e componentes online, além disso também há a possibilidade de criar um cadastro para o cliente, para que ele possa se comunicar com os vendedores e manutentores, e acumular pontos em suas compras. Outra possibilidae será monitorar o inventório, criar uma lista de agendamento para os clientes.
 
 ## Justificativa
 
-Uma loja que está presente somente na locação física não atinge todos os potenciais clientes, Há também uma necessidade de monitoramento do inventário e agendamento dos clientes.
+Uma loja que está presente somente na locação física não atinge todos os potenciais clientes. Há também uma necessidade de monitoramento do inventário e agendamento dos clientes.
 
 ## Público-Alvo
 
