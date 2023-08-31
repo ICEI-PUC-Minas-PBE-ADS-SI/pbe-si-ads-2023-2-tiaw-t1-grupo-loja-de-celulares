@@ -14,7 +14,7 @@ Sistemas de Informação
 > - Leonardo Martins Antunes Lopes
 > - Caio Henrique Queiroz do Santos
 > - Gabriel Eduardo Ramos Vignoli
-> - Cleber
+> - Cleber Cleber Gomes Junior
 > - Eric Carvalho Pedro
 > - Thales Henrique Santos Vasconcelos de Andrade
 
