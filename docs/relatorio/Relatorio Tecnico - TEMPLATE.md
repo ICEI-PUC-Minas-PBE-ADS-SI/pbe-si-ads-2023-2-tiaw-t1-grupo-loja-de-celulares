@@ -84,7 +84,8 @@ Temos como publico alvo todo tipo de pessoa que precisa comprar ou consertar sma
 
 ## Personas e Mapas de Empatia
 
- ![Persona Andre](docs/relatorio/images/personaandre.png)
+ ![Persona Andre](imaages/../images/personaandre.png)
+ 
  ![Mapa de empatia Andre](imaages/../images/mapaempatiaandre.png)
 > **Exemplo de Persona**
 > 
