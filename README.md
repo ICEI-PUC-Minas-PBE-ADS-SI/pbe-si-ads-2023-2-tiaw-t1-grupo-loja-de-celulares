@@ -8,7 +8,7 @@ O objetivo do projeto é criar um site de uma loja de celular física para dispo
 * Gabriel Eduardo Ramos Vignoli
 * Cleber
 * Eric Carvalho Pedro
-* Thales
+* Thales Henrique Santos Vasconcelos de Andrade
 
 ## Professores responsáveis
 
