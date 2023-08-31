@@ -6,7 +6,7 @@ O objetivo do projeto é criar um projeto web de uma loja de celular física par
 * Leonardo Martins Antunes Lopes
 * Caio Henrique Queiroz do Santos
 * Gabriel Eduardo Ramos Vignoli
-* Cleber
+* Cleber Gomes Junior
 * Eric Carvalho Pedro
 * Thales Henrique Santos Vasconcelos de Andrade
 
