@@ -1,5 +1,5 @@
 ## Loja de Celulares
-O objetivo do projeto é criar um site de uma loja de celular física para disponibilizar aos clientes praticidade tanto na manutenção quanto na compra de celulares e seus derivados. 
+O objetivo do projeto é criar um projeto web de uma loja de celular física para disponibilizar aos clientes praticidade tanto na manutenção quanto na compra de celulares e seus derivados. 
 
 ## Alunos integrantes da equipe
 
