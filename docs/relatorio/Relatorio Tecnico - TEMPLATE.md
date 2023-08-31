@@ -1,11 +1,11 @@
 # Informações do Projeto
 `TÍTULO DO PROJETO`  
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Loja de celulares
 
-`CURSO` 
+`Curso` 
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Sistemas de Informação
 
 ## Participantes
 
@@ -14,8 +14,12 @@
 > Inclua a lista dos membros da equipe com seus nomes completos.
 >
 > Os membros do grupo são: 
-> - Fulano da Silva
-> - Ciclano Albuquerque
+> - Leonardo Martins Antunes Lopes
+> - Caio Henrique Queiroz do Santos
+> - Gabriel Eduardo Ramos Vignoli
+> - Cleber
+> - Eric Carvalho Pedro
+> - Thales Henrique Santos Vasconcelos de Andrade
 
 # Estrutura do Documento
 
