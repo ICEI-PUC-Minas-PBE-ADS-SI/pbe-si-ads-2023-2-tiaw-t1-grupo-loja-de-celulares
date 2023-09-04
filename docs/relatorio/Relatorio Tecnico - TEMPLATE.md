@@ -97,9 +97,9 @@ Temos como publico alvo todo tipo de pessoa que precisa comprar ou consertar sma
 
  ![Mapa de empatia Thales](imaages/../images/thales2.jpeg)
 
- ![Persona Gabriel](imaages/../images/personaGabriel.jpeg)
+ ![Persona Gabriel](imaages/../images/personaGabriel.PNG)
 
- ![Mapa de empatia Gabriel](imaages/../images/mapaEmpatiaGabriel.jpeg)
+ ![Mapa de empatia Gabriel](imaages/../images/mapaEmpatiaGabriel.PNG)
 
 ## Histórias de Usuários
 
