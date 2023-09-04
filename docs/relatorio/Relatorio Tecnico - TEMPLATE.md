@@ -84,24 +84,18 @@ Temos como publico alvo todo tipo de pessoa que precisa comprar ou consertar sma
 
 ## Personas e Mapas de Empatia
 
- ![Persona Andre](imaages/../images/personaandre.png)
- 
- ![Mapa de empatia Andre](imaages/../images/mapaempatiaandre.png)
 
  ![Persona Cleber](imaages/../images/Persona_Cleber.jpg)
 
  ![Mapa de empatia Cleber](imaages/../images/MapaEmpatia_Cleber.png)
-
-![Persona Thales](imaages/../images/thales.jpeg)
-
-![Mapa de empatia Thales](imaages/../images/thales2.jpeg)
  
-> **Exemplo de Persona**
-> 
-> ![Exemplo de Persona](imaages/../images/persona.png)
-> 
-> Fonte: [Como criar uma persona para o seu negócio](https://raissaviegas.com.br/como-criar-uma-persona/)
+ ![Persona Andre](imaages/../images/personaandre.png)
+ 
+ ![Mapa de empatia Andre](imaages/../images/mapaempatiaandre.png)
 
+ ![Persona Thales](imaages/../images/thales.jpeg)
+
+ ![Mapa de empatia Thales](imaages/../images/thales2.jpeg)
 
 ## Histórias de Usuários
 
