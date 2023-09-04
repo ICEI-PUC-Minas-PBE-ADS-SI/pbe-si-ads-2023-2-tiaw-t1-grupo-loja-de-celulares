@@ -97,6 +97,10 @@ Temos como publico alvo todo tipo de pessoa que precisa comprar ou consertar sma
 
  ![Mapa de empatia Thales](imaages/../images/thales2.jpeg)
 
+ ![Persona Gabriel](imaages/../images/personaGabriel.jpeg)
+
+ ![Mapa de empatia Gabriel](imaages/../images/mapaEmpatiaGabriel.jpeg)
+
 ## Histórias de Usuários
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
