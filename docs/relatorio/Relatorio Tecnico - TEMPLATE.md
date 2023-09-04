@@ -87,6 +87,11 @@ Temos como publico alvo todo tipo de pessoa que precisa comprar ou consertar sma
  ![Persona Andre](imaages/../images/personaandre.png)
  
  ![Mapa de empatia Andre](imaages/../images/mapaempatiaandre.png)
+
+ ![Persona Cleber](imaages/../images/Persona_Cleber.jpg)
+
+ ![Mapa de empatia Cleber](imaages/../images/MapaEmpatia_Cleber.png)
+ 
 > **Exemplo de Persona**
 > 
 > ![Exemplo de Persona](imaages/../images/persona.png)
