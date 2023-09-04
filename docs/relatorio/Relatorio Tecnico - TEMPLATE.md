@@ -91,6 +91,10 @@ Temos como publico alvo todo tipo de pessoa que precisa comprar ou consertar sma
  ![Persona Cleber](imaages/../images/Persona_Cleber.jpg)
 
  ![Mapa de empatia Cleber](imaages/../images/MapaEmpatia_Cleber.png)
+
+![Persona Thales](imaages/../images/thales.jpeg)
+
+![Mapa de empatia Thales](imaages/../images/thales2.jpeg)
  
 > **Exemplo de Persona**
 > 
