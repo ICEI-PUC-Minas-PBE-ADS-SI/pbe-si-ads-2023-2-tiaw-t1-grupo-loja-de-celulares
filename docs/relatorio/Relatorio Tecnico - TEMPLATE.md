@@ -100,6 +100,10 @@ Temos como publico alvo todo tipo de pessoa que precisa comprar ou consertar sma
  ![Persona Gabriel](imaages/../images/personaGabriel.PNG)
 
  ![Mapa de empatia Gabriel](imaages/../images/mapaEmpatiaGabriel.PNG)
+ 
+ ![Persona Caio](imaages/../images/persona_caio1.jpeg)
+
+ ![Mapa de empatia Caio](imaages/../images/mapadeempatia_caio.jpg) 
 
 ## Histórias de Usuários
 
