@@ -103,7 +103,7 @@ Temos como publico alvo todo tipo de pessoa que precisa comprar ou consertar sma
  
  ![Persona Caio](imaages/../images/persona_caio1.jpeg)
 
-  
+ ![Mapa de empatia Caio](imaages/../images/mapadeempatia_caio.jpg)  
 
 ## Histórias de Usuários
 
