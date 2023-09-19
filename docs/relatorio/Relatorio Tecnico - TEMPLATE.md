@@ -230,7 +230,6 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 > **Exemplo**:
 > ![Untitled-1](https://github.com/ICEI-PUC-Minas-PBE-SI/pbe-si-ads-2023-2-tiaw-t1-grupo-loja-de-celulares/assets/142186389/bb159a04-7526-44ae-80ab-cec2d7fc56c0)
 
-> ![Exemplo de Wireframe](images/wireframe-example.png)
 
 
 # Metodologia
