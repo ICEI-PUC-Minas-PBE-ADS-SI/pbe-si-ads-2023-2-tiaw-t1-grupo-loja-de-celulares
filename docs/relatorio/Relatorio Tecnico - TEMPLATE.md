@@ -210,6 +210,8 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 > **Exemplo**:
 > 
 > ![Exemplo de UserFlow](images/userflow.jpg)
+> 
+![_Fluxograma (1)](https://github.com/ICEI-PUC-Minas-PBE-SI/pbe-si-ads-2023-2-tiaw-t1-grupo-loja-de-celulares/assets/142746479/d3939d9a-ab57-44f9-85e6-05bc11a8e46f)
 
 
 ## Wireframes
