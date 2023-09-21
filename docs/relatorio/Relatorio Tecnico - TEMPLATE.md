@@ -118,6 +118,8 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |Usuário do sistema  | Adicionar produtos ao carrinho     | Realizar várias compras simultaneamente|
 |Usuário do sistema  | Cadastro/Login                     | Acessar o sistema                      |
 |Usuário do sistema  | Solicitar serviços                 | Fazer orçamento de manutenção          |
+|Usuário do sistema  | Utiliza o navegador pelo celular   | Acessar  o sistema pelo celular        |
+
 
 > Apresente aqui as histórias de usuário que são relevantes para o
 > projeto de sua solução. As Histórias de Usuário consistem em uma
@@ -138,12 +140,12 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o administrador cadastre e altere produtos | ALTA | 
-|RF-002| Permitir o usuário vizualizar status do serviço   | MÉDIA |
-|RF-001| Permitir a vizualização dos produtos pelo usuário | ALTA | 
-|RF-002| Fazer o gerenciamento de peditos   | ALTA |
-|RF-001| Permitir que o usuário Visualizar serviços | ALTA | 
-|RF-002| Disponibilizar   | MÉDIA |
+|RF-001| Permitir que o administrador cadastre e altere produtos      | ALTA | 
+|RF-003| Permitir o usuário vizualizar status do serviço              | MÉDIA |
+|RF-004| Permitir a vizualização dos produtos pelo usuário            | ALTA | 
+|RF-005| Organizar pedidos e permitir alterar o status e prioridade   | MÉDIA |
+|RF-006| Permitir que o usuário Visualizar serviços                   | ALTA | 
+|RF-007| Disponibilizar orçamento de serviço pelo sistema             | MÉDIA |
 
 
 ### Requisitos não Funcionais
