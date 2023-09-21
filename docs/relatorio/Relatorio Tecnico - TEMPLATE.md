@@ -200,12 +200,11 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 # Projeto de Interface
 
-......  COLOQUE AQUI O SEU TEXTO DE INTRODUÇÃO ......
+A partir das informações apresentadas nas Histórias de Usuário e Requisitos Funcionais, desenvolveremos interfaces que permitam ao administrador gerenciar produtos e pedidos, enquanto os usuários poderão visualizar produtos, serviços, realizar compras e solicitar orçamentos de serviços de reparo de celulares. As interfaces também serão responsivas para garantir a acessibilidade em dispositivos móveis, atendendo ao Requisito Não Funcional RNF-001.
 
-> Apresente as principais interfaces da solução. Discuta como 
-> foram elaboradas de forma a atender os requisitos funcionais, não
-> funcionais e histórias de usuário abordados nas [Especificações do
-> Projeto](#especificações-do-projeto).
+Além disso, considerando o Requisito Não Funcional RNF-002, a solução será projetada de forma a integrar-se com sistemas de pagamento online para facilitar as transações de compras.
+
+As interfaces serão desenvolvidas com foco na usabilidade, com layouts intuitivos e elementos de design que reflitam a identidade da marca Alpha Cell. Isso incluirá uma paleta de cores referente à marca já existente. A seguir, apresentaremos as principais interfaces da solução.
 
 ## User Flow
 
@@ -218,20 +217,7 @@ O diagrama a esquerda indica ações que podem ser realizadas tanto pelo cliente
 
 ## Wireframes
 
-......  INCLUA AQUI OS WIREFRAMES DAS TELAS DA APLICAÇÃO COM UM BREVE DESCRITIVO ......
-
-> Wireframes são protótipos das telas da aplicação usados em design de interface para sugerir a
-> estrutura de um site web e seu relacionamentos entre suas
-> páginas. Um wireframe web é uma ilustração semelhante ao
-> layout de elementos fundamentais na interface.
-> 
-> **Links Úteis**:
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> 
-> **Exemplo**:
+A imagem a seguir representa o wireframe da página inicial da loja. 
 > ![Untitled-1](https://github.com/ICEI-PUC-Minas-PBE-SI/pbe-si-ads-2023-2-tiaw-t1-grupo-loja-de-celulares/assets/142186389/bb159a04-7526-44ae-80ab-cec2d7fc56c0)
 
 
