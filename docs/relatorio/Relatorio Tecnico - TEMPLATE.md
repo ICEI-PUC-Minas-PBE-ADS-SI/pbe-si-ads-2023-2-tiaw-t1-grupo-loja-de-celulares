@@ -64,7 +64,7 @@ Uma loja de celulares fora do mundo virtual trás vários problemas e impraticid
 
 ## Objetivos
 
-Desenvolver uma interface Web para a loja de conserto de celulares, para que assim clientes possam comprar celulares e componentes online, além disso também há a possibilidade de criar um cadastro para o cliente, para que ele possa se comunicar com os vendedores e manutentores, e acumular pontos em suas compras. Outra possibilidae será monitorar o inventório, criar uma lista de agendamento para os clientes.
+Desenvolver uma interface Web para a loja de conserto de celulares Alpha Cell, para que assim clientes possam comprar celulares e componentes online, além disso também há a possibilidade de criar um cadastro para o cliente, para que ele possa se comunicar com os vendedores e manutentores, e acumular pontos em suas compras. Outra possibilidae será monitorar o inventório, criar uma lista de agendamento para os clientes.
 
 ## Justificativa
 
@@ -76,6 +76,12 @@ Temos como publico alvo todo tipo de pessoa que precisa comprar ou consertar sma
  
 # Especificações do Projeto
 
+O projeto Alpha Cell tem como objetivo criar um site intuitivo e funcional para oferecer informações sobre serviços de reparo de celulares. Nosso público-alvo são os clientes em busca de serviços de reparo de celulares e informações sobre a loja. Para alcançar esse objetivo, utilizaremos as seguintes técnicas e ferramentas:
+Ferramentas utilizadas:
+> Wireframing: Faremos uso de ferramentas como Photoshop e Figma para criar wireframes detalhados das páginas.
+> Design Responsivo: Vamos adotar frameworks como Bootstrap para garantir um design responsivo e consistente.
+
+O projeto Alpha Cell tem como objetivo fornecer uma interface web eficaz e informativa para atender tanto aos clientes em busca de serviços de reparo de celulares quanto aos interessados em acessórios para dispositivos móveis. As técnicas e ferramentas mencionadas serão empregadas para garantir que o site atenda às expectativas dos usuários e aos objetivos da loja.
 ......  COLOQUE AQUI O SEU TEXTO ......
 
 > Apresente uma visão geral do que será abordado nesta parte do
