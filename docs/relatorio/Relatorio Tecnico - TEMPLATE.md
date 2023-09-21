@@ -79,14 +79,10 @@ Temos como publico alvo todo tipo de pessoa que precisa comprar ou consertar sma
 O projeto Alpha Cell tem como objetivo criar um site intuitivo e funcional para oferecer informações sobre serviços de reparo de celulares. Nosso público-alvo são os clientes em busca de serviços de reparo de celulares e informações sobre a loja. Para alcançar esse objetivo, utilizaremos as seguintes técnicas e ferramentas:
 Ferramentas utilizadas:
 > Wireframing: Faremos uso de ferramentas como Photoshop e Figma para criar wireframes detalhados das páginas.
+> Mapa de 
 > Design Responsivo: Vamos adotar frameworks como Bootstrap para garantir um design responsivo e consistente.
 
 O projeto Alpha Cell tem como objetivo fornecer uma interface web eficaz e informativa para atender tanto aos clientes em busca de serviços de reparo de celulares quanto aos interessados em acessórios para dispositivos móveis. As técnicas e ferramentas mencionadas serão empregadas para garantir que o site atenda às expectativas dos usuários e aos objetivos da loja.
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Apresente uma visão geral do que será abordado nesta parte do
-> documento, enumerando as técnicas e/ou ferramentas utilizadas para
-> realizar a especificações do projeto
 
 ## Personas e Mapas de Empatia
 
@@ -213,22 +209,10 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## User Flow
 
-......  INCLUA AQUI O DIAGRAMA COM O FLUXO DO USUÁRIO NA APLICAÇÃO ......
+O fluxograama abaixo representa o fluxo do usuário no site.
+O diagrama a esquerda indica ações que podem ser realizadas tanto pelo cliente quanto pelo administrador, enquanto o diagrama à direita mostra ações a serem realizadas apenas pelo administrador
 
-> Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor
-> mapear todo fluxo de telas do site ou app. Essa técnica funciona
-> para alinhar os caminhos e as possíveis ações que o usuário pode
-> fazer junto com os membros de sua equipe.
->
-> **Links Úteis**:
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 User Flow Tools & Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
->
-> **Exemplo**:
-> 
->
-> 
+
 ![_Fluxograma (1)](https://github.com/ICEI-PUC-Minas-PBE-SI/pbe-si-ads-2023-2-tiaw-t1-grupo-loja-de-celulares/assets/142746479/d3939d9a-ab57-44f9-85e6-05bc11a8e46f)
 
 
