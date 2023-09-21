@@ -1,7 +1,7 @@
 # Informações do Projeto
 `TÍTULO DO PROJETO`  
 
-Loja de celulares
+Alpha Cell
 
 `Curso` 
 
