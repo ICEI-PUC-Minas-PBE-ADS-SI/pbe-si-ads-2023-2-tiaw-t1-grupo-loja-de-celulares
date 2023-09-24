@@ -118,7 +118,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |Usuário do sistema  | Vizualizar os Produtos             | Comprar e comprarar preços             |
 |Usuário do sistema  | Vizualizar os Serviços             | Acompanhar status do serviço           |
 |Usuário do sistema  | Adicionar produtos ao carrinho     | Realizar várias compras simultaneamente|
-|Usuário do sistema  | Cadastro/Login                     | Acessar o sistema                      |
+|Usuário do sistema  | Criar e acessar minha conta        | Acessar o sistema                      |
 |Usuário do sistema  | Solicitar serviços                 | Fazer orçamento de manutenção          |
 |Usuário do sistema  | Utiliza o navegador pelo celular   | Acessar  o sistema pelo celular        |
 
