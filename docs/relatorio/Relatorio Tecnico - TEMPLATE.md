@@ -72,14 +72,14 @@ Uma loja que está presente somente na locação física não atinge todos os po
 
 ## Público-Alvo
 
-Temos como publico alvo todo tipo de pessoa que precisa comprar ou consertar smartphones, com foco em pessoas que trabalham utilizando o celular, pois com a implementação da interface será possível criar uma forma de agendamento prioritário para casos que precisem urgência. 
+Temos como publico alvo todo tipo de pessoa que precisa consertar smartphones ou adquirir acessórios e periféricos para seu aparelho, com foco em pessoas que trabalham utilizando o celular, pois com a implementação da interface será possível criar uma forma de agendamento prioritário para casos que precisem urgência. 
  
 # Especificações do Projeto
 
 O projeto Alpha Cell tem como objetivo criar um site intuitivo e funcional para oferecer informações sobre serviços de reparo de celulares. Nosso público-alvo são os clientes em busca de serviços de reparo de celulares e informações sobre a loja. Para alcançar esse objetivo, utilizaremos as seguintes técnicas e ferramentas:
 Ferramentas utilizadas:
 > Wireframing: Faremos uso de ferramentas como Photoshop e Figma para criar wireframes detalhados das páginas.
-> Mapa de 
+> Mapa de Empatia e Personas para exemplificar possíveis clientes.
 > Design Responsivo: Vamos adotar frameworks como Bootstrap para garantir um design responsivo e consistente.
 
 O projeto Alpha Cell tem como objetivo fornecer uma interface web eficaz e informativa para atender tanto aos clientes em busca de serviços de reparo de celulares quanto aos interessados em acessórios para dispositivos móveis. As técnicas e ferramentas mencionadas serão empregadas para garantir que o site atenda às expectativas dos usuários e aos objetivos da loja.
