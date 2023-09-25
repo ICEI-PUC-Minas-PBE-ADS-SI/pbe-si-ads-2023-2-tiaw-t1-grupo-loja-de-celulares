@@ -54,17 +54,21 @@ Sistemas de Informação
 
 
 # Introdução
+Alpha Cell Assistência técnica
+Instagram: [@alphacellbetim](https://www.instagram.com/alphacellbetim/)
 
 ## Problema
+Alpha Cell Assistência técnica é uma loja de concerto de celulares 
 
-Uma loja de celulares fora do mundo virtual trás vários problemas e impraticidades, problemas esses como:
--Vários clientes em potencial não alcançados, pois moram distante da loja física;
--Dificuldade no agendamento de clientes, além de não possuir uma lista de prioridade;
--É necessário que o cliente se desloque até a loja para que seja prontamente atendido;
+A Alpha Cell, como uma loja de celulares que opera no mundo físico, enfrenta diversos desafios e inconveniências. Entre os problemas que a Alpha Cell enfrenta estão:
+
+> A inacessibilidade para muitos clientes em potencial devido à distância geográfica em relação à loja física.
+> Dificuldades na organização do agendamento de clientes, juntamente com a falta de uma lista de prioridades.
+> A necessidade de deslocamento por parte do cliente até a loja para receber atendimento imediato.
 
 ## Objetivos
 
-Desenvolver uma interface Web para a loja de conserto de celulares Alpha Cell, para que assim clientes possam comprar celulares e componentes online, além disso também há a possibilidade de criar um cadastro para o cliente, para que ele possa se comunicar com os vendedores e manutentores, e acumular pontos em suas compras. Outra possibilidae será monitorar o inventório, criar uma lista de agendamento para os clientes.
+Desenvolver uma interface Web para a loja de conserto de celulares Alpha Cell, para que assim clientes possam comprar celulares e componentes online, além disso criar a possibilidade de fazer um cadastro para o cliente, para que ele possa se comunicar com os vendedores e manutentores, e acumular pontos em suas compras. Outra possibilidae será monitorar o inventório e criar uma lista de agendamento para os clientes.
 
 ## Justificativa
 
