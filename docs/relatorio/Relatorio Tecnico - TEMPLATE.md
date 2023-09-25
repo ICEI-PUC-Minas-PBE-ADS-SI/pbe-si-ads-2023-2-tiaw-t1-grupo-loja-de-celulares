@@ -63,9 +63,9 @@ Instagram: [@alphacellbetim](https://www.instagram.com/alphacellbetim/)
 
 A Alpha Cell, como uma loja de celulares que opera no mundo físico, enfrenta diversos desafios e inconveniências. Entre os problemas que a Alpha Cell enfrenta estão:
 
-> A inacessibilidade para muitos clientes em potencial devido à distância geográfica em relação à loja física.
-> Dificuldades na organização do agendamento de clientes, juntamente com a falta de uma lista de prioridades.
-> A necessidade de deslocamento por parte do cliente até a loja para receber atendimento imediato.
+> A inacessibilidade para muitos clientes em potencial devido à distância geográfica em relação à loja física.                
+> Dificuldades na organização do agendamento de clientes, juntamente com a falta de uma lista de prioridades.                
+> A necessidade de deslocamento por parte do cliente até a loja para receber atendimento imediato.                  
 
 ## Objetivos
 
