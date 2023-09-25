@@ -63,17 +63,18 @@ Instagram: [@alphacellbetim](https://www.instagram.com/alphacellbetim/)
 
 A Alpha Cell, como uma loja de celulares que opera no mundo físico, enfrenta diversos desafios e inconveniências. Entre os problemas que a Alpha Cell enfrenta estão:
 
-- A inacessibilidade para muitos clientes em potencial devido à distância geográfica em relação à loja física.                
-- Dificuldades na organização do agendamento de clientes, juntamente com a falta de uma lista de prioridades.                
-- A necessidade de deslocamento por parte do cliente até a loja para receber atendimento imediato.                  
+- A inacessibilidade para muitos clientes em potencial devido à distância geográfica em relação à loja física. Isso limita o alcance da loja e impede que clientes em áreas distantes tenham fácil acesso aos serviços e produtos oferecidos.
+- Dificuldades na organização do agendamento de clientes, juntamente com a falta de uma lista de prioridades. Isso pode resultar em atrasos no atendimento e na dificuldade de gerenciar o fluxo de clientes de maneira eficiente, levando a experiências insatisfatórias.
+- A necessidade de deslocamento por parte do cliente até a loja para receber atendimento imediato. Isso não apenas inconveniencia os clientes, mas também os obriga a gastar tempo e recursos adicionais para receber assistência presencial que frequentemente poderia ser solucionado ou antecipado online.                 
 
 ## Objetivos
 
-Desenvolver uma interface Web para a loja de conserto de celulares Alpha Cell, para que assim clientes possam comprar celulares e componentes online, além disso criar a possibilidade de fazer um cadastro para o cliente, para que ele possa se comunicar com os vendedores e manutentores, e acumular pontos em suas compras. Outra possibilidae será monitorar o inventório e criar uma lista de agendamento para os clientes.
+A criação de uma interface web para a Alpha Cell, a loja de conserto de celulares, tem como objetivo possibilitar aos clientes a compra de Periféricos e componentes online, oferecendo também a funcionalidade de cadastro para que eles possam se comunicar com os vendedores e técnicos, acumulando pontos em suas compras. Além disso, essa plataforma permitirá o monitoramento do inventário e a criação de uma lista de agendamento para os clientes.
 
 ## Justificativa
 
-A criação de um site para uma loja de conserto de celulares é essencial como parte de uma estratégia para ampliar o alcance, aprimorar a experiência do cliente, impulsionar a eficiência operacional e atender às demandas do mercado atual. Alguns dos motivos-chave para a criação de um site incluem:
+A criação de um site para uma loja de conserto de celulares é essencial como parte de uma estratégia para ampliar o alcance, aprimorar a experiência do cliente, impulsionar a eficiência operacional e atender às
+demandas do mercado atual. Alguns dos motivos-chave para a criação de um site incluem:
 
 - Aumento da Visibilidade Online: Ter um site permite que a loja de conserto de celulares seja encontrada facilmente pelos clientes que procuram serviços de reparo na internet. Isso amplia a visibilidade da empresa e a torna acessível a um público mais amplo, incluindo aqueles que podem não estar cientes da loja fisicamente.
 - Facilidade de Informação: O site serve como uma plataforma centralizada para fornecer informações detalhadas sobre os serviços oferecidos, horários de funcionamento, localização da loja física e métodos de contato. Os clientes podem acessar essas informações a qualquer momento, facilitando o planejamento de suas visitas.
