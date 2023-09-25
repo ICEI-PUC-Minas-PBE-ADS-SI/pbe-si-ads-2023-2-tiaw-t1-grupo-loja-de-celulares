@@ -55,12 +55,11 @@ Sistemas de Informação
 
 # Introdução
 Alpha Cell Assistência técnica                                          
-Endereço: Rua : Rio de janeiro 437 centro Betim MG                      
+Endereço: Rua Rio de janeiro 437 centro Betim MG                      
 Whatsapp: (31) 998477520                                              
 Instagram: [@alphacellbetim](https://www.instagram.com/alphacellbetim/)
 
 ## Problema
-Alpha Cell Assistência técnica é uma loja de concerto de celulares 
 
 A Alpha Cell, como uma loja de celulares que opera no mundo físico, enfrenta diversos desafios e inconveniências. Entre os problemas que a Alpha Cell enfrenta estão:
 
@@ -121,8 +120,8 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |--------------------|------------------------------------|----------------------------------------|
 |Administrador       | Cadastrar e Gerenciar os Produtos  | Gerenciar Estoque                      |
 |Administrador       | Gerenciar os Pedidos               | Organizar os pedidos e suas prioridades|
-|Usuário do sistema  | Vizualizar os Produtos             | Comprar e comprarar preços             |
-|Usuário do sistema  | Vizualizar os Serviços             | Acompanhar status do serviço           |
+|Usuário do sistema  | Visualizar os Produtos             | Comprar e comprarar preços             |
+|Usuário do sistema  | Visualizar os Serviços             | Acompanhar status do serviço           |
 |Usuário do sistema  | Adicionar produtos ao carrinho     | Realizar várias compras simultaneamente|
 |Usuário do sistema  | Criar e acessar minha conta        | Acessar o sistema                      |
 |Usuário do sistema  | Solicitar serviços                 | Fazer orçamento de manutenção          |
@@ -138,8 +137,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
 |RF-001| Permitir que o administrador cadastre e altere produtos      | ALTA | 
-|RF-003| Permitir o usuário vizualizar status do serviço              | MÉDIA |
-|RF-004| Permitir a vizualização dos produtos pelo usuário            | ALTA | 
+|RF-003| Permitir o usuário visualizar status do serviço              | MÉDIA |
+|RF-004| Permitir a vizualisação dos produtos pelo usuário            | ALTA | 
 |RF-005| Organizar pedidos e permitir alterar o status e prioridade   | MÉDIA |
 |RF-006| Permitir que o usuário Visualizar serviços                   | ALTA | 
 |RF-007| Disponibilizar orçamento de serviço pelo sistema             | MÉDIA |
