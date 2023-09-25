@@ -63,9 +63,9 @@ Instagram: [@alphacellbetim](https://www.instagram.com/alphacellbetim/)
 
 A Alpha Cell, como uma loja de celulares que opera no mundo físico, enfrenta diversos desafios e inconveniências. Entre os problemas que a Alpha Cell enfrenta estão:
 
-> A inacessibilidade para muitos clientes em potencial devido à distância geográfica em relação à loja física.                
-> Dificuldades na organização do agendamento de clientes, juntamente com a falta de uma lista de prioridades.                
-> A necessidade de deslocamento por parte do cliente até a loja para receber atendimento imediato.                  
+- A inacessibilidade para muitos clientes em potencial devido à distância geográfica em relação à loja física.                
+- Dificuldades na organização do agendamento de clientes, juntamente com a falta de uma lista de prioridades.                
+- A necessidade de deslocamento por parte do cliente até a loja para receber atendimento imediato.                  
 
 ## Objetivos
 
@@ -73,7 +73,13 @@ Desenvolver uma interface Web para a loja de conserto de celulares Alpha Cell, p
 
 ## Justificativa
 
-Uma loja que está presente somente na locação física não atinge todos os potenciais clientes. Há também uma necessidade de monitoramento do inventário e agendamento dos clientes.
+A criação de um site para uma loja de conserto de celulares é essencial como parte de uma estratégia para ampliar o alcance, aprimorar a experiência do cliente, impulsionar a eficiência operacional e atender às demandas do mercado atual. Alguns dos motivos-chave para a criação de um site incluem:
+
+- Aumento da Visibilidade Online: Ter um site permite que a loja de conserto de celulares seja encontrada facilmente pelos clientes que procuram serviços de reparo na internet. Isso amplia a visibilidade da empresa e a torna acessível a um público mais amplo, incluindo aqueles que podem não estar cientes da loja fisicamente.
+- Facilidade de Informação: O site serve como uma plataforma centralizada para fornecer informações detalhadas sobre os serviços oferecidos, horários de funcionamento, localização da loja física e métodos de contato. Os clientes podem acessar essas informações a qualquer momento, facilitando o planejamento de suas visitas.
+- Acesso a Clientes Potenciais: Um site permite que a loja alcance clientes que estão procurando serviços de conserto de celulares online. Isso é especialmente valioso para pessoas que preferem pesquisar e comparar opções antes de tomar uma decisão.
+- Agendamento Online: A implementação de um sistema de agendamento online facilita a vida dos clientes, permitindo que eles marquem horários para o reparo de seus dispositivos diretamente pelo site. Isso economiza tempo tanto para os clientes quanto para a equipe da loja, melhorando a eficiência geral.
+- Acompanhamento de Pedidos: Os clientes podem usar o site para acompanhar o status de seus pedidos ou reparos em andamento. Isso proporciona transparência e tranquilidade aos clientes, pois eles podem verificar o progresso a qualquer momento.
 
 ## Público-Alvo
 
