@@ -145,7 +145,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |------|-----------------------------------------|----|
 |RF-001| Permitir que o administrador cadastre e altere produtos      | ALTA | 
 |RF-002| Permitir o usuário visualizar status do serviço              | MÉDIA |
-|RF-003| Permitir a vizualisação dos produtos pelo usuário            | ALTA | 
+|RF-003| Permitir a visualização dos produtos pelo usuário            | ALTA | 
 |RF-004| Organizar pedidos e permitir alterar o status e prioridade   | MÉDIA |
 |RF-005| Permitir que o usuário Visualizar serviços                   | ALTA | 
 |RF-006| Disponibilizar orçamento de serviço pelo sistema             | MÉDIA |
