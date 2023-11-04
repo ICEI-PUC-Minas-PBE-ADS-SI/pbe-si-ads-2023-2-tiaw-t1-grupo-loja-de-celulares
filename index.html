@@ -1,35 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Dashboard</title>
-</head>
-<body>
-    <h1>Dashboard</h1>
-    
+  </head>
+  <body class="bg-light">
+    <header class="bg-warning py-2">
+      <div class="container d-flex justify-content-between align-items-center py-3">
+        <h2 class="text-white m-0">AlhpaCell</h2>
 
+        <div
+          style="width: 300px"
+          class="d-none d-xl-block position-relative search-container"
+        >
+          <input
+            type="text"
+            class="form-control"
+            name=""
+            id=""
+            placeholder="Pesquisar produtos"
+            style="border-radius: 1rem"
+          />
+          <button
+            class="position-absolute btn bg-dark top-0 end-0 d-flex align-items-center justify-content-center"
+          >
+            <i class="bi bi-search text-white"></i>
+          </button>
+        </div>
+        <i
+          class="bi bi-list text-white d-xl-none"
+          style="font-size: 2.5rem !important"
+        ></i>
 
+        <a class="position-relative d-none d-xl-block">
+          <i
+            class="bi bi-bag text-white"
+            style="font-size: 2rem !important"
+          ></i>
+          <div
+            class="position-absolute bg-dark text-white d-flex justify-content-center align-items-center top-0 fw-semibold"
+            style="
+              border-radius: 100%;
+              height: 24px;
+              width: 24px;
+              font-size: 10px;
+              left: 20px;
+            "
+          >
+            0
+          </div>
+        </a>
+      </div>
+    </header>
 
+    <section class="mt-4 d-xl-none">
+      <div class="container">
+        <h5>Filtros</h5>
+        <div class="d-flex gap-2">
+          <select class="form-select form-select-sm">
+            <option selected>Categoria</option>
+            <option value="">Fones</option>
+            <option value=""></option>
+          </select>
 
+          <select class="form-select form-select-sm">
+            <option selected>Marcas</option>
+          </select>
+
+          <select class="form-select form-select-sm">
+            <option selected>Preço</option>
+            <option value="1">&lt;50</option>
+            <option value="2">100-200</option>
+            <option value="3">200-300</option>
+            <option value="4">300-400</option>
+            <option value="5">400-500</option>
+            <option value="6">&#60;500</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <main class="mt-4">
+      <div
+        class="container d-flex gap-4 align-items-start justify-content-center mx-auto"
+      >
+        <section class="filtros d-none d-xl-flex flex-column gap-4">
+          <div class="bg-white p-4 h-auto">
+            <h5>Categorias</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="">Todos <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Fones <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Smartphones <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Capas <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Periféricos <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Outros <span>(12)</span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="bg-white p-4 h-auto">
+            <h5>Categorias</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="">Todos <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Fones <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Smartphones <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Capas <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Periféricos <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Outros <span>(12)</span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="bg-white p-4 h-auto">
+            <h5>Categorias</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="">Todos <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Fones <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Smartphones <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Capas <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Periféricos <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Outros <span>(12)</span></a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <ul
+          class="list-unstyled row flex-wrap align-items-xl-start w-100 justify-content-center justify-content-xxl-end gap-3 gap-xl-0 gap-xxl-3"
+        >
+          <li class="product bg-white col-12 col-md-6 col-xl-4">
+            <div class="product-img-container overflow-hidden p-3">
+              <img
+                src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+            <div
+              class="d-flex flex-column justify-content-between product-content-container gap-3"
+            >
+              <span class="product-brand text-white"> Celular </span>
+              <h6 class="product-title m-0">Iphone 6s</h6>
+              <p class="product-description m-0">
+                O iPhone 6s é um smartphone desenvolvido pela Apple e lançado em
+                setembro de 2015.
+              </p>
+              <p class="product-price m-0">R$ 1800.00</p>
+              <button class="btn m-0 p-0" onclick="">
+                Adicionar ao carrinho
+              </button>
+            </div>
+          </li>
+          <li class="product bg-white col-12 col-md-6 col-xl-4">
+            <div class="product-img-container overflow-hidden p-3">
+              <img
+                src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+            <div
+              class="d-flex flex-column justify-content-between product-content-container gap-3"
+            >
+              <span class="product-brand text-white"> Celular </span>
+              <h6 class="product-title m-0">Iphone 6s</h6>
+              <p class="product-description m-0">
+                O iPhone 6s é um smartphone desenvolvido pela Apple e lançado em
+                setembro de 2015.
+              </p>
+              <p class="product-price m-0">R$ 1800.00</p>
+              <button class="btn m-0 p-0" onclick="">
+                Adicionar ao carrinho
+              </button>
+            </div>
+          </li>
+          <li class="product bg-white col-12 col-md-6 col-xl-4">
+            <div class="product-img-container overflow-hidden p-3">
+              <img
+                src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+            <div
+              class="d-flex flex-column justify-content-between product-content-container gap-3"
+            >
+              <span class="product-brand text-white"> Celular </span>
+              <h6 class="product-title m-0">Iphone 6s</h6>
+              <p class="product-description m-0">
+                O iPhone 6s é um smartphone desenvolvido pela Apple e lançado em
+                setembro de 2015.
+              </p>
+              <p class="product-price m-0">R$ 1800.00</p>
+              <button class="btn m-0 p-0" onclick="">
+                Adicionar ao carrinho
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </main>
 
     <style>
+      .search-container .btn {
+        height: 38px;
+        width: 40px;
+        border-radius: 0 1rem 1rem 0;
+        transition: opacity 300ms;
+      }
 
+      .search-container .btn:hover {
+        opacity: 0.8;
+      }
+      .product {
+        max-width: 296px;
+        border: 2px solid rgba(245, 245, 245, 1);
 
+        cursor: pointer;
+      }
 
+      .product-img-container {
+        height: 200px;
+        /* background-color: rgba(245, 245, 245, 1); */
+      }
 
+      .product:hover .product-img-container .img-fluid {
+        transform: scale(1.2);
+      }
 
+      .product-brand {
+        width: fit-content;
+        background-color: rgba(46, 36, 94, 1);
+        font-family: Inter;
+        font-size: 12px;
+        font-weight: 400;
+        text-align: left;
+        padding: 5px 12px;
+      }
+
+      .product-content-container {
+        padding: 20px 15px;
+      }
+      .product-price {
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: rgb(79, 79, 79);
+      }
+      .product-title {
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+
+      .product-description {
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+      }
+
+      .img-fluid {
+        object-fit: cover;
+        transition: all 300ms;
+      }
+
+      .product .btn {
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+      .product .btn:hover {
+        color: #ffbe26;
+      }
+
+      .filtros {
+        width: 300px;
+      }
     </style>
-  
-    <script >
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-
-
-
-    </script>
-
-    
-</body>
+    <script></script>
+  </body>
 </html>
