@@ -1,12 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
-    <h1></h1>
-    
+
+    <!-- Botão para abrir o modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cadastroModal">
+        Cadastrar Produto
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="cadastroModal" tabindex="-1" aria-labelledby="cadastroModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style=" max-width: 500px;">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <button type="button" style=" background-color: rgb(226, 116, 20);" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Formulário de cadastro de produto -->
+                    <form id="produtoForm">
+                        <div class="mb-3" style="display: flex; justify-content: center;">
+                            <input type="text" style="width: 80%;" class="form-control" id="nomeProduto"
+                                placeholder="Nome do Produto" required>
+                        </div>
+                        <div class="mb-3" style="display: flex; justify-content: center;">
+                            <input type="file" class="form-control" id="imagemProduto" accept="image/*"
+                                style="display: none;">
+                            <img id="imagemPlaceholder" src="img\placeholder2.jpg" class="img-fluid"
+                                alt="Imagem do Produto" style="width: 80%; cursor: pointer;">
+                        </div>
+                        <div class="mb-3" style="display: flex; justify-content: center;">
+                            <textarea style="width: 80%;" class="form-control text-center" id="descricaoProduto"
+                                rows="3" placeholder="Digite a descrição do produto" required></textarea>
+                        </div>
+                        <div class="row mb-3" style="display: flex; justify-content: center;">
+                            <div class="col input-group" style="padding-left: 11.5%;">
+                                <span class="input-group-text">Preço</span>
+                                <input type="text" class="form-control text-center" id="precoProduto"
+                                    placeholder="R$ 0,00" required>
+                            </div>
+                            <div class="col">
+                                <select class="form-select" id="categoriaProduto" style="width: 77%;" required>
+                                    <option value="" disabled selected>Categoria</option>
+                                    <option value="categoria1">Categoria 1</option>
+                                    <option value="categoria2">Categoria 2</option>
+                                    <option value="categoria3">Categoria 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div style="display: flex; justify-content: center; padding:6% 0;">
+                            <button type="submit" class="btn text-white btn-block"
+                                style="width: 80%; height: 45px; background-color: rgb(226, 116, 20);">Cadastrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row" id="products-container">
+            <!-- Os cards dos produtos serão adicionados aqui -->
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script>
+        var produtos = [];
+
+        // Função para exibir a imagem selecionada no modal
+        document.getElementById('imagemPlaceholder').addEventListener('click', function () {
+            document.getElementById('imagemProduto').click();
+        });
+
+        document.getElementById('imagemProduto').addEventListener('change', function () {
+            var imagemPreview = document.getElementById('imagemPlaceholder');
+            var file = this.files[0];
+
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function (event) {
+                    imagemPreview.src = event.target.result;
+                };
+                reader.readAsDataURL(file);
+            } else {
+                imagemPreview.src = 'placeholder.jpg';
+            }
+        });
+
+        // Função para adicionar um novo produto ao array e criar um card
+        function adicionarProduto(nome, descricao, preco, categoria, imagem) {
+            var produto = {
+                nome: nome,
+                descricao: descricao,
+                preco: preco,
+                categoria: categoria,
+                imagem: imagem
+            };
+            produtos.push(produto);
+
+            var card = document.createElement("div");
+            card.className = "col-4 mb-4";
+            card.innerHTML = `
+      <div class="card" style="width: 18rem;">
+        <img src="${imagem}" class="card-img-top" alt="Imagem do Produto">
+        <div class="card-body">
+          <h5 class="card-title">${nome}</h5>
+          <p class="card-text">${descricao}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Preço: ${preco}</li>
+          <li class="list-group-item">Categoria: ${categoria}</li>
+        </ul>
+      </div>
+    `;
+            document.getElementById("products-container").appendChild(card);
+        }
+
+        document.getElementById('produtoForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            var nomeProduto = document.getElementById('nomeProduto').value;
+            var descricaoProduto = document.getElementById('descricaoProduto').value;
+            var precoProduto = document.getElementById('precoProduto').value;
+            var categoriaProduto = document.getElementById('categoriaProduto').value;
+            var imagemProduto = document.getElementById('imagemProduto').files[0];
+
+            if (imagemProduto) {
+                var reader = new FileReader();
+                reader.onload = function (event) {
+                    var imagemBase64 = event.target.result;
+                    adicionarProduto(nomeProduto, descricaoProduto, precoProduto, categoriaProduto, imagemBase64);
+                };
+                reader.readAsDataURL(imagemProduto);
+            } else {
+                adicionarProduto(nomeProduto, descricaoProduto, precoProduto, categoriaProduto, 'caminho_da_imagem_padrao.png');
+            }
+
+            var modal = new bootstrap.Modal(document.getElementById('cadastroModal'));
+            modal.hide();
+
+            document.getElementById('nomeProduto').value = "";
+            document.getElementById('descricaoProduto').value = "";
+            document.getElementById('precoProduto').value = "";
+            document.getElementById('categoriaProduto').value = "";
+            document.getElementById('imagemProduto').value = "";
+        });
+    </script>
 </body>
+
 </html>
