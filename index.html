@@ -31,14 +31,12 @@
     <title>Dashboard</title>
   </head>
   <body class="bg-light">
-    <header class="py-2">
-      <div
-        class="container d-flex justify-content-between align-items-center py-3"
-      >
-        <img src="src/assets/Images/logomelhor.png" height="100px" alt="">
+    <header>
+      <div class="container d-flex align-items-center py-3">
+        <img src="src/assets/Images/logomelhor.png" height="100px" class="me-3" alt="" />
 
         <div
-          style="width: 300px"
+          style="width: 700px"
           class="d-none d-xl-block position-relative search-container"
         >
           <input
@@ -56,12 +54,26 @@
             <i class="bi bi-search text-white"></i>
           </a>
         </div>
-        <i
-          class="bi bi-list text-white d-xl-none"
-          style="font-size: 2.5rem !important"
-        ></i>
 
-        <a class="position-relative d-none d-xl-block" href="/src/pages/Client/cart.html">
+        <div
+          class="ms-5 d-flex align-items-center gap-3 justify-content-center"
+        >
+          <i
+            class="bi bi-person-circle text-white"
+            style="font-size: 1.5rem"
+          ></i>
+          <p class="text-white m-0">
+            Faça <span class="fw-bold">Login</span> ou <br />
+            crie seu <span class="fw-bold">Cadastro</span>
+          </p>
+        </div>
+
+        <nav class="ms-auto">
+          <a
+          class="position-relative text-end d-none d-xl-block cart-link"
+          href="/src/pages/Client/cart.html"
+          style="width: 147px"
+        >
           <i
             class="bi bi-bag text-white"
             style="font-size: 2rem !important"
@@ -73,15 +85,17 @@
               height: 24px;
               width: 24px;
               font-size: 10px;
-              left: 20px;
+              right: -10px;
             "
           >
             0
           </div>
         </a>
+        </nav>
       </div>
     </header>
 
+   
     <section class="mt-4 d-xl-none">
       <div class="container">
         <h5>Filtros</h5>
@@ -261,7 +275,7 @@
     </main>
 
     <style>
-      header{
+      header {
         background-color: rgb(251, 146, 54);
       }
       .search-container .btn {
@@ -349,6 +363,13 @@
       .filtros {
         width: 300px;
       }
+
+      .cart-link {
+        transition: all 300ms;
+      }
+      .cart-link:hover {
+        transform: scale(1.2);
+      }
     </style>
 
     <script
@@ -367,9 +388,9 @@
           destination: "https://github.com/apvarun/toastify-js",
           newWindow: true,
           close: true,
-          gravity: "top", 
+          gravity: "top",
           position: "right",
-          stopOnFocus: true, 
+          stopOnFocus: true,
           style: {
             background: "linear-gradient(to right, #00b09b, #96c93d)",
           },
