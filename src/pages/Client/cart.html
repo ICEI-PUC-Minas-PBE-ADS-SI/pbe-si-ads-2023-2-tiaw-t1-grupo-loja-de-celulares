@@ -31,45 +31,125 @@
     <title>Carrinho</title>
   </head>
   <body class="bg-light">
-    <header class="bg-warning py-2">
-      <div
-        class="container d-flex justify-content-between align-items-center py-3"
-      >
-        <h2 class="text-white m-0">AlhpaCell</h2>
+    <header class="py-2">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a href="/index.html">
+          <img
+            src="../../assets/Images/logomelhor.png"
+            height="100px"
+            class="me-3"
+            alt=""
+          />
+        </a>
 
         <div>
-          <a href="/index.html">Voltar</a>
+          <div
+            class="ms-3 ms-xl-5 d-none align-items-center gap-2 d-lg-flex justify-content-center"
+            style="width: fit-content"
+          >
+            <i
+              class="bi bi-person-circle text-white"
+              style="font-size: 1.7rem"
+            ></i>
+            <p class="text-white m-0">Leonardo Martins</p>
+          </div>
+
+          <nav class="ms-auto justify-content-end d-flex gap-3">
+            <a
+              class="position-relative text-end d-none d-lg-block cart-link"
+              href="/src/pages/Client/cart.html"
+            >
+              <i
+                class="bi bi-instagram text-white"
+                style="font-size: 1.7rem !important"
+              ></i>
+            </a>
+            <a
+              class="position-relative text-end d-none d-lg-block cart-link"
+              href="/src/pages/Client/cart.html"
+            >
+              <i
+                class="bi bi-geo-alt text-white"
+                style="font-size: 1.7rem !important"
+              ></i>
+            </a>
+            <a
+              class="position-relative text-end d-none d-lg-block cart-link"
+              href="/src/pages/Client/cart.html"
+            >
+              <i
+                class="bi bi-bag text-white"
+                style="font-size: 1.7rem !important"
+              ></i>
+              <div
+                class="position-absolute bg-dark text-white d-flex justify-content-center align-items-center top-0 fw-semibold"
+                style="
+                  border-radius: 100%;
+                  height: 20px;
+                  width: 20px;
+                  font-size: 10px;
+                  right: -10px;
+                "
+              >
+                0
+              </div>
+            </a>
+          </nav>
         </div>
+
+        <button
+          class="btn d-block d-lg-none p-0 border-0"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasRight"
+          aria-controls="offcanvasRight"
+        >
+          <i class="bi bi-list text-white" style="font-size: 3rem"></i>
+        </button>
       </div>
     </header>
 
-    <section class="mt-5">
-      <div class="container">
-        <h2>Carrinho</h2>
-        <p>Você possui 3 itens no carrinho</p>
+    <section class="mt-5 mb-4">
+      <div class="container d-flex align-items-center justify-content-between">
+        <div>
+          <h2>Carrinho</h2>
+          <p class="m-0">
+            Quantidade de itens no carrinho: <span class="fw-bolder">3</span>
+          </p>
+          <p>Preço Total: <span class="fw-bolder">R$ 120</span></p>
+        </div>
+        <div>
+          <a href="/index.html" class="btn btn-outline-primary"><i class="bi bi-arrow-bar-left"></i> Voltar</a>
+        </div>
       </div>
     </section>
 
-    <div class="container d-flex">
+    <main class="container d-flex flex-column flex-lg-row gap-4">
       <div class="w-100">
         <ul class="list-unstyled">
           <li
-            class="card p-4 d-flex align-items-center flex-row justify-content-between"
+            class="card p-2 px-3 d-flex align-items-center flex-row justify-content-between"
           >
             <div>
-              <h4>Capinha</h4>
-              <p>R$ 50,00</p>
+              <h4 class="m-0">Capinha</h4>
+              <p class="m-0">R$ 50,00</p>
             </div>
-            <div class="d-flex align-items-center justify-content-center">
-              <h4 class="m-0">6</h4>
+            <div class="d-flex align-items-center justify-content-center gap-1">
+              <h4 class="m-0" style="transform: translateY(3px)">6</h4>
               <div
                 class="d-flex flex-column justify-content-center align-items-center"
               >
-                <i
-                  class="bi bi-plus m-0 p-0"
-                  style="font-size: 2rem; height: 32px"
-                ></i>
-                <i class="bi bi-dash" style="font-size: 2rem; height: 32px"></i>
+                <button class="btn p-0 d-flex border-0">
+                  <i
+                    class="bi bi-caret-up m-0 p-0"
+                    style="font-size: 2rem; height: 32px"
+                  ></i>
+                </button>
+                <button class="btn p-0 d-flex border-0">
+                  <i
+                    class="bi bi-caret-down m-0 p-0 d-flex"
+                    style="font-size: 2rem; height: 32px"
+                  ></i>
+                </button>
               </div>
             </div>
 
@@ -79,31 +159,35 @@
           </li>
         </ul>
       </div>
-      <form  style="width: 700px;" class="px-4">
+      <form class="px-4 card py-4">
         <h2>Detalhes do cartão</h2>
-        <p>Tipo do cartão</p>
-        <div>
-            <img src="../../assets/Images/visa_logo.png" alt="">
+        <p class="mt-3">Tipo do cartão</p>
+        <div class="mb-3 d-flex align-items-center gap-3">
+          <img
+            src="../../assets/Images/Visa_Inc._logo.svg.png"
+            style="height: 50px"
+            class="img-fluid"
+            alt=""
+          />
+          <img
+            src="../../assets/Images/Mastercard-logo.svg.png"
+            style="height: 80px"
+            class="img-fluid"
+            alt=""
+          />
         </div>
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label"
             >Nome do titular</label
           >
-          <input
-            class="form-control"
-            placeholder=""
-          />
+          <input class="form-control" placeholder="" />
         </div>
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label"
             >Número do cartão</label
           >
-          <input
-            class="form-control"
-            placeholder="0000 0000 0000 0000"
-          />
+          <input class="form-control" placeholder="0000 0000 0000 0000" />
         </div>
-        
 
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label"
@@ -118,9 +202,7 @@
         </div>
 
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label"
-            >CVV</label
-          >
+          <label for="exampleFormControlInput1" class="form-label">CVV</label>
           <input
             type="number"
             max="4"
@@ -130,10 +212,79 @@
         </div>
 
         <div>
-            <button class="btn btn-primary">CHECKOUT</button>
+          <button class="btn btn-primary">CHECKOUT</button>
         </div>
       </form>
+    </main>
+
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">
+          Offcanvas right
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">...</div>
     </div>
+
+    <style>
+      header {
+        background-color: rgb(251, 146, 54);
+      }
+      .search-container .btn {
+        height: 38px;
+        width: 40px;
+        border-radius: 0 1rem 1rem 0;
+        transition: opacity 300ms;
+      }
+
+      .search-container .btn:hover {
+        opacity: 0.8;
+      }
+
+      main.container {
+        margin-bottom: 5rem !important;
+      }
+      .cart-link {
+        transition: all 300ms;
+      }
+      .cart-link:hover {
+        transform: scale(1.2);
+      }
+
+      .btn-outline-primary{
+        border-color: rgb(251, 146, 54) !important;
+        color:rgb(251, 146, 54) !important;
+        font-weight: 700;
+      }
+
+      .btn-outline-primary:is(:hover, :focus){
+        background-color: rgb(251, 146, 54) !important;
+        border-color: rgb(251, 146, 54) !important;
+        color:#fff !important;
+      }
+      @media (min-width: 992px) {
+        main.container form {
+          width: 700px;
+        }
+      }
+
+      @media (min-width: 1400px) {
+        .search-container {
+          width: 700px !important;
+        }
+      }
+    </style>
 
     <script
       type="text/javascript"
