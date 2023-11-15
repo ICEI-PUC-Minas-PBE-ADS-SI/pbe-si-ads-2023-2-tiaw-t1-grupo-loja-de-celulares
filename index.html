@@ -22,22 +22,24 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>Dashboard</title>
   </head>
   <body class="bg-light">
-    <header>
-      <div class="container d-flex align-items-center py-3">
-        <img
-          src="src/assets/Images/logomelhor.png"
-          height="100px"
-          class="me-3"
-          alt=""
-        />
+    <header class="py-2">
+      <div class="container d-flex align-items-center">
+        <a href="/index.html">
+          <img
+            src="/src/assets/Images/logomelhor.png"
+            height="100px"
+            class="me-3"
+            alt=""
+          />
+        </a>
 
         <div
-          style="width: 700px"
-          class="d-none d-xl-block position-relative search-container"
+          style="width: 40%"
+          class="d-none d-lg-block position-relative search-container"
         >
           <input
             type="text"
@@ -56,8 +58,8 @@
         </div>
 
         <div
-          class="ms-5 d-flex align-items-center gap-3 justify-content-center "
-          style="width: fit-content;"
+          class="ms-3 ms-xl-5 d-none align-items-center gap-3 d-lg-flex justify-content-center"
+          style="width: fit-content"
         >
           <i
             class="bi bi-person-circle text-white"
@@ -100,9 +102,8 @@
             ></i>
           </a>
           <a
-            class="position-relative text-end d-none d-xl-block cart-link"
+            class="position-relative text-end d-none d-lg-block cart-link"
             href="/src/pages/Client/cart.html"
-    
           >
             <i
               class="bi bi-bag text-white"
@@ -121,7 +122,22 @@
               0
             </div>
           </a>
+          <a href="/src/pages/Auth/login.html" class="d-none d-lg-block cart-link">
+            <i
+              class="bi bi-box-arrow-in-left text-white"
+              style="font-size: 1.9rem !important"
+            ></i>
+          </a>
         </nav>
+
+        <button
+          class="btn d-block d-lg-none p-0 border-0"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasRight"
+          aria-controls="offcanvasRight"
+        >
+          <i class="bi bi-list text-white" style="font-size: 3rem"></i>
+        </button>
       </div>
     </header>
 
@@ -157,7 +173,7 @@
         class="container d-flex gap-4 align-items-start justify-content-center mx-auto"
       >
         <section class="filtros d-none d-xl-flex flex-column gap-4">
-          <div class="bg-white p-4 h-auto">
+          <div class="bg-white p-4 h-auto" data-aos="fade-right">
             <h5>Categorias</h5>
             <ul class="list-unstyled">
               <li>
@@ -180,7 +196,7 @@
               </li>
             </ul>
           </div>
-          <div class="bg-white p-4 h-auto">
+          <div class="bg-white p-4 h-auto" data-aos="fade-right">
             <h5>Categorias</h5>
             <ul class="list-unstyled">
               <li>
@@ -203,7 +219,7 @@
               </li>
             </ul>
           </div>
-          <div class="bg-white p-4 h-auto">
+          <div class="bg-white p-4 h-auto" data-aos="fade-right">
             <h5>Categorias</h5>
             <ul class="list-unstyled">
               <li>
@@ -230,7 +246,7 @@
         <ul
           class="list-unstyled row flex-wrap align-items-xl-start w-100 justify-content-center justify-content-xxl-end gap-3 gap-xl-0 gap-xxl-3"
         >
-          <li class="product bg-white col-12 col-md-6 col-xl-4">
+          <li class="product bg-white col-12 col-md-6 col-xl-4" data-aos="fade-up">
             <div class="product-img-container overflow-hidden p-3">
               <img
                 src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg"
@@ -253,7 +269,7 @@
               </button>
             </div>
           </li>
-          <li class="product bg-white col-12 col-md-6 col-xl-4">
+          <li class="product bg-white col-12 col-md-6 col-xl-4" data-aos="fade-up">
             <div class="product-img-container overflow-hidden p-3">
               <img
                 src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg"
@@ -276,7 +292,7 @@
               </button>
             </div>
           </li>
-          <li class="product bg-white col-12 col-md-6 col-xl-4">
+          <li class="product bg-white col-12 col-md-6 col-xl-4" data-aos="fade-up">
             <div class="product-img-container overflow-hidden p-3">
               <img
                 src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg"
@@ -463,9 +479,16 @@
       .cart-link:hover {
         transform: scale(1.2);
       }
+
+      @media (min-width: 1400px) {
+        .search-container {
+          width: 700px !important;
+        }
+      }
     </style>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
       const addItemCart = () => {
@@ -485,6 +508,27 @@
           title: "Produto adicionado no carrinho.",
         });
       };
+
+      AOS.init({
+        // Global settings:
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: "aos-init", // class applied after initialization
+        animatedClassName: "aos-animate", // class applied on animation
+        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 800, // values from 0 to 3000, with step 50ms
+        easing: "ease", // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: "top-bottom",
+      });
     </script>
   </body>
 </html>

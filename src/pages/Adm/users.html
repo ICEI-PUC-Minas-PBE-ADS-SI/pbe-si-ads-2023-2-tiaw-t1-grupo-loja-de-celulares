@@ -24,7 +24,7 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <title>Produtos</title>
+    <title>Usuários</title>
   </head>
   <body>
     <header class="py-2">
@@ -61,6 +61,7 @@
               ></i>
             </a>
             <button
+            
               onclick="confirmLogout()"
               class="d-none d-lg-block btn cart-link m-0 p-0 border-0"
             >
@@ -84,17 +85,17 @@
     </header>
 
     <main>
-      <div class="container">
-        <div class="mt-5 d-flex align-items-center justify-content-between">
-          <h2>Produtos</h2>
-          <div>
-            <a href="/src/pages/Adm/home.html" class="btn btn-outline-primary"
-              ><i class="bi bi-arrow-bar-left"></i> Voltar
-            </a>
+        <div class="container">
+          <div class="mt-5 d-flex align-items-center justify-content-between">
+            <h2>Usuários</h2>
+            <div>
+              <a href="/src/pages/Adm/home.html" class="btn btn-outline-primary"
+                ><i class="bi bi-arrow-bar-left"></i> Voltar
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
 
     <style>
       :root {
@@ -142,11 +143,11 @@
           confirmButtonColor: "#3085d6",
           cancelButtonColor: "#d33",
           confirmButtonText: "Sim, desejo!",
-          cancelButtonText: "Não, cancelar.",
+          cancelButtonText: "Não, cancelar."
         }).then((result) => {
           if (result.isConfirmed) {
-            window.location = "/src/pages/Auth/login.html";
-            return;
+            window.location = "/src/pages/Auth/login.html"
+            return
           }
         });
       };
