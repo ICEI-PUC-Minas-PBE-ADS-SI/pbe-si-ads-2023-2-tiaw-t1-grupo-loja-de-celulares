@@ -118,7 +118,11 @@
 
       // Selecionando form e adicionando evento de submit do formulario
       document.querySelector("#login-form").addEventListener("submit", (e) => {
+
+        // Impede que a pagina recarregue ao enviar o formulário
         e.preventDefault();
+
+        // Pegando elementos do formualario
         const { email, password } = e.target.elements;
 
         // Verificando se é o ADM
@@ -127,7 +131,7 @@
           return;
         }
 
-        
+
         // (Kleber) REALIZAR AUTENTICAÇÃO DO USUÁRIO AQUI
 
  
