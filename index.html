@@ -53,7 +53,7 @@
             href="/src/pages/Client/cart.html"
             class="position-absolute btn bg-dark top-0 end-0 d-flex align-items-center justify-content-center"
           >
-            <i class="bi bi-search text-white"></i>
+            <i class="bi bi-search text-white" ></i>
           </a>
         </div>
 
@@ -132,8 +132,7 @@
 
         <button
           class="btn d-block d-lg-none p-0 border-0"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasRight"
+          data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" 
           aria-controls="offcanvasRight"
         >
           <i class="bi bi-list text-white" style="font-size: 3rem"></i>
@@ -382,7 +381,15 @@
             
       </div>
     </main>
-
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        ...
+      </div>
+    </div>
     <style>
       header {
         background-color: rgb(251, 146, 54);
