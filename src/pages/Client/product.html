@@ -1,307 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    
-</head>
-<body>
-    <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-    crossorigin="anonymous"
-  />
 
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
-  />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
 
   <title>Dashboard</title>
-</head>
-<body class="bg-light">
-  <header>
-    <div class="container d-flex align-items-center py-3">
-      <img
-        src="src/assets/Images/logomelhor.png"
-        height="100px"
-        class="me-3"
-        alt=""
-      />
+  </head>
 
-      <div
-        style="width: 700px"
-        class="d-none d-xl-block position-relative search-container"
-      >
-        <input
-          type="text"
-          class="form-control"
-          name=""
-          id=""
-          placeholder="Pesquisar produtos"
-          style="border-radius: 1rem"
-        />
-        <a
-          href="/src/pages/Client/cart.html"
-          class="position-absolute btn bg-dark top-0 end-0 d-flex align-items-center justify-content-center"
-        >
-          <i class="bi bi-search text-white"></i>
-        </a>
-      </div>
+  <body class="bg-light">
+    <header>
+      <div class="container d-flex align-items-center py-3">
+        <img src="src/assets/Images/logomelhor.png" height="100px" class="me-3" alt="" />
 
-      <div
-        class="ms-5 d-flex align-items-center gap-3 justify-content-center "
-        style="width: fit-content;"
-      >
-        <i
-          class="bi bi-person-circle text-white"
-          style="font-size: 1.7rem"
-        ></i>
-        <p class="text-white m-0">
-      
-          <a href="/src/pages/Auth/login.html" class="fw-bold text-white"
-            >Login</a
-          >
-          /
-          
-          <a href="/src/pages/Auth/register.html" class="fw-bold text-white"
-            >Cadastro</a
-          >
-        </p>
-      </div>
+        <div style="width: 700px" class="d-none d-xl-block position-relative search-container">
+          <input type="text" class="form-control" name="" id="" placeholder="Pesquisar produtos"
+            style="border-radius: 1rem" />
+          <a href="/src/pages/Client/cart.html"
+            class="position-absolute btn bg-dark top-0 end-0 d-flex align-items-center justify-content-center">
+            <i class="bi bi-search text-white"></i>
+          </a>
+        </div>
 
-      <nav class="ms-auto justify-content-end d-flex gap-3">
-        <a
-        class="position-relative text-end d-none d-xl-block cart-link"
-        href="https://www.instagram.com/alphacellbetim/" target="_blank"
-        
-      >
-        <i
-          class="bi bi-instagram text-white"
-          style="font-size: 1.7rem !important"
-        ></i>
-      </a>
-        <a
-          class="position-relative text-end d-none d-xl-block cart-link"
-          href="https://www.google.com.br/maps/place/Alpha+Cell+Betim/@-19.9681393,
-          -44.2024054,17z/data=!3m1!4b1!4m6!3m5!1s0xa6c350754611bb:0x65b5d6d67084244b!8m2!3d-19.9681444!4d-44.1998305!16s%2Fg%2F11fn64jp18?entry=ttu"
-          target="_blank"
-          
-        >
-          <i
-            class="bi bi-geo-alt text-white"
-            style="font-size: 1.7rem !important"
-          ></i>
-        </a>
-        <a
-          class="position-relative text-end d-none d-xl-block cart-link"
-          href="/src/pages/Client/cart.html"
-  
-        >
-          <i
-            class="bi bi-bag text-white"
-            style="font-size: 1.7rem !important"
-          ></i>
-          <div
-            class="position-absolute bg-dark text-white d-flex justify-content-center align-items-center top-0 fw-semibold"
-            style="
+        <div class="ms-5 d-flex align-items-center gap-3 justify-content-center " style="width: fit-content;">
+          <i class="bi bi-person-circle text-white" style="font-size: 1.7rem"></i>
+          <p class="text-white m-0">
+
+            <a href="/src/pages/Auth/login.html" class="fw-bold text-white">Login</a>
+            /
+
+            <a href="/src/pages/Auth/register.html" class="fw-bold text-white">Cadastro</a>
+          </p>
+        </div>
+
+        <nav class="ms-auto justify-content-end d-flex gap-3">
+          <a class="position-relative text-end d-none d-xl-block cart-link"
+            href="https://www.instagram.com/alphacellbetim/" target="_blank">
+            <i class="bi bi-instagram text-white" style="font-size: 1.7rem !important"></i>
+          </a>
+          <a class="position-relative text-end d-none d-xl-block cart-link"
+            href="https://www.google.com.br/maps/place/Alpha+Cell+Betim/@-19.9681393,
+          -44.2024054,17z/data=!3m1!4b1!4m6!3m5!1s0xa6c350754611bb:0x65b5d6d67084244b!8m2!3d-19.9681444!4d-44.1998305!16s%2Fg%2F11fn64jp18?entry=ttu" target="_blank">
+            <i class="bi bi-geo-alt text-white" style="font-size: 1.7rem !important"></i>
+          </a>
+          <a class="position-relative text-end d-none d-xl-block cart-link" href="/src/pages/Client/cart.html">
+            <i class="bi bi-bag text-white" style="font-size: 1.7rem !important"></i>
+            <div
+              class="position-absolute bg-dark text-white d-flex justify-content-center align-items-center top-0 fw-semibold"
+              style="
               border-radius: 100%;
               height: 20px;
               width: 20px;
               font-size: 10px;
               right: -10px;
-            "
-          >
-            0
-          </div>
-        </a>
-      </nav>
-    </div>
-  </header>
+            ">
+              0
+            </div>
+          </a>
+        </nav>
+      </div>
+    </header>
 
-  
 
-  <main class="mt-4">
-    <div
-      class="container d-flex gap-4 align-items-start justify-content-center mx-auto"
-    >
-      <section class="d-flex justify-content-center align-items-center" style="height: 60%;">
-        <div class="text-center">
-            <div id="carouselExampleIndicators" class="carousel slide">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+    <main class="mt-4">
+      <div class="container d-flex gap-4 align-items-start justify-content-center mx-auto">
+        <section class="d-flex justify-content-center align-items-center" style="height: 60%;">
+          <div class="text-center">
+           
+
+
+            <div id="carouselExampleControls" class="carousel carousel-dark slide " data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg"
+                  class=" w-100" style="width: 300px !important;">
                 </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg" 
-                    class="d-block w-100"  style="width: 300px !important;">
-                  </div> 
-                  <div class="carousel-item">
-                    <img src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg" 
-                    class="d-block w-100"  style="width: 300px !important;">
-                  </div> 
-                  <div class="carousel-item">
-                    <img src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg" 
-                    class="d-block w-100"  style="width: 300px !important;">
-                  </div> 
-                  
+                <div class="carousel-item">
+                   <img src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg"
+                  class="" style="width: 300px !important;">
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" 
-                ></button>
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
+                <div class="carousel-item">
+                  <img src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg"
+                  class="" style="width: 300px !important;">
+                </div>
               </div>
-              <nav class="navbar bg-body-tertiary">
-                <div class="container-fluid">
-                  <span class="navbar-brand mb-0 h1" >Descrição do Produto</span>
-                </div> 
-            </nav>
-            <div class="container mt-4"> 
-             <p class="text-start">  Ampla tela Touchscreen de 4.7 polegadas com uma boa resolução de 1334x750 pixels. 
-            Quanto às funções, no Apple iPhone 6 realmente não falta nada. </p>
-            <p class="text-start">  Começando pelo conectividade Wi-fi e GPS. A transferência de dados e navegação web sao fornecidas pela rede UMTS, mas não suporta tecnologias mais recentes, tais como HSDPA. Enfatizamos a boa memória interna de 128 GB mas sem a
-             possibilidade de expansão.</p>
-            <p class="text-start"> Ótima a câmera de 8 megapixels que permite ao Apple iPhone 6 tirar fotos com uma resolução de 3264x2448 pixels e gravar vídeos em alta definição (Full HD) com uma resolução de 1920x1080 pixels.
- Muito fino, 6.9 milímetros, o que torna o Apple iPhone 6 realmente interessante.
-</div></p>
- </p>       
-</div>
-    </section>
+              <button class="carousel-control-prev bg-light" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
 
-    <!-- Estilos CSS -->
-    <style>
-        body {
+
+            <nav class="navbar bg-body-tertiary">
+              <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">Descrição do Produto</span>
+              </div>
+            </nav>
+            <div class="container mt-4">
+              <p class="text-start"> Ampla tela Touchscreen de 4.7 polegadas com uma boa resolução de 1334x750 pixels.
+                Quanto às funções, no Apple iPhone 6 realmente não falta nada. </p>
+              <p class="text-start"> Começando pelo conectividade Wi-fi e GPS. A transferência de dados e navegação web
+                sao fornecidas pela rede UMTS, mas não suporta tecnologias mais recentes, tais como HSDPA. Enfatizamos a
+                boa memória interna de 128 GB mas sem a
+                possibilidade de expansão.</p>
+              <p class="text-start"> Ótima a câmera de 8 megapixels que permite ao Apple iPhone 6 tirar fotos com uma
+                resolução de 3264x2448 pixels e gravar vídeos em alta definição (Full HD) com uma resolução de 1920x1080
+                pixels.
+                Muito fino, 6.9 milímetros, o que torna o Apple iPhone 6 realmente interessante.
+            </div>
+            </p>
+            </p>
+          </div>
+        </section>
+
+        <!-- Estilos CSS -->
+        <style>
+          body {
             margin: 0;
             font-family: Arial, sans-serif;
-        }
-        section {
+          }
+
+          section {
             text-align: center;
-        }
-        p {
+          }
+
+          p {
             margin: 5px 0;
-        }
-    </style>
-      <style>
-      header {
-      background-color: rgb(251, 146, 54);
-    }
-    .search-container .btn {
-      height: 38px;
-      width: 40px;
-      border-radius: 0 1rem 1rem 0;
-      transition: opacity 300ms;
-    }
+          }
+        </style>
+        <style>
+          header {
+            background-color: rgb(251, 146, 54);
+          }
 
-    .search-container .btn:hover {
-      opacity: 0.8;
-    }
-    .product {
-      max-width: 296px;
-      border: 2px solid rgba(245, 245, 245, 1);
+          .search-container .btn {
+            height: 38px;
+            width: 40px;
+            border-radius: 0 1rem 1rem 0;
+            transition: opacity 300ms;
+          }
 
-      cursor: pointer;
-    }
+          .search-container .btn:hover {
+            opacity: 0.8;
+          }
 
-    .product-img-container {
-      height: 200px;
-      /* background-color: rgba(245, 245, 245, 1); */
-    }
+          .product {
+            max-width: 296px;
+            border: 2px solid rgba(245, 245, 245, 1);
 
-    .product:hover .product-img-container .img-fluid {
-      transform: scale(1.2);
-    }
+            cursor: pointer;
+          }
 
-    .product-brand {
-      width: fit-content;
-      background-color: rgba(46, 36, 94, 1);
-      font-family: Inter;
-      font-size: 12px;
-      font-weight: 400;
-      text-align: left;
-      padding: 5px 12px;
-    }
+          .product-img-container {
+            height: 200px;
+            /* background-color: rgba(245, 245, 245, 1); */
+          }
 
-    .product-content-container {
-      padding: 20px 15px;
-    }
-    .product-price {
-      font-family: Inter;
-      font-size: 14px;
-      font-weight: 600;
-      line-height: 16px;
-      letter-spacing: 0em;
-      text-align: left;
-      color: rgb(79, 79, 79);
-    }
-    .product-title {
-      font-family: Inter;
-      font-size: 18px;
-      font-weight: 700;
-      line-height: 24px;
-      letter-spacing: 0em;
-      text-align: left;
-    }
+          .product:hover .product-img-container .img-fluid {
+            transform: scale(1.2);
+          }
 
-    .product-description {
-      font-family: Inter;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 24px;
-      letter-spacing: 0em;
-    }
+          .product-brand {
+            width: fit-content;
+            background-color: rgba(46, 36, 94, 1);
+            font-family: Inter;
+            font-size: 12px;
+            font-weight: 400;
+            text-align: left;
+            padding: 5px 12px;
+          }
 
-    .img-fluid {
-      object-fit: cover;
-      transition: all 300ms;
-    }
+          .product-content-container {
+            padding: 20px 15px;
+          }
 
-    .product .btn {
-      font-family: Inter;
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 16px;
-      letter-spacing: 0em;
-      text-align: left;
-    }
-    .product .btn:hover {
-      color: #ffbe26;
-    }
+          .product-price {
+            font-family: Inter;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 16px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: rgb(79, 79, 79);
+          }
 
-    .filtros {
-      width: 300px;
-    }
+          .product-title {
+            font-family: Inter;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+          }
 
-    .cart-link {
-      transition: all 300ms;
-    }
-    .cart-link:hover {
-      transform: scale(1.2);
-    }
-  </style>
-    <style>
+          .product-description {
+            font-family: Inter;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+          }
 
-    </style>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+          .img-fluid {
+            object-fit: cover;
+            transition: all 300ms;
+          }
 
-  <!-- <script>
+          .product .btn {
+            font-family: Inter;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 16px;
+            letter-spacing: 0em;
+            text-align: left;
+          }
+
+          .product .btn:hover {
+            color: #ffbe26;
+          }
+
+          .filtros {
+            width: 300px;
+          }
+
+          .cart-link {
+            transition: all 300ms;
+          }
+
+          .cart-link:hover {
+            transform: scale(1.2);
+          }
+        </style>
+        <style>
+
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <!-- <script>
     const addItemCart = () => {
       const Toast = Swal.mixin({
         toast: true,
@@ -320,9 +276,11 @@
       });
     };
   </script> !-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+
 </html>
 
 </body>
+
 </html>
