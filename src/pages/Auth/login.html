@@ -103,6 +103,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
+      // Configuração do Toastfiy
       const Toast = Swal.mixin({
         toast: true,
         position: "top-end",
@@ -115,25 +116,26 @@
         },
       });
 
+      // Selecionando form e adicionando evento de submit do formulario
       document.querySelector("#login-form").addEventListener("submit", (e) => {
         e.preventDefault();
         const { email, password } = e.target.elements;
 
-        // ADM
+        // Verificando se é o ADM
         if (email.value === "adm@gmail.com" && password.value === "1234") {
           window.location = "/src/pages/Adm/home.html";
           return;
         }
 
+        
+        // (Kleber) REALIZAR AUTENTICAÇÃO DO USUÁRIO AQUI
 
-
-       
-        // REALIZAR AUTENTICAÇÃO DO USUÁRIO
-
-
+ 
 
          
-        // Condição caso o usuário não existir
+
+
+        // Caso o usuário não existir exibir esse toast como mensagem de erro 
         Toast.fire({
           icon: "error",
           title: "Dados inválidos por favor tente novamente.",
