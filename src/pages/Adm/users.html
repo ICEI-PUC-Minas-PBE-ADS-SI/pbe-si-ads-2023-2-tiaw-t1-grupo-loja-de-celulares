@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
   <title>Usuários Cadastrados</title>
 </head>
 
@@ -51,6 +51,7 @@
   </header>
 
   <main>
+    
     <div class="container">
       <div class="mt-5 d-flex align-items-center justify-content-between">
         <h2>Relatório de Usuários Cadastrados</h2>
@@ -59,6 +60,7 @@
           </a>
         </div>
       </div>
+      
       <table class="table mt-5">
         <thead>
           <tr>
@@ -76,7 +78,7 @@
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td>Cleber Junior</td>
+            <td><i class="bi bi-shield-shaded"></i> Cleber Junior</td>
             <td>123.456.789-10</td>
             <td class="text-center">beleza123</td>
             <td class="text-center">01/02/2023 09:45:22</td>
@@ -89,7 +91,7 @@
           </tr>
           <tr>
             <th scope="row">2</th>
-            <td>Leornado Martins</td>
+            <td><i class="bi bi-shield-shaded"></i> Leornado Martins</td>
             <td>123.456.789-10</td>
             <td class="text-center">beleza123</td>
             <td class="text-center">02/02/2023 10:15:43</td>
@@ -102,7 +104,7 @@
           </tr>
           <tr>
             <th scope="row">3</th>
-            <td>Eric Pedro</td>
+            <td><i class="bi bi-shield-shaded"></i> Eric Pedro</td>
             <td>123.456.789-10</td>
             <td class="text-center">beleza123</td>
             <td class="text-center">03/02/2023 11:30:55</td>
@@ -115,10 +117,36 @@
           </tr>
           <tr>
             <th scope="row">4</th>
-            <td>Caio Queiroz</td>
+            <td><i class="bi bi-shield-shaded"></i> Caio Queiroz</td>
             <td>123.456.789-10</td>
             <td class="text-center">beleza123</td>
             <td class="text-center">04/02/2023 12:20:18</td>
+            <td>Online</td>
+            <td>
+              <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#order-modal">
+                Editar
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td><i class="bi bi-shield-shaded"></i> Gabriel Eduardo</td>
+            <td>123.456.789-10</td>
+            <td class="text-center">beleza123</td>
+            <td class="text-center">04/02/2023 17:45:10</td>
+            <td>Online</td>
+            <td>
+              <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#order-modal">
+                Editar
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td><i class="bi bi-shield-shaded"></i> Thales Henrique</td>
+            <td>123.456.789-10</td>
+            <td class="text-center">beleza123</td>
+            <td class="text-center">07/02/2023 14:12:42</td>
             <td>Offline</td>
             <td>
               <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#order-modal">
@@ -126,9 +154,123 @@
               </button>
             </td>
           </tr>
-
-          <!-- ESPAÇO PARA COLOCA MAIS-->
-
+          <tr>
+            <th scope="row">7</th>
+            <td>Théo</td>
+            <td>123.456.789-10</td>
+            <td class="text-center">83DRENgM9n</td>
+            <td class="text-center">15/11/2023 17:42:36</td>
+            <td>Offline</td>
+            <td>
+              <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#order-modal">
+                Editar
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">8</th>
+            <td>Heitor</td>
+            <td>123.456.789-10</td>
+            <td class="text-center">b2jNS2CkJ3</td>
+            <td class="text-center">09/01/2023 09:15:44</td>
+            <td>Online</td>
+            <td>
+              <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#order-modal">
+                Editar
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">9</th>
+            <td>Ravi</td>
+            <td>123.456.789-10</td>
+            <td class="text-center">i9syMAwsU9</td>
+            <td class="text-center">04/05/2023 12:30:59</td>
+            <td>Offline</td>
+            <td>
+              <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#order-modal">
+                Editar
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">10</th>
+            <td>Davi</td>
+            <td>123.456.789-10</td>
+            <td class="text-center">xLkUwl7QtQ</td>
+            <td class="text-center">22/08/2023 19:55:22</td>
+            <td>Online</td>
+            <td>
+              <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#order-modal">
+                Editar
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">11</th>
+            <td>Bernardo</td>
+            <td>123.456.789-10</td>
+            <td class="text-center">2sQgiQzlHB</td>
+            <td class="text-center">11/12/2023 14:10:18</td>
+            <td>Offline</td>
+            <td>
+              <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#order-modal">
+                Editar
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">12</th>
+            <td>Maria</td>
+            <td>123.456.789-10</td>
+            <td class="text-center">rxmH3xDcOt</td>
+            <td class="text-center">28/03/2023 22:40:07</td>
+            <td>Online</td>
+            <td>
+              <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#order-modal">
+                Editar
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">13</th>
+            <td>Ana</td>
+            <td>123.456.789-10</td>
+            <td class="text-center">lf4arI7glh</td>
+            <td class="text-center">14/06/2023 16:05:34</td>
+            <td>Offline</td>
+            <td>
+              <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#order-modal">
+                Editar
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">14</th>
+            <td>Júlia</td>
+            <td>123.456.789-10</td>
+            <td class="text-center">Fh9cOsjmyd</td>
+            <td class="text-center">01/09/2023 10:22:51</td>
+            <td>Online</td>
+            <td>
+              <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#order-modal">
+                Editar
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">15</th>
+            <td>Alice</td>
+            <td>123.456.789-10</td>
+            <td class="text-center">TkryXTCPYg</td>
+            <td class="text-center">19/12/2023 18:45:03</td>
+            <td>Offline</td>
+            <td>
+              <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#order-modal">
+                Editar
+              </button>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
