@@ -167,7 +167,7 @@
       </div>
     </section>
 
-    <main class="mt-4">
+    <main class="my-4">
       <div
         class="container d-flex gap-4 align-items-start justify-content-center mx-auto"
       >
@@ -318,7 +318,56 @@
               </button>
             </div>
           </li>
-          <li class="product bg-white col-12 col-md-6 col-xl-4">
+          <li class="product bg-white col-12 col-md-6 col-xl-4" data-aos="fade-up">
+            <div class="product-img-container overflow-hidden p-3">
+              <a href="/src/pages/Client/product.html">
+              <img
+                src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg"
+                alt=""
+                class="img-fluid"
+              />
+            </a>
+            </div>
+            <div
+              class="d-flex flex-column justify-content-between product-content-container gap-3"
+            >
+              <span class="product-brand text-white"> Celular </span>
+              <h6 class="product-title m-0">Iphone 6s</h6>
+              <p class="product-description m-0">
+                O iPhone 6s é um smartphone desenvolvido pela Apple e lançado em
+                setembro de 2015.
+              </p>
+              <p class="product-price m-0">R$ 1800.00</p>
+              <button class="btn m-0 p-0 border-0" onclick="addItemCart()">
+                Adicionar ao carrinho
+              </button>
+            </div>
+          </li>
+          <li class="product bg-white col-12 col-md-6 col-xl-4" data-aos="fade-up">
+            <div class="product-img-container overflow-hidden p-3">
+             <a href="/src/pages/Client/product.html">
+              <img
+                src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg"
+                
+                class="img-fluid"/>
+              </a>
+              </div>
+            <div
+              class="d-flex flex-column justify-content-between product-content-container gap-3"
+            >
+              <span class="product-brand text-white"> Celular </span>
+              <h6 class="product-title m-0">Iphone 6s</h6>
+              <p class="product-description m-0">
+                O iPhone 6s é um smartphone desenvolvido pela Apple e lançado em
+                setembro de 2015.
+              </p>
+              <p class="product-price m-0">R$ 1800.00</p>
+              <button class="btn m-0 p-0 border-0" onclick="addItemCart()">
+                Adicionar ao carrinho
+              </button>
+            </div>
+          </li>
+          <li class="product bg-white col-12 col-md-6 col-xl-4" data-aos="fade-up">
             <div class="product-img-container overflow-hidden p-3">
               <a href="/src/pages/Client/product.html">
               <img
@@ -327,7 +376,9 @@
                 class="img-fluid"/>
               </a>
             </div>
-            <div class="d-flex flex-column justify-content-between product-content-container gap-3">
+            <div
+              class="d-flex flex-column justify-content-between product-content-container gap-3"
+            >
               <span class="product-brand text-white"> Celular </span>
               <h6 class="product-title m-0">Iphone 6s</h6>
               <p class="product-description m-0">
@@ -340,52 +391,7 @@
               </button>
             </div>
           </li>
-          <li class="product bg-white col-12 col-md-6 col-xl-4">
-            <div class="product-img-container overflow-hidden p-3">
-              <a href="/src/pages/Client/product.html">
-              <img
-                src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg"
-                alt=""
-                class="img-fluid"
-              />
-              </a>
-            </div>
-            <div class="d-flex flex-column justify-content-between product-content-container gap-3">
-              <span class="product-brand text-white"> Celular </span>
-              <h6 class="product-title m-0">Iphone 6s</h6>
-              <p class="product-description m-0">
-                O iPhone 6s é um smartphone desenvolvido pela Apple e lançado em
-                setembro de 2015.
-              </p>
-              <p class="product-price m-0">R$ 1800.00</p>
-              <button class="btn m-0 p-0 border-0" onclick="addItemCart()">
-                Adicionar ao carrinho
-              </button>
-            </div>
-          </li>
-          <li class="product bg-white col-12 col-md-6 col-xl-4">
-            <div class="product-img-container overflow-hidden p-3">
-              <a href="/src/pages/Client/product.html">
-              <img
-                src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg"
-                alt=""
-                class="img-fluid"
-              />
-              </a>
-            </div>
-            <div class="d-flex flex-column justify-content-between product-content-container gap-3">
-              <span class="product-brand text-white"> Celular </span>
-              <h6 class="product-title m-0">Iphone 6s</h6>
-              <p class="product-description m-0">
-                O iPhone 6s é um smartphone desenvolvido pela Apple e lançado em
-                setembro de 2015.
-              </p>
-              <p class="product-price m-0">R$ 1800.00</p>
-              <button class="btn m-0 p-0 border-0" onclick="addItemCart()">
-                Adicionar ao carrinho
-              </button>
-            </div>
-          </li>
+        
         </ul>
             
       </div>
@@ -507,6 +513,12 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
+       const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
       const addItemCart = () => {
         const Toast = Swal.mixin({
           toast: true,
