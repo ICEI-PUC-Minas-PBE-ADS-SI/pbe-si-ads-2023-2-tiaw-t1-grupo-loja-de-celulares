@@ -93,23 +93,35 @@
             </a>
           </div>
         </div>
+        <div>
+          <button class="m-5 btn btn-sm btn-secondary float-end"
+                  data-bs-toggle="modal"
+                  data-bs-target="#cadastroModal">
+              <h3 style="color: white;">Adicionar produto</h3>
+          </button>
+      </div>
         <table class="table mt-5">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nome do Cliente</th>
+              <th scope="col">Nome do Produto</th>
+              <th scope="col" style="text-align: center">Unidade em Estoque</th>
+              <th scope="col" style="text-align: center">
+                Categoria
+              </th>
+              <th scope="col">Preço</th>
+              <th scope="col">Ações</th>
+            </tr>
+          </thead>
           <tbody>
             <tr>
               <th scope="row"></th>
               <td><img src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg" alt="" width="100px"></td>
-              <td>Fones de Ouvido Haylou GT3</td>
+              <td>Iphone 6s</td>
               <td class="text-center"><strong>50 unidades</strong></td>
-              <td class="text-center">
-                <button
-                  class="btn btn-sm btn-dark"
-                  data-bs-toggle="modal"
-                  data-bs-target="#order-modal"
-                >
-                  Descrição
-                </button>
-              </td>
-              <td><strong>R$ 229,99</strong></td>
+              <td class="text-center">Celular</td>
+              <td><strong>R$ 1800.00</strong></td>
               <td>
                 <button
                   class="btn btn-sm btn-primary"
@@ -123,18 +135,10 @@
             <tr>
               <th scope="row"></th>
               <td><img src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg" alt="" width="100px"></td>
-              <td>Fones de Ouvido Haylou GT3</td>
+              <td>Iphone 6s</td>
               <td class="text-center"><strong>50 unidades</strong></td>
-              <td class="text-center">
-                <button
-                  class="btn btn-sm btn-dark"
-                  data-bs-toggle="modal"
-                  data-bs-target="#order-modal"
-                >
-                  Descrição
-                </button>
-              </td>
-              <td><strong>R$ 229,99</strong></td>
+              <td class="text-center">Celular</td>
+              <td><strong>R$ 1800.00</strong></td>
               <td>
                 <button
                   class="btn btn-sm btn-primary"
@@ -147,18 +151,10 @@
             </tr><tr>
               <th scope="row"></th>
               <td><img src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg" alt="" width="100px"></td>
-              <td>Fones de Ouvido Haylou GT3</td>
+              <td>Iphone 6s</td>
               <td class="text-center"><strong>50 unidades</strong></td>
-              <td class="text-center">
-                <button
-                  class="btn btn-sm btn-dark"
-                  data-bs-toggle="modal"
-                  data-bs-target="#order-modal"
-                >
-                  Descrição
-                </button>
-              </td>
-              <td><strong>R$ 229,99</strong></td>
+              <td class="text-center">Celular</td>
+              <td><strong>R$ 1800.00</strong></td>
               <td>
                 <button
                   class="btn btn-sm btn-primary"
@@ -171,18 +167,10 @@
             </tr><tr>
               <th scope="row"></th>
               <td><img src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg" alt="" width="100px"></td>
-              <td>Fones de Ouvido Haylou GT3</td>
+              <td>Iphone 6s</td>
               <td class="text-center"><strong>50 unidades</strong></td>
-              <td class="text-center">
-                <button
-                  class="btn btn-sm btn-dark"
-                  data-bs-toggle="modal"
-                  data-bs-target="#order-modal"
-                >
-                  Descrição
-                </button>
-              </td>
-              <td><strong>R$ 229,99</strong></td>
+              <td class="text-center">Celular</td>
+              <td><strong>R$ 1800.00</strong></td>
               <td>
                 <button
                   class="btn btn-sm btn-primary"
@@ -195,18 +183,10 @@
             </tr><tr>
               <th scope="row"></th>
               <td><img src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg" alt="" width="100px"></td>
-              <td>Fones de Ouvido Haylou GT3</td>
+              <td>Iphone 6s</td>
               <td class="text-center"><strong>50 unidades</strong></td>
-              <td class="text-center">
-                <button
-                  class="btn btn-sm btn-dark"
-                  data-bs-toggle="modal"
-                  data-bs-target="#order-modal"
-                >
-                  Descrição
-                </button>
-              </td>
-              <td><strong>R$ 229,99</strong></td>
+              <td class="text-center">Celular</td>
+              <td><strong>R$ 1800.00</strong></td>
               <td>
                 <button
                   class="btn btn-sm btn-primary"
@@ -257,12 +237,12 @@
                           <div class="col">
                               <select class="form-select" id="categoriaProduto" style="width: 77%;" required>
                                   <option value="" disabled selected>Categoria</option>
-                                  <option value="categoria1">Celular</option>
-                                  <option value="categoria2">Fone</option>
-                                  <option value="categoria3">Caixa de som</option>
-                                  <option value="categoria4">Bateria</option>
-                                  <option value="categoria5">Mouse/Teclado</option>
-                                  <option value="categoria6">Capinha/Película</option>
+                                  <option value="Celular">Celular</option>
+                                  <option value="Fone">Fone</option>
+                                  <option value="Caixa de som">Caixa de som</option>
+                                  <option value="Bateria">Bateria</option>
+                                  <option value="Mouse/Teclado">Mouse/Teclado</option>
+                                  <option value="Capinha/película">Capinha/Película</option>
                               </select>
                           </div>
                       </div>
@@ -401,21 +381,15 @@
             card.innerHTML = `
             <div class="container">
             
-            <table class="table mt-5">
+        <table class="table mt-5">
           <tbody>
             <tr>
-              <th scope="row"></th>
+              <th scope="row"> </th>
               <td><img src="${imagem}" alt="" width="100px"></td>
               <td>${nome}</td>
               <td class="text-center"><strong>50 unidades</strong></td>
               <td class="text-center">
-                <button
-                  class="btn btn-sm btn-dark"
-                  data-bs-toggle="modal"
-                  data-bs-target="#order-modal"
-                >
-                  Descrição
-                </button>
+                ${categoria}
               </td>
               <td><strong>${preco}</strong></td>
               <td>
