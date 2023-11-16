@@ -121,6 +121,9 @@
         </nav>
       </div>
     </header>
+      <section class="text-center mt-4 iphone-section" >
+      <h2>Iphone 6s</h2>
+      </section>
 
     <main class="mt-4">
       <div
@@ -136,7 +139,7 @@
               class="carousel carousel-dark slide"
               data-bs-ride="carousel"
             >
-              <div class="carousel-inner">
+              <div class="carousel-inner" >
                 <div class="carousel-item active">
                   <a href=""></a>
                   <img
@@ -177,6 +180,7 @@
                 type="button"
                 data-bs-target="#carouselExampleControls"
                 data-bs-slide="next"
+                style="width: 300px;"
               >
                 <span
                   class="carousel-control-next-icon"
@@ -186,11 +190,22 @@
               </button>
             </div>
             <nav class="navbar bg-body-tertiary">
+              <div class="container-fluid d-flex justify-content-between align-items-center">
+               
+                <div class="d-flex align-items-center">
+                  <span class="me-4"><b>Valor:</b> $1899,00</span>
+                  <button class="btn btn-primary" onclick="addItemCart()">
+                    Adicionar ao carrinho
+                  </button>
+                </div>
+              </div>
+            </nav>
+            <nav class="navbar bg-body-tertiary">
               <div class="container-fluid">
                 <span class="navbar-brand mb-0 h1">Descrição do Produto</span>
               </div>
             </nav>
-            <div class="container mt-4">
+            <div class="container mt-4 text-section">
               <p class="text-start">
                 Ampla tela Touchscreen de 4.7 polegadas com uma boa resolução de
                 1334x750 pixels. Quanto às funções, no Apple iPhone 6 realmente
@@ -236,6 +251,16 @@
         background-color: rgb(251, 146, 54);
       }
 
+      .iphone-section{
+        background-color: rgba(245, 245, 245, 1);
+        padding: 10px; 
+    border-radius: 10px; 
+      }
+      .text-section{
+        background-color: rgba(245, 245, 245, 1);
+         
+         
+      }
       .search-container .btn {
         height: 38px;
         width: 40px;
@@ -337,7 +362,7 @@
     
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <!-- <script>
+     <script>
     const addItemCart = () => {
       const Toast = Swal.mixin({
         toast: true,
@@ -355,7 +380,7 @@
         title: "Produto adicionado no carrinho.",
       });
     };
-  </script> !-->
+  </script> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
