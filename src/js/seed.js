@@ -6,6 +6,7 @@ const seed = {
         "id": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
         "name": "Produto teste",
         "category" : "capas",
+        "quantity": 50,
         "brand": "Samsung",
         "description": "",
         "price": 120,
@@ -34,3 +35,4 @@ const seed = {
 
   
 };
+

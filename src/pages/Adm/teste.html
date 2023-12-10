@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabela Dinâmica</title>
+  <!-- Adicione o Bootstrap 5.0 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+  <table class="table mt-5">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome do Cliente</th>
+        <th scope="col">Nome do Produto</th>
+        <th scope="col" style="text-align: center">Unidade em Estoque</th>
+        <th scope="col" style="text-align: center">Categoria</th>
+        <th scope="col">Preço</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody id="tabela-corpo">
+      <!-- Linhas da tabela serão adicionadas aqui dinamicamente -->
+    </tbody>
+  </table>
+
+  <!-- Adicione o Bootstrap 5.0 JS e dependências para funcionalidades como modais -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+  <script>
+    // Dados de exemplo do seed.js
+    const seed = {
+      stock: {
+        products: [
+          {
+            "id": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+            "name": "Produto teste",
+            "category" : "capas",
+            "brand": "Samsung",
+            "description": "",
+            "price": 120,
+            "img": ""
+          }
+          // Adicione mais produtos conforme necessário
+        ]
+      }
+    };
+
+    // Referência ao corpo da tabela
+    const tabelaCorpo = document.getElementById('tabela-corpo');
+
+    // Preencha a tabela com os dados do seed.js
+    seed.stock.products.forEach((produto, index) => {
+      const newRow = tabelaCorpo.insertRow();
+
+      // Adicione as células conforme a ordem das colunas
+      newRow.insertCell(0).textContent = index + 1;
+      newRow.insertCell(1).textContent = produto.name ;
+      newRow.insertCell(2).textContent = produto.category;
+      newRow.insertCell(3).textContent = `${produto.quantity}`;
+      newRow.insertCell(4).textContent = produto.description;
+      newRow.insertCell(5).innerHTML = `<strong>${produto.price}</strong>`;
+      newRow.insertCell(6).innerHTML = `
+        <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#cadastroModal">
+          Editar
+        </button>
+      `;
+    });
+  </script>
+
+
+</body>
+</html>
