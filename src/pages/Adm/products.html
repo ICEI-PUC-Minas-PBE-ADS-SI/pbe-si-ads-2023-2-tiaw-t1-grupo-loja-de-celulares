@@ -113,133 +113,19 @@
           </div>
         </div>
         <table class="table mt-5">
-          <thead>
+          <thead style="background-color: rgb(251, 146, 54);">
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Imagem</th>
-              <th scope="col">Nome do Produto</th>
+              <th scope="col" style="text-align: center">Imagem</th>
+              <th scope="col" style="text-align: center">Nome do Produto</th>
               <th scope="col" style="text-align: center">Unidade em Estoque</th>
               <th scope="col" style="text-align: center">Categoria</th>
-              <th scope="col">Preço</th>
-              <th scope="col">Ações</th>
+              <th scope="col" style="text-align: center">Preço</th>
+              <th scope="col" style="text-align: center">Ações</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <th scope="row"></th>
-              <td>
-                <img
-                  src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg"
-                  alt=""
-                  width="100px"
-                />
-              </td>
-              <td>Iphone 6s</td>
-              <td class="text-center"><strong>50 unidades</strong></td>
-              <td class="text-center">Celular</td>
-              <td><strong>R$ 1800.00</strong></td>
-              <td>
-                <button
-                  class="btn btn-sm btn-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#cadastroModal"
-                >
-                  Editar
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row"></th>
-              <td>
-                <img
-                  src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg"
-                  alt=""
-                  width="100px"
-                />
-              </td>
-              <td>Iphone 6s</td>
-              <td class="text-center"><strong>50 unidades</strong></td>
-              <td class="text-center">Celular</td>
-              <td><strong>R$ 1800.00</strong></td>
-              <td>
-                <button
-                  class="btn btn-sm btn-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#cadastroModal"
-                >
-                  Editar
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row"></th>
-              <td>
-                <img
-                  src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg"
-                  alt=""
-                  width="100px"
-                />
-              </td>
-              <td>Iphone 6s</td>
-              <td class="text-center"><strong>50 unidades</strong></td>
-              <td class="text-center">Celular</td>
-              <td><strong>R$ 1800.00</strong></td>
-              <td>
-                <button
-                  class="btn btn-sm btn-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#cadastroModal"
-                >
-                  Editar
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row"></th>
-              <td>
-                <img
-                  src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg"
-                  alt=""
-                  width="100px"
-                />
-              </td>
-              <td>Iphone 6s</td>
-              <td class="text-center"><strong>50 unidades</strong></td>
-              <td class="text-center">Celular</td>
-              <td><strong>R$ 1800.00</strong></td>
-              <td>
-                <button
-                  class="btn btn-sm btn-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#cadastroModal"
-                >
-                  Editar
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row"></th>
-              <td>
-                <img
-                  src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg"
-                  alt=""
-                  width="100px"
-                />
-              </td>
-              <td>Iphone 6s</td>
-              <td class="text-center"><strong>50 unidades</strong></td>
-              <td class="text-center">Celular</td>
-              <td><strong>R$ 1800.00</strong></td>
-              <td>
-                <button
-                  class="btn btn-sm btn-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#cadastroModal"
-                >
-                  Editar
-                </button>
-              </td>
-            </tr>
+          <tbody id="tabela-corpo" style="text-align: center">
+            
           </tbody>
         </table>
       </div>
@@ -413,8 +299,38 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../../js/seed.js"></script>
 
     <script>
+ if (typeof seed !== 'undefined') {
+      // Referência ao corpo da tabela
+      const tabelaCorpo = document.getElementById('tabela-corpo');
+
+      // Preencha a tabela com os dados do seed.js
+      seed.stock.products.forEach((produto, index) => {
+        const newRow = tabelaCorpo.insertRow();
+
+        // Adicione as células conforme a ordem das colunas
+        newRow.insertCell(0).textContent = index + 1;
+        newRow.insertCell(1).innerHTML = `<img
+                  src="${produto.img}"
+                  alt=""
+                  width="100px"
+                />`;
+        newRow.insertCell(2).textContent = produto.name;
+        newRow.insertCell(3).innerHTML =`<strong> ${produto.quantity +" Unidades"} </strong>`;
+        newRow.insertCell(4).textContent = produto.category;
+        newRow.insertCell(5).innerHTML = `<strong>R$ ${produto.price}</strong>`;
+        newRow.insertCell(6).innerHTML = `
+          <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#cadastroModal">
+            Editar
+          </button>
+        `;
+      });
+    } else {
+      console.error('O objeto "seed" não está definido. Verifique o carregamento do arquivo seed.js.');
+    }
+
       const tooltipTriggerList = document.querySelectorAll(
         '[data-bs-toggle="tooltip"]'
       );

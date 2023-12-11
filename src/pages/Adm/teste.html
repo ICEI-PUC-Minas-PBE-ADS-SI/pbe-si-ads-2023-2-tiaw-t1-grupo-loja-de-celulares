@@ -45,11 +45,15 @@
 
         // Adicione as células conforme a ordem das colunas
         newRow.insertCell(0).textContent = index + 1;
-        newRow.insertCell(1).textContent = produto.name;
+        newRow.insertCell(1).innerHTML = `<img
+                  src="${produto.img}"
+                  alt=""
+                  width="100px"
+                />`;
         newRow.insertCell(2).textContent = produto.name;
         newRow.insertCell(3).innerHTML =`<strong> ${produto.quantity +" Unidades"} </strong>`;
         newRow.insertCell(4).textContent = produto.category;
-        newRow.insertCell(5).innerHTML = `<strong>${produto.price}</strong>`;
+        newRow.insertCell(5).innerHTML = `<strong>R$ ${produto.price}</strong>`;
         newRow.insertCell(6).innerHTML = `
           <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#cadastroModal">
             Editar
