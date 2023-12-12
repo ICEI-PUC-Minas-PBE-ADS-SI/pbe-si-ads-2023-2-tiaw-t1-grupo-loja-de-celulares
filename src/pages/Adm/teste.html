@@ -9,6 +9,17 @@
 </head>
 <body>
 
+  <div class="d-flex align-items-center justify-content-end mt-2">
+    <div>
+      <button
+        class="btn btn-outline-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#cadastroModal"
+      >
+        <i class="bi bi-plus"></i> Adicionar produto
+      </button>
+    </div>
+  </div>
   <table class="table mt-5">
     <thead>
       <tr>
@@ -25,7 +36,120 @@
       <!-- Linhas da tabela serão adicionadas aqui dinamicamente -->
     </tbody>
   </table>
-
+  <!--Modal para cadastro de produtos-->
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="cadastroModal"
+      tabindex="-1"
+      aria-labelledby="cadastroModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" style="max-width: 500px">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              style="background-color: rgb(251, 146, 54)"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Formulário de cadastro de produto -->
+            <form id="produtoForm">
+              <!-- Adicione uma entrada oculta para o índice do produto sendo editado -->
+              <input type="hidden" id="produtoIndex" value="" />
+              <div class="mb-3" style="display: flex; justify-content: center">
+                <input
+                  type="text"
+                  style="width: 80%"
+                  class="form-control"
+                  id="nomeProduto"
+                  placeholder="Nome do Produto"
+                  required
+                />
+              </div>
+              <div class="mb-3" style="display: flex; justify-content: center">
+                <input
+                  type="file"
+                  class="form-control"
+                  id="imagemProduto"
+                  accept="image/*"
+                  style="display: none"
+                />
+                <img
+                  id="imagemPlaceholder"
+                  src="/src/assets/Images/placeholder.png"
+                  class="img-fluid"
+                  alt="Imagem do Produto"
+                  style="width: 80%; cursor: pointer"
+                  onclick="document.getElementById('imagemProduto').click();"
+                />
+              </div>
+              <div class="mb-3" style="display: flex; justify-content: center">
+                <textarea
+                  style="width: 80%"
+                  class="form-control text-center"
+                  id="descricaoProduto"
+                  rows="3"
+                  placeholder="Digite a descrição do produto"
+                  required
+                ></textarea>
+              </div>
+              <div
+                class="row mb-3"
+                style="display: flex; justify-content: center"
+              >
+                <div class="col input-group" style="padding-left: 11.5%">
+                  <span class="input-group-text">Preço</span>
+                  <input
+                    type="text"
+                    class="form-control text-center"
+                    id="precoProduto"
+                    placeholder="R$ 0,00"
+                    required
+                  />
+                </div>
+                <div class="col">
+                  <select
+                    class="form-select"
+                    id="categoriaProduto"
+                    style="width: 77%"
+                    required
+                  >
+                    <option value="" disabled selected>Categoria</option>
+                    <option value="Celular">Celular</option>
+                    <option value="Fone">Fone</option>
+                    <option value="Caixa de som">Caixa de som</option>
+                    <option value="Bateria">Bateria</option>
+                    <option value="Mouse/Teclado">Mouse/Teclado</option>
+                    <option value="Capinha/película">Capinha/Película</option>
+                  </select>
+                </div>
+              </div>
+              <div
+                style="display: flex; justify-content: center; padding: 6% 0"
+              >
+                <button
+                  type="button"
+                  class="btn text-white btn-block"
+                  style="
+                    width: 80%;
+                    height: 45px;
+                    background-color: rgb(251, 146, 54);
+                  "
+                  onclick="cadastrarEditarProduto()"
+                >
+                  Cadastrar
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   <!-- Adicione o Bootstrap 5.0 JS e dependências para funcionalidades como modais -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
@@ -34,35 +158,69 @@
   <script src="../../js/seed.js"></script>
 
   <script>
-    // Verifique se a variável seed está definida
-    if (typeof seed !== 'undefined') {
-      // Referência ao corpo da tabela
-      const tabelaCorpo = document.getElementById('tabela-corpo');
+    // Função para preencher o formulário com os dados do produto
+    function preencherFormulario(index) {
+      const produto = seed.stock.products[index];
+      document.getElementById('produtoIndex').value = index;
+      document.getElementById('nomeProduto').value = produto.name;
+      document.getElementById('imagemPlaceholder').src = produto.img;
+      document.getElementById('descricaoProduto').value = produto.description;
+      document.getElementById('precoProduto').value = produto.price;
+      document.getElementById('categoriaProduto').value = produto.category;
+    }
 
-      // Preencha a tabela com os dados do seed.js
+    // Função para cadastrar ou editar um produto
+    function cadastrarEditarProduto() {
+      const index = document.getElementById('produtoIndex').value;
+      const novoProduto = {
+        name: document.getElementById('nomeProduto').value,
+        img: document.getElementById('imagemPlaceholder').src,
+        description: document.getElementById('descricaoProduto').value,
+        price: document.getElementById('precoProduto').value,
+        category: document.getElementById('categoriaProduto').value,
+      };
+
+      // Se index for -1, é um novo produto, caso contrário, é uma edição
+      if (index === '-1') {
+        seed.stock.products.push(novoProduto);
+      } else {
+        seed.stock.products[index] = novoProduto;
+      }
+
+      // Atualizar a tabela e fechar o modal
+      atualizarTabela();
+      fecharModal();
+    }
+
+    // Função para fechar o modal
+    function fecharModal() {
+      const modal = new bootstrap.Modal(document.getElementById('cadastroModal'));
+      modal.hide();
+    }
+
+    // Função para atualizar a tabela com os dados do seed.js
+    function atualizarTabela() {
+      const tabelaCorpo = document.getElementById('tabela-corpo');
+      tabelaCorpo.innerHTML = '';
+
       seed.stock.products.forEach((produto, index) => {
         const newRow = tabelaCorpo.insertRow();
 
-        // Adicione as células conforme a ordem das colunas
         newRow.insertCell(0).textContent = index + 1;
-        newRow.insertCell(1).innerHTML = `<img
-                  src="${produto.img}"
-                  alt=""
-                  width="100px"
-                />`;
+        newRow.insertCell(1).innerHTML = `<img src="${produto.img}" alt="" width="100px"/>`;
         newRow.insertCell(2).textContent = produto.name;
-        newRow.insertCell(3).innerHTML =`<strong> ${produto.quantity +" Unidades"} </strong>`;
+        newRow.insertCell(3).innerHTML = `<strong>${produto.quantity} Unidades</strong>`;
         newRow.insertCell(4).textContent = produto.category;
         newRow.insertCell(5).innerHTML = `<strong>R$ ${produto.price}</strong>`;
         newRow.insertCell(6).innerHTML = `
-          <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#cadastroModal">
+          <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#cadastroModal" onclick="preencherFormulario(${index})">
             Editar
-          </button>
-        `;
+          </button>`;
       });
-    } else {
-      console.error('O objeto "seed" não está definido. Verifique o carregamento do arquivo seed.js.');
     }
+
+    // Execute a função de atualizar tabela inicialmente
+    atualizarTabela();
   </script>
 
 </body>
