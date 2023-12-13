@@ -219,15 +219,7 @@ A imagem a seguir representa o wireframe da página inicial da loja.
 ## Divisão de Papéis
 
  - Todos os membros do grupo assumiram papéis idênticos no projeto. Cada um foi encarregado da criação do código e outras tarefas ao longo de todo o desenvolvimento. Essa distribuição equitativa de responsabilidades garantiu uma colaboração integral e uma contribuição uniforme de cada membro para o sucesso do projeto. A única divisão realizada foi a de decidir quem iria fazer qual página. Segue abaixo a divisão:
-  | Página do Site  | Membro              |
-|-----------      |-------------------------|
-| Autenticação do sistema - Cliente  |Cleber Gomes Junior |  
-|Página Home(Produtos) | Caio Henrique Queiroz |  
-|Página Home (Carrinho) - Cliente |Leonardo Martins Antunes Lopes | 
-| Página Home (Serviços) - Cliente| Leonardo Martins Antunes Lopes |
-|Página de Produtos/Estoque - Administrador| Gabriel Eduardo Ramos  | 
-|Página dos Pedidos Solicitados - Administrador| Thales Henrique Santos Vasconcelos de Andrade | 
-|Modal de criar/editar produto - Administrador | Eric Carvalho Pedro |
+ 
 
 > Apresente a divisão de papéis e tarefas entre os membros do grupo.
 >
