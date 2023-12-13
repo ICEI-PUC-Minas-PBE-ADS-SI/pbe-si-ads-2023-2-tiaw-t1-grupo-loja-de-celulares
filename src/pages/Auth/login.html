@@ -138,13 +138,12 @@
           return;
         }
 
-
-        // (Kleber) REALIZAR AUTENTICAÇÃO DO USUÁRIO AQUI
-        window.location = "/index.html";
-
-        
-
-
+        // (Cleber) 
+        const storedUser = JSON.parse(localStorage.getItem('user'));
+        if (storedUser && storedUser.email === email.value && storedUser.password === password.value) {
+          window.location = "/index.html"; // Redirecionar para a página do cliente
+          return;
+        }
 
         // Caso o usuário não existir exibir esse toast como mensagem de erro 
         Toast.fire({
