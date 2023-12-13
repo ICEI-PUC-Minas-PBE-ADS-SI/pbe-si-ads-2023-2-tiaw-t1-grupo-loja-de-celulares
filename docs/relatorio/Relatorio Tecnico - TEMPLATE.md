@@ -198,7 +198,7 @@ A imagem a seguir representa o wireframe da página inicial da loja.
 
 # Metodologia
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Para atender à demanda de desenvolver múltiplas páginas web para o nosso projeto, tivemos uma conversa em equipe e decidimos que cada membro seria responsável por criar uma página. Essa abordagem não apenas poupou tempo, mas também permitiu a criação simultânea de todas as páginas. Além disso, estabelecemos reuniões semanais, geralmente às segundas-feiras, para debater ideias e manter o site atualizado. Esses encontros foram cruciais para o nosso progresso e colaboração constante.
 
 > Nesta parte do documento, você deve apresentar a metodologia 
 > adotada pelo grupo, descrevendo o processo de trabalho baseado nas metodologias ágeis, 
@@ -233,10 +233,11 @@ A imagem a seguir representa o wireframe da página inicial da loja.
 
 | Ambiente  | Plataforma              |Link de Acesso |
 |-----------|-------------------------|---------------|
-|Processo de Design Thinkgin  | Miro |  https://miro.com/XXXXXXX | 
-|Repositório de código | GitHub | https://github.com/XXXXXXX | 
-|Hospedagem do site | Heroku |  https://XXXXXXX.herokuapp.com | 
-|Protótipo Interativo | MavelApp ou Figma | https://figma.com/XXXXXXX | 
+|Processo de Design Thinkgin  | Miro  | https://miro.com/pt/ | 
+|Repositório de código | GitHub | https://github.com/ICEI-PUC-Minas-PBE-SI/pbe-si-ads-2023-2-tiaw-t1-grupo-loja-de-celulares | 
+|Hospedagem do site | GitHub Pages | https://github.com/ICEI-PUC-Minas-PBE-SI/pbe-si-ads-2023-2-tiaw-t1-grupo-loja-de-celulares.git | 
+|Protótipo Interativo | Figma | https://www.figma.com/file/yeQokxPzF8uvAhALXrbLuj/Untitled?type=design&node-id=1-16&mode=design | 
+
 
 >
 > Liste as ferramentas empregadas no desenvolvimento do
