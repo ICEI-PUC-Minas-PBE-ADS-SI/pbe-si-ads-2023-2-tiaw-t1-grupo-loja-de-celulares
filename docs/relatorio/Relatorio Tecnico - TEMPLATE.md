@@ -198,7 +198,7 @@ A imagem a seguir representa o wireframe da página inicial da loja.
 
 # Metodologia
 
-> - Para atender à demanda de desenvolver múltiplas páginas web para o nosso projeto, tivemos uma conversa em equipe e decidimos que cada membro seria responsável por criar uma página. Essa abordagem não apenas poupou tempo, mas também permitiu a criação simultânea de todas as páginas. Além disso, estabelecemos reuniões semanais, geralmente às segundas-feiras, para debater ideias e manter o site atualizado. Esses encontros foram cruciais para o nosso progresso e colaboração constante.
+ - Para atender à demanda de desenvolver múltiplas páginas web para o nosso projeto, tivemos uma conversa em equipe e decidimos que cada membro seria responsável por criar uma página. Essa abordagem não apenas poupou tempo, mas também permitiu a criação simultânea de todas as páginas. Além disso, estabelecemos reuniões semanais, geralmente às segundas-feiras, para debater ideias e manter o site atualizado. Esses encontros foram cruciais para o nosso progresso e colaboração constante.
 
 > Nesta parte do documento, você deve apresentar a metodologia 
 > adotada pelo grupo, descrevendo o processo de trabalho baseado nas metodologias ágeis, 
@@ -218,7 +218,7 @@ A imagem a seguir representa o wireframe da página inicial da loja.
 
 ## Divisão de Papéis
 
-> - Todos os membros do grupo assumiram papéis idênticos no projeto. Cada um foi encarregado da criação do código e outras tarefas ao longo de todo o desenvolvimento. Essa distribuição equitativa de responsabilidades garantiu uma colaboração integral e uma contribuição uniforme de cada membro para o sucesso do projeto.
+ - Todos os membros do grupo assumiram papéis idênticos no projeto. Cada um foi encarregado da criação do código e outras tarefas ao longo de todo o desenvolvimento. Essa distribuição equitativa de responsabilidades garantiu uma colaboração integral e uma contribuição uniforme de cada membro para o sucesso do projeto.
 
 > Apresente a divisão de papéis e tarefas entre os membros do grupo.
 >
@@ -238,10 +238,10 @@ A imagem a seguir representa o wireframe da página inicial da loja.
 |Hospedagem do site | GitHub Pages | https://github.com/ICEI-PUC-Minas-PBE-SI/pbe-si-ads-2023-2-tiaw-t1-grupo-loja-de-celulares.git | 
 |Protótipo Interativo | Figma | https://www.figma.com/file/yeQokxPzF8uvAhALXrbLuj/Untitled?type=design&node-id=1-16&mode=design | 
 
-> - Nosso processo de design thinking se inspirou nos sites já consolidados no mercado. Absorvemos o melhor dessas referências para formular a identidade do nosso projeto. Exploramos os elementos de sucesso dessas plataformas, adaptando-os da nossa maneira para moldar um site cativante aos visitantes da nossa loja online.
-> - Optamos pelo GitHub como o repositório para nosso código devido à sua incrível integração com o Vs Code. Essa sinergia permite editar o programa diretamente no Vs Code e, em seguida, compartilhá-lo no GitHub, permitindo que todos no grupo visualizem as modificações feitas. Essa conexão perfeita entre as plataformas facilitou nossa colaboração e trouxe uma dinâmica incrível ao nosso trabalho em equipe.
-> - Optamos por hospedar nosso site utilizando o GitHub, aproveitando a plataforma GitHub Pages para acompanhar de perto o desenvolvimento do nosso projeto na prática. Essa escolha não apenas ofereceu a hospedagem necessária, mas também nos permitiu visualizar em tempo real o progresso e a evolução do nosso site de forma prática e acessível a todos os envolvidos.
-> - O Figma foi nossa escolha principal para a criação do protótipo interativo, principalmente por conta dos seus recursos integrados. Essa plataforma não apenas nos permitiu desenvolver as interfaces necessárias, mas também se destacou na facilitação da colaboração flexível em todo o projeto. Sua versatilidade e ferramentas intuitivas tornaram o processo de design mais eficiente, possibilitando uma criação interativa que agregou dinamismo e precisão à nossa equipe.
+ - Nosso processo de design thinking se inspirou nos sites já consolidados no mercado. Absorvemos o melhor dessas referências para formular a identidade do nosso projeto. Exploramos os elementos de sucesso dessas plataformas, adaptando-os da nossa maneira para moldar um site cativante aos visitantes da nossa loja online.
+ - Optamos pelo GitHub como o repositório para nosso código devido à sua incrível integração com o Vs Code. Essa sinergia permite editar o programa diretamente no Vs Code e, em seguida, compartilhá-lo no GitHub, permitindo que todos no grupo visualizem as modificações feitas. Essa conexão perfeita entre as plataformas facilitou nossa colaboração e trouxe uma dinâmica incrível ao nosso trabalho em equipe.
+ - Optamos por hospedar nosso site utilizando o GitHub, aproveitando a plataforma GitHub Pages para acompanhar de perto o desenvolvimento do nosso projeto na prática. Essa escolha não apenas ofereceu a hospedagem necessária, mas também nos permitiu visualizar em tempo real o progresso e a evolução do nosso site de forma prática e acessível a todos os envolvidos.
+ - O Figma foi nossa escolha principal para a criação do protótipo interativo, principalmente por conta dos seus recursos integrados. Essa plataforma não apenas nos permitiu desenvolver as interfaces necessárias, mas também se destacou na facilitação da colaboração flexível em todo o projeto. Sua versatilidade e ferramentas intuitivas tornaram o processo de design mais eficiente, possibilitando uma criação interativa que agregou dinamismo e precisão à nossa equipe.
 > Liste as ferramentas empregadas no desenvolvimento do
 > projeto, justificando a escolha delas, sempre que possível.
 > 
