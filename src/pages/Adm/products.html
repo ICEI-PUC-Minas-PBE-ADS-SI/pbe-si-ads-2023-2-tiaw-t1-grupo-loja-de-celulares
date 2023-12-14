@@ -131,7 +131,7 @@
       </div>
     </main>
 
-     <!--Modal para cadastro de produtos-->
+      <!--Modal para cadastro de produtos-->
   <div class="modal fade" id="cadastroModal" tabindex="-1" aria-labelledby="cadastroModalLabel" aria-hidden="true">
     <div class="modal-dialog" style="max-width: 500px">
       <div class="modal-content">
@@ -322,6 +322,23 @@
           }
         });
       };
+      const confirmDelete = (index) => {
+        Swal.fire({
+          title: "Você tem certeza?",
+          text: "Você tem certeza de que deseja deletar o produto?",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Sim, desejo!",
+          cancelButtonText: "Não, cancelar.",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            removerProduto(index);
+            return;
+          }
+        });
+      };
 
       AOS.init({
         // Global settings:
@@ -354,21 +371,21 @@
       document.getElementById('precoProduto').value = produto.price;
       document.getElementById('categoriaProduto').value = produto.category;
     }
-  
-    // Função para limpar os campos do formulário e abrir o modal de cadastro
-    function adicionarProduto() {
-      // Limpar os campos do formulário
-      document.getElementById('produtoForm').reset();
-      // Resetar o índice do produto em edição
-      document.getElementById('produtoIndex').value = '';
-      // Atualizar a imagem do placeholder
-      document.getElementById('imagemPlaceholder').src = "/src/assets/Images/placeholder.png";
-  
-      // Abrir o modal
-      const modal = new bootstrap.Modal(document.getElementById('cadastroModal'));
-      modal.show();
-    }
-  
+   // Função para resetar os campos do formulário para os valores padrão
+   function resetarCamposModal() {
+    // Defina os valores padrão ou limpe os campos conforme necessário
+    document.getElementById('produtoIndex').value = '';
+    document.getElementById('nomeProduto').value = '';
+    document.getElementById('imagemPlaceholder').src = "/src/assets/Images/placeholder.png";
+    document.getElementById('descricaoProduto').value = '';
+    document.getElementById('precoProduto').value = '';
+    document.getElementById('categoriaProduto').value = '';
+  }
+   // Adicione o evento hidden.bs.modal ao modal
+   const cadastroModal = document.getElementById('cadastroModal');
+  cadastroModal.addEventListener('hidden.bs.modal', function () {
+    resetarCamposModal();
+  });
     // Função para salvar os dados no localStorage
     function salvarNoLocalStorage() {
       localStorage.setItem('seedData', JSON.stringify(seed));
@@ -417,6 +434,7 @@
       atualizarTabela();
       salvarNoLocalStorage();
     }
+    
   
     // Função para fechar o modal de cadastro
   function fecharModal() {
@@ -440,7 +458,7 @@
         newRow.insertCell(4).textContent = produto.category;
         newRow.insertCell(5).innerHTML = `<strong>R$ ${produto.price}</strong>`;
         newRow.insertCell(6).innerHTML = `
-          <button class="btn btn-sm btn-danger" onclick="removerProduto(${index})">
+          <button class="btn btn-sm btn-danger" onclick="confirmDelete(${index})">
             Remover
           </button>
           <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#cadastroModal" onclick="preencherFormulario(${index})">
@@ -452,6 +470,7 @@
     // Execute a função de recuperar do localStorage antes de atualizar a tabela inicialmente
     recuperarDoLocalStorage();
     atualizarTabela();
+    
     </script>
     <div class="container"></div>
   </body>

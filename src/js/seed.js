@@ -82,7 +82,42 @@ const seed = {
       ],
     },
   ],
+  cellparts: [
+    {
+    "id": "",
+    "name": "Tela",
+    "compatibility": "";
+    "suplier": "",
+    "quantity": "20",
+    "price": "120"
+    },
+    {
+      "id": "",
+      "name": "Tela",
+      "compatibility": "";
+      "suplier": "",
+      "quantity": "20",
+      "price": "120"
+    },
+    {
+      "id": "",
+      "name": "Tela",
+      "compatibility": "";
+      "suplier": "",
+      "quantity": "20",
+      "price": "120"
+    },
+    {
+      "id": "",
+      "name": "Tela",
+      "compatibility": "";
+      "suplier": "",
+      "quantity": "20",
+      "price": "120"
+    }
+  ]
 };
+
 function salvarNoLocalStorage() {
   localStorage.setItem('seedData', JSON.stringify(seed));
 }
