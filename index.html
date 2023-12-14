@@ -53,7 +53,7 @@
             href="/src/pages/Client/cart.html"
             class="position-absolute btn bg-dark top-0 end-0 d-flex align-items-center justify-content-center"
           >
-            <i class="bi bi-search text-white" ></i>
+            <i class="bi bi-search text-white"></i>
           </a>
         </div>
 
@@ -65,13 +65,12 @@
             class="bi bi-person-circle text-white"
             style="font-size: 1.7rem"
           ></i>
-          <p class="text-white m-0">
-        
+          <p class="text-white m-0" id="user-info-container">
             <a href="/src/pages/Auth/login.html" class="fw-bold text-white"
               >Login</a
             >
             /
-            
+
             <a href="/src/pages/Auth/register.html" class="fw-bold text-white"
               >Cadastro</a
             >
@@ -80,21 +79,20 @@
 
         <nav class="ms-auto justify-content-end d-flex gap-3">
           <a
-          class="position-relative text-end d-none d-xl-block cart-link"
-          href="https://www.instagram.com/alphacellbetim/" target="_blank"
-          
-        >
-          <i
-            class="bi bi-instagram text-white"
-            style="font-size: 1.7rem !important"
-          ></i>
-        </a>
+            class="position-relative text-end d-none d-xl-block cart-link"
+            href="https://www.instagram.com/alphacellbetim/"
+            target="_blank"
+          >
+            <i
+              class="bi bi-instagram text-white"
+              style="font-size: 1.7rem !important"
+            ></i>
+          </a>
           <a
             class="position-relative text-end d-none d-xl-block cart-link"
             href="https://www.google.com.br/maps/place/Alpha+Cell+Betim/@-19.9681393,
             -44.2024054,17z/data=!3m1!4b1!4m6!3m5!1s0xa6c350754611bb:0x65b5d6d67084244b!8m2!3d-19.9681444!4d-44.1998305!16s%2Fg%2F11fn64jp18?entry=ttu"
             target="_blank"
-            
           >
             <i
               class="bi bi-geo-alt text-white"
@@ -118,21 +116,26 @@
                 font-size: 10px;
                 right: -10px;
               "
+              id="count-cart"
             >
               0
             </div>
           </a>
-          <a href="/src/pages/Auth/login.html" class="d-none d-lg-block cart-link">
+          <button
+            class="d-none d-lg-block cart-link btn m-0 p-0 border-0"
+            id="logout"
+          >
             <i
               class="bi bi-box-arrow-in-left text-white"
               style="font-size: 1.9rem !important"
             ></i>
-          </a>
+          </button>
         </nav>
 
         <button
           class="btn d-block d-lg-none p-0 border-0"
-          data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" 
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasRight"
           aria-controls="offcanvasRight"
         >
           <i class="bi bi-list text-white" style="font-size: 3rem"></i>
@@ -169,9 +172,12 @@
 
     <main class="my-4">
       <div
-        class="container d-flex gap-4 align-items-start justify-content-center mx-auto"
+        class="container d-flex gap-4 align-items-start justify-content-between w-100 mx-auto"
       >
-        <section class="filtros d-none d-xl-flex flex-column gap-4">
+        <section
+          class="filtros d-none d-xl-flex flex-column gap-4 w-100"
+          style="margin-right: auto !important"
+        >
           <div class="bg-white p-4 h-auto" data-aos="fade-right">
             <h5>Categorias</h5>
             <ul class="list-unstyled">
@@ -244,167 +250,30 @@
         </section>
         <ul
           class="list-unstyled row flex-wrap align-items-xl-start w-100 justify-content-center justify-content-xxl-end gap-3 gap-xl-0 gap-xxl-3"
-        >
-          <li class="product bg-white col-12 col-md-6 col-xl-4" data-aos="fade-up">
-            <div class="product-img-container overflow-hidden p-3">
-              <a href="/src/pages/Client/product.html">
-              <img
-                src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg"
-                alt=""
-                class="img-fluid"
-              />
-            </a>
-            </div>
-            <div
-              class="d-flex flex-column justify-content-between product-content-container gap-3"
-            >
-              <span class="product-brand text-white"> Celular </span>
-              <h6 class="product-title m-0">Iphone 6s</h6>
-              <p class="product-description m-0">
-                O iPhone 6s é um smartphone desenvolvido pela Apple e lançado em
-                setembro de 2015.
-              </p>
-              <p class="product-price m-0">R$ 1800.00</p>
-              <button class="btn m-0 p-0 border-0" onclick="addItemCart()">
-                Adicionar ao carrinho
-              </button>
-            </div>
-          </li>
-          <li class="product bg-white col-12 col-md-6 col-xl-4" data-aos="fade-up">
-            <div class="product-img-container overflow-hidden p-3">
-             <a href="/src/pages/Client/product.html">
-              <img
-                src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg"
-                
-                class="img-fluid"/>
-              </a>
-              </div>
-            <div
-              class="d-flex flex-column justify-content-between product-content-container gap-3"
-            >
-              <span class="product-brand text-white"> Celular </span>
-              <h6 class="product-title m-0">Iphone 6s</h6>
-              <p class="product-description m-0">
-                O iPhone 6s é um smartphone desenvolvido pela Apple e lançado em
-                setembro de 2015.
-              </p>
-              <p class="product-price m-0">R$ 1800.00</p>
-              <button class="btn m-0 p-0 border-0" onclick="addItemCart()">
-                Adicionar ao carrinho
-              </button>
-            </div>
-          </li>
-          <li class="product bg-white col-12 col-md-6 col-xl-4" data-aos="fade-up">
-            <div class="product-img-container overflow-hidden p-3">
-              <a href="/src/pages/Client/product.html">
-              <img
-                src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg"
-                alt=""
-                class="img-fluid"/>
-              </a>
-            </div>
-            <div
-              class="d-flex flex-column justify-content-between product-content-container gap-3"
-            >
-              <span class="product-brand text-white"> Celular </span>
-              <h6 class="product-title m-0">Iphone 6s</h6>
-              <p class="product-description m-0">
-                O iPhone 6s é um smartphone desenvolvido pela Apple e lançado em
-                setembro de 2015.
-              </p>
-              <p class="product-price m-0">R$ 1800.00</p>
-              <button class="btn m-0 p-0 border-0" onclick="addItemCart()">
-                Adicionar ao carrinho
-              </button>
-            </div>
-          </li>
-          <li class="product bg-white col-12 col-md-6 col-xl-4" data-aos="fade-up">
-            <div class="product-img-container overflow-hidden p-3">
-              <a href="/src/pages/Client/product.html">
-              <img
-                src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg"
-                alt=""
-                class="img-fluid"
-              />
-            </a>
-            </div>
-            <div
-              class="d-flex flex-column justify-content-between product-content-container gap-3"
-            >
-              <span class="product-brand text-white"> Celular </span>
-              <h6 class="product-title m-0">Iphone 6s</h6>
-              <p class="product-description m-0">
-                O iPhone 6s é um smartphone desenvolvido pela Apple e lançado em
-                setembro de 2015.
-              </p>
-              <p class="product-price m-0">R$ 1800.00</p>
-              <button class="btn m-0 p-0 border-0" onclick="addItemCart()">
-                Adicionar ao carrinho
-              </button>
-            </div>
-          </li>
-          <li class="product bg-white col-12 col-md-6 col-xl-4" data-aos="fade-up">
-            <div class="product-img-container overflow-hidden p-3">
-             <a href="/src/pages/Client/product.html">
-              <img
-                src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg"
-                
-                class="img-fluid"/>
-              </a>
-              </div>
-            <div
-              class="d-flex flex-column justify-content-between product-content-container gap-3"
-            >
-              <span class="product-brand text-white"> Celular </span>
-              <h6 class="product-title m-0">Iphone 6s</h6>
-              <p class="product-description m-0">
-                O iPhone 6s é um smartphone desenvolvido pela Apple e lançado em
-                setembro de 2015.
-              </p>
-              <p class="product-price m-0">R$ 1800.00</p>
-              <button class="btn m-0 p-0 border-0" onclick="addItemCart()">
-                Adicionar ao carrinho
-              </button>
-            </div>
-          </li>
-          <li class="product bg-white col-12 col-md-6 col-xl-4" data-aos="fade-up">
-            <div class="product-img-container overflow-hidden p-3">
-              <a href="/src/pages/Client/product.html">
-              <img
-                src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg"
-                alt=""
-                class="img-fluid"/>
-              </a>
-            </div>
-            <div
-              class="d-flex flex-column justify-content-between product-content-container gap-3"
-            >
-              <span class="product-brand text-white"> Celular </span>
-              <h6 class="product-title m-0">Iphone 6s</h6>
-              <p class="product-description m-0">
-                O iPhone 6s é um smartphone desenvolvido pela Apple e lançado em
-                setembro de 2015.
-              </p>
-              <p class="product-price m-0">R$ 1800.00</p>
-              <button class="btn m-0 p-0 border-0" onclick="addItemCart()">
-                Adicionar ao carrinho
-              </button>
-            </div>
-          </li>
-        
-        </ul>
-            
+          id="productsLitst"
+        ></ul>
       </div>
     </main>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel"
+    >
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">
+          Offcanvas right
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
       </div>
-      <div class="offcanvas-body">
-        ...
-      </div>
+      <div class="offcanvas-body">...</div>
     </div>
+
     <style>
       header {
         background-color: rgb(251, 146, 54);
@@ -492,7 +361,8 @@
       }
 
       .filtros {
-        width: 300px;
+        width: 100%;
+        max-width: 300px;
       }
 
       .cart-link {
@@ -513,31 +383,24 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
-       const tooltipTriggerList = document.querySelectorAll(
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        },
+      });
+      const tooltipTriggerList = document.querySelectorAll(
         '[data-bs-toggle="tooltip"]'
       );
       const tooltipList = [...tooltipTriggerList].map(
         (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
       );
-      const addItemCart = () => {
-        const Toast = Swal.mixin({
-          toast: true,
-          position: "top-end",
-          showConfirmButton: false,
-          timer: 3000,
-          timerProgressBar: true,
-          didOpen: (toast) => {
-            toast.onmouseenter = Swal.stopTimer;
-            toast.onmouseleave = Swal.resumeTimer;
-          },
-        });
-
-        
-        Toast.fire({
-          icon: "success",
-          title: "Produto adicionado no carrinho.",
-        });
-      };
+ 
 
       AOS.init({
         // Global settings:
@@ -560,5 +423,8 @@
         anchorPlacement: "top-bottom",
       });
     </script>
+
+    <script src="src/js/seed.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

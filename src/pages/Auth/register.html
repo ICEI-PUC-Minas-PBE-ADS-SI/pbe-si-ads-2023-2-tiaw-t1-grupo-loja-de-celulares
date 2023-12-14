@@ -1,95 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
-    </head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
     <div class="tela">
-        <a href="login.html">
-            <div>
-              <i class="bi bi-backspace" style="font-size: 2em; color: rgba(255, 94, 0, 0.986);"></i>
-            </div>
-        </a>
-        <h1>Cadastro</h1>
-        <form action="/src/pages/Auth/login.html">
-            <div class="mb-3">
-                <label for="nome" class="form-label">Nome Completo</label>
-                <input type="text" class="form-control" id="nome">
-            </div>
-            <div class="mb-3">
-                <label for="cpf" class="form-label">CPF</label>
-                <input type="text" class="form-control" id="cpf">
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email">
-            </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Senha</label>
-                <input type="password" class="form-control" id="password">
-            </div>
-            <div class="mb-3">
-                <label for="confirmPassword" class="form-label">Confirme sua Senha</label>
-                <input type="password" class="form-control" id="confirmPassword">
-            </div>
-            <button type="submit" class="btn btn-orange" style="width: 100%">Cadastrar</button>
-        </form>
+      <a href="login.html">
+        <div>
+          <i
+            class="bi bi-backspace"
+            style="font-size: 2em; color: rgba(255, 94, 0, 0.986)"
+          ></i>
+        </div>
+      </a>
+      <h1>Cadastro</h1>
+      <form id="register-form">
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome Completo</label>
+          <input
+            type="text"
+            name="name"
+            class="form-control"
+            id="name"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            id="email"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Senha</label>
+          <input
+            type="password"
+            name="password"
+            class="form-control"
+            id="password"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="confirmPassword" class="form-label"
+            >Confirme sua Senha</label
+          >
+          <input
+            type="password"
+            name="confirmPassword"
+            class="form-control"
+            id="confirmPassword"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-orange" style="width: 100%">
+          Cadastrar
+        </button>
+      </form>
     </div>
+
     <style>
-        body {
-            background-color: rgb(255, 245, 233);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
+      body {
+        background-color: rgb(255, 245, 233);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
 
-        .tela {
-            border: 1px solid black;
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 100%;
-            max-width: 500px; 
-        }
+      .tela {
+        border: 1px solid black;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 100%;
+        max-width: 500px;
+      }
 
-        h1 {
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-align: left;
-            width: 100%;
-        }
+      h1 {
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: left;
+        width: 100%;
+      }
 
-        form {
-            width: 100%;
-            text-align: left;
-        }
+      form {
+        width: 100%;
+        text-align: left;
+      }
 
-        .mb-3 {
-            margin-bottom: 20px;
-        }
+      .mb-3 {
+        margin-bottom: 20px;
+      }
 
-        .btn-orange {
-            background-color: rgba(255, 94, 0, 0.986);
-            color: white;
-            width: 100%;
-            transition: all 300ms;
-        }
+      .btn-orange {
+        background-color: rgba(255, 94, 0, 0.986);
+        color: white;
+        width: 100%;
+        transition: all 300ms;
+      }
 
-        .btn-orange:hover{
-            background-color: rgba(255, 94, 0, 0.986) !important;
-            color: white;
-            opacity: 0.8;
-        }
-        
+      .btn-orange:hover {
+        background-color: rgba(255, 94, 0, 0.986) !important;
+        color: white;
+        opacity: 0.8;
+      }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-</body>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../../js/seed.js"></script>
+
+    <script>
+      const databaseName = "loja-de-celulares-database";
+      let db;
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        },
+      });
+      // Selecionando form e adicionando evento de submit do formulario[]
+      //   action="/src/pages/Auth/login.html"
+      document
+        .querySelector("#register-form")
+        .addEventListener("submit", (e) => {
+          // Impede que a pagina recarregue ao enviar o formulário
+          e.preventDefault();
+
+          // Pegando elementos do formualario
+          const { name, email, password, confirmPassword } = e.target.elements;
+
+          console.log(name);
+          if (name.value.length < 3) {
+            Toast.fire({
+              icon: "error",
+              title: "O nome deve ter no mínimo 3 letras.",
+            });
+            return;
+          }
+
+          let foundDb = localStorage.getItem(databaseName);
+
+          if (!foundDb) {
+            localStorage.setItem(databaseName, JSON.stringify(seed));
+
+            foundDb = localStorage.getItem(databaseName);
+          }
+          db = JSON.parse(foundDb);
+
+          if (db.users.find((user) => user.email === email.value)) {
+            Toast.fire({
+              icon: "error",
+              title: "E-mail já registrado.",
+            });
+
+            return;
+          }
+          if (password.value.length < 4) {
+            Toast.fire({
+              icon: "error",
+              title: "A senha deve ter, no mínimo, 4 letras.",
+            });
+
+            return;
+          }
+
+          if (password.value !== confirmPassword.value) {
+            Toast.fire({
+              icon: "error",
+              title: "A senha e a confirmação de senha devem ser iguais.",
+            });
+
+            return;
+          }
+
+          if (name.length < 3) {
+            Toast.fire({
+              icon: "error",
+              title: "O nome deve possuir pelo menos 3 letras",
+            });
+            return;
+          }
+          const idNewUser = Math.random().toString(16).slice(2);
+
+          db.users.push({
+            id: idNewUser,
+            name: name.value,
+            email: email.value,
+            password: password.value,
+            isAdm: false,
+            cart: [],
+          });
+          localStorage.setItem("userLoginId", idNewUser);
+
+          localStorage.setItem(databaseName, JSON.stringify(db));
+
+          window.location = "/index.html";
+        });
+    </script>
+  </body>
 </html>
