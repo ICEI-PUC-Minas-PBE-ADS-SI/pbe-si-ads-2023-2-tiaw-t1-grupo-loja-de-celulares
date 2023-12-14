@@ -129,6 +129,11 @@ function isEmailValid(email) {
             const password = document.getElementById('password').value;
             const confirmPassword = document.getElementById('confirmPassword').value;
 
+            if (!nome || !cpf || !email || !password || !confirmPassword) {
+                alert("Por favor, preencha todos os campos.");
+                return;
+            }
+
             // Crie um objeto para representar o usuário
             const user = {
                 nome,
