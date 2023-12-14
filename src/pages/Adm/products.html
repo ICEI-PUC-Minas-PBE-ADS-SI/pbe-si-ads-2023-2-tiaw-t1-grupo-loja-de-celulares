@@ -131,117 +131,113 @@
       </div>
     </main>
 
-    <!--Modal para cadastro de produtos-->
-
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="cadastroModal"
-      tabindex="-1"
-      aria-labelledby="cadastroModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" style="max-width: 500px">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button
-              type="button"
-              style="background-color: rgb(251, 146, 54)"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <!-- Formulário de cadastro de produto -->
-            <form id="produtoForm">
-              <div class="mb-3" style="display: flex; justify-content: center">
+     <!--Modal para cadastro de produtos-->
+  <div class="modal fade" id="cadastroModal" tabindex="-1" aria-labelledby="cadastroModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 500px">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button
+            type="button"
+            style="background-color: rgb(251, 146, 54)"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <!-- Formulário de cadastro de produto -->
+          <form id="produtoForm">
+            <!-- Adicione uma entrada oculta para o índice do produto sendo editado -->
+            <input type="hidden" id="produtoIndex" value="" />
+            <div class="mb-3" style="display: flex; justify-content: center">
+              <input
+                type="text"
+                style="width: 80%"
+                class="form-control"
+                id="nomeProduto"
+                placeholder="Nome do Produto"
+                required
+              />
+            </div>
+            <div class="mb-3" style="display: flex; justify-content: center">
+              <input
+                type="file"
+                class="form-control"
+                id="imagemProduto"
+                accept="image/*"
+                style="display: none"
+              />
+              <img
+                id="imagemPlaceholder"
+                src="/src/assets/Images/placeholder.png"
+                class="img-fluid"
+                alt="Imagem do Produto"
+                style="width: 80%; cursor: pointer"
+                onclick="document.getElementById('imagemProduto').click();"
+              />
+            </div>
+            <div class="mb-3" style="display: flex; justify-content: center">
+              <textarea
+                style="width: 80%"
+                class="form-control text-center"
+                id="descricaoProduto"
+                rows="3"
+                placeholder="Digite a descrição do produto"
+                required
+              ></textarea>
+            </div>
+            <div
+              class="row mb-3"
+              style="display: flex; justify-content: center"
+            >
+              <div class="col input-group" style="padding-left: 11.5%">
+                <span class="input-group-text">Preço</span>
                 <input
                   type="text"
-                  style="width: 80%"
-                  class="form-control"
-                  id="nomeProduto"
-                  placeholder="Nome do Produto"
-                  required
-                />
-              </div>
-              <div class="mb-3" style="display: flex; justify-content: center">
-                <input
-                  type="file"
-                  class="form-control"
-                  id="imagemProduto"
-                  accept="image/*"
-                  style="display: none"
-                />
-                <img
-                  id="imagemPlaceholder"
-                  src="/src/assets/Images/placeholder.png"
-                  class="img-fluid"
-                  alt="Imagem do Produto"
-                  style="width: 80%; cursor: pointer"
-                />
-              </div>
-              <div class="mb-3" style="display: flex; justify-content: center">
-                <textarea
-                  style="width: 80%"
                   class="form-control text-center"
-                  id="descricaoProduto"
-                  rows="3"
-                  placeholder="Digite a descrição do produto"
+                  id="precoProduto"
+                  placeholder="R$ 0,00"
                   required
-                ></textarea>
+                />
               </div>
-              <div
-                class="row mb-3"
-                style="display: flex; justify-content: center"
-              >
-                <div class="col input-group" style="padding-left: 11.5%">
-                  <span class="input-group-text">Preço</span>
-                  <input
-                    type="text"
-                    class="form-control text-center"
-                    id="precoProduto"
-                    placeholder="R$ 0,00"
-                    required
-                  />
-                </div>
-                <div class="col">
-                  <select
-                    class="form-select"
-                    id="categoriaProduto"
-                    style="width: 77%"
-                    required
-                  >
-                    <option value="" disabled selected>Categoria</option>
-                    <option value="Celular">Celular</option>
-                    <option value="Fone">Fone</option>
-                    <option value="Caixa de som">Caixa de som</option>
-                    <option value="Bateria">Bateria</option>
-                    <option value="Mouse/Teclado">Mouse/Teclado</option>
-                    <option value="Capinha/película">Capinha/Película</option>
-                  </select>
-                </div>
-              </div>
-              <div
-                style="display: flex; justify-content: center; padding: 6% 0"
-              >
-                <button
-                  type="submit"
-                  class="btn text-white btn-block"
-                  style="
-                    width: 80%;
-                    height: 45px;
-                    background-color: rgb(251, 146, 54);
-                  "
+              <div class="col">
+                <select
+                  class="form-select"
+                  id="categoriaProduto"
+                  style="width: 77%"
+                  required
                 >
-                  Cadastrar
-                </button>
+                  <option value="" disabled selected>Categoria</option>
+                  <option value="Celular">Celular</option>
+                  <option value="Fone">Fone</option>
+                  <option value="Caixa de som">Caixa de som</option>
+                  <option value="Bateria">Bateria</option>
+                  <option value="Mouse/Teclado">Mouse/Teclado</option>
+                  <option value="Capinha/película">Capinha/Película</option>
+                </select>
               </div>
-            </form>
-          </div>
+            </div>
+            <div
+              style="display: flex; justify-content: center; padding: 6% 0"
+            >
+              <button
+                type="button"
+                class="btn text-white btn-block"
+                style="
+                  width: 80%;
+                  height: 45px;
+                  background-color: rgb(251, 146, 54);
+                "
+                onclick="cadastrarEditarProduto()"
+              >
+                Cadastrar
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
+  </div>
 
     <div class="container mt-4">
       <div class="row" id="products-container">
@@ -299,7 +295,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="../../js/seed.js"></script>
+
 
     <script>
       const tooltipTriggerList = document.querySelectorAll(
@@ -348,152 +344,114 @@
         anchorPlacement: "top-bottom",
       });
 
-      // Criação de produtos
-      if (typeof seed !== 'undefined') {
-      // Referência ao corpo da tabela
+      // Função para preencher o formulário com os dados do produto
+    function preencherFormulario(index) {
+      const produto = seed.stock.products[index];
+      document.getElementById('produtoIndex').value = index;
+      document.getElementById('nomeProduto').value = produto.name;
+      document.getElementById('imagemPlaceholder').src = produto.img;
+      document.getElementById('descricaoProduto').value = produto.description;
+      document.getElementById('precoProduto').value = produto.price;
+      document.getElementById('categoriaProduto').value = produto.category;
+    }
+  
+    // Função para limpar os campos do formulário e abrir o modal de cadastro
+    function adicionarProduto() {
+      // Limpar os campos do formulário
+      document.getElementById('produtoForm').reset();
+      // Resetar o índice do produto em edição
+      document.getElementById('produtoIndex').value = '';
+      // Atualizar a imagem do placeholder
+      document.getElementById('imagemPlaceholder').src = "/src/assets/Images/placeholder.png";
+  
+      // Abrir o modal
+      const modal = new bootstrap.Modal(document.getElementById('cadastroModal'));
+      modal.show();
+    }
+  
+    // Função para salvar os dados no localStorage
+    function salvarNoLocalStorage() {
+      localStorage.setItem('seedData', JSON.stringify(seed));
+    }
+  
+    // Função para recuperar os dados do localStorage
+    function recuperarDoLocalStorage() {
+      const seedData = localStorage.getItem('seedData');
+      if (seedData) {
+        seed = JSON.parse(seedData);
+      }
+    }
+  
+    // Função para cadastrar ou editar produtos
+    function cadastrarEditarProduto() {
+      const index = document.getElementById('produtoIndex').value;
+  
+      const novoProduto = {
+        name: document.getElementById('nomeProduto').value,
+        img: document.getElementById('imagemPlaceholder').src,
+        description: document.getElementById('descricaoProduto').value,
+        price: document.getElementById('precoProduto').value,
+        category: document.getElementById('categoriaProduto').value,
+      };
+  
+      // Se index for -1, é um novo produto, caso contrário, é uma edição
+      if (index === '') {
+        // Adiciona o novo produto ao array
+        seed.stock.products.push(novoProduto);
+      } else {
+        // Atualiza o produto existente
+        seed.stock.products[index] = novoProduto;
+      }
+  
+      // Atualizar a tabela, salvar no localStorage e fechar o modal
+      atualizarTabela();
+      salvarNoLocalStorage();
+      fecharModal();
+    }
+  
+    // Função para remover um produto
+    function removerProduto(index) {
+      // Remove o produto do array
+      seed.stock.products.splice(index, 1);
+      // Atualizar a tabela, salvar no localStorage
+      atualizarTabela();
+      salvarNoLocalStorage();
+    }
+  
+    // Função para fechar o modal de cadastro
+  function fecharModal() {
+    const modalElement = document.getElementById('cadastroModal');
+    const modal = bootstrap.Modal.getInstance(modalElement);
+    modal.hide();
+  }
+  
+    // Função para atualizar a tabela com os dados do seed.js
+    function atualizarTabela() {
       const tabelaCorpo = document.getElementById('tabela-corpo');
-
-      // Preencha a tabela com os dados do seed.js
+      tabelaCorpo.innerHTML = '';
+  
       seed.stock.products.forEach((produto, index) => {
         const newRow = tabelaCorpo.insertRow();
-
-        // Adicione as células conforme a ordem das colunas
+  
         newRow.insertCell(0).textContent = index + 1;
-        newRow.insertCell(1).innerHTML = `<img
-                  src="${produto.img}"
-                  alt=""
-                  width="100px"
-                />`;
+        newRow.insertCell(1).innerHTML = `<img src="${produto.img}" alt="" width="100px"/>`;
         newRow.insertCell(2).textContent = produto.name;
-        newRow.insertCell(3).innerHTML =`<strong> ${produto.quantity +" Unidades"} </strong>`;
+        newRow.insertCell(3).innerHTML = `<strong>${produto.quantity} Unidades</strong>`;
         newRow.insertCell(4).textContent = produto.category;
         newRow.insertCell(5).innerHTML = `<strong>R$ ${produto.price}</strong>`;
         newRow.insertCell(6).innerHTML = `
-          <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#cadastroModal">
-            Editar
+          <button class="btn btn-sm btn-danger" onclick="removerProduto(${index})">
+            Remover
           </button>
-        `;
+          <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#cadastroModal" onclick="preencherFormulario(${index})">
+            Editar
+          </button>`;
       });
-    } else {
-      console.error('O objeto "seed" não está definido. Verifique o carregamento do arquivo seed.js.');
     }
-      var produtos = [];
-
-      // Função para exibir a imagem selecionada no modal
-      document
-        .getElementById("imagemPlaceholder")
-        .addEventListener("click", function () {
-          document.getElementById("imagemProduto").click();
-        });
-
-      document
-        .getElementById("imagemProduto")
-        .addEventListener("change", function () {
-          var imagemPreview = document.getElementById("imagemPlaceholder");
-          var file = this.files[0];
-
-          if (file) {
-            var reader = new FileReader();
-            reader.onload = function (event) {
-              imagemPreview.src = event.target.result;
-            };
-            reader.readAsDataURL(file);
-          } else {
-            imagemPreview.src = "placeholder.jpg";
-          }
-        });
-
-      // Função para adicionar um novo produto ao array e criar um card
-      function adicionarProduto(nome, descricao, preco, categoria, imagem) {
-        var produto = {
-          nome: nome,
-          descricao: descricao,
-          preco: preco,
-          categoria: categoria,
-          imagem: imagem,
-        };
-        produtos.push(produto);
-
-        var card = document.createElement("div");
-        card.className = "";
-        card.innerHTML = `
-            <div class="container">
-            
-        <table class="table mt-5">
-          <tbody>
-            <tr>
-              <th scope="row"> </th>
-              <td><img src="${imagem}" alt="" width="100px"></td>
-              <td>${nome}</td>
-              <td class="text-center"><strong>50 unidades</strong></td>
-              <td class="text-center">
-                ${categoria}
-              </td>
-              <td><strong>${preco}</strong></td>
-              <td>
-                <button
-                  class="btn btn-sm btn-primary"
-                  data-bs-toggle="modal" 
-                  data-bs-target="#cadastroModal"
-                >
-                  Editar
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    `;
-        document.getElementById("products-container").appendChild(card);
-      }
-
-      document
-        .getElementById("produtoForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          var nomeProduto = document.getElementById("nomeProduto").value;
-          var descricaoProduto =
-            document.getElementById("descricaoProduto").value;
-          var precoProduto = document.getElementById("precoProduto").value;
-          var categoriaProduto =
-            document.getElementById("categoriaProduto").value;
-          var imagemProduto = document.getElementById("imagemProduto").files[0];
-
-          if (imagemProduto) {
-            var reader = new FileReader();
-            reader.onload = function (event) {
-              var imagemBase64 = event.target.result;
-              adicionarProduto(
-                nomeProduto,
-                descricaoProduto,
-                precoProduto,
-                categoriaProduto,
-                imagemBase64
-              );
-            };
-            reader.readAsDataURL(imagemProduto);
-          } else {
-            adicionarProduto(
-              nomeProduto,
-              descricaoProduto,
-              precoProduto,
-              categoriaProduto,
-              "caminho_da_imagem_padrao.png"
-            );
-          }
-
-          var modal = new bootstrap.Modal(
-            document.getElementById("cadastroModal")
-          );
-          modal.hide();
-
-          document.getElementById("nomeProduto").value = "";
-          document.getElementById("descricaoProduto").value = "";
-          document.getElementById("precoProduto").value = "";
-          document.getElementById("categoriaProduto").value = "";
-          document.getElementById("imagemProduto").value = "";
-        });
+  
+    // Execute a função de recuperar do localStorage antes de atualizar a tabela inicialmente
+    recuperarDoLocalStorage();
+    atualizarTabela();
     </script>
     <div class="container"></div>
   </body>

@@ -5,7 +5,7 @@ const seed = {
       {
         "id": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
         "name": "Produto teste",
-        "category" : "Capas",
+        "category" : "Capinha/Película",
         "quantity": 50,
         "brand": "Samsung",
         "description": "",
@@ -82,7 +82,14 @@ const seed = {
       ],
     },
   ],
-
-  
 };
+function salvarNoLocalStorage() {
+  localStorage.setItem('seedData', JSON.stringify(seed));
+}
 
+function recuperarDoLocalStorage() {
+  const seedData = localStorage.getItem('seedData');
+  if (seedData) {
+    seed = JSON.parse(seedData);
+  }
+}
