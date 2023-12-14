@@ -93,53 +93,61 @@
     crossorigin="anonymous"></script>
     <script>
 
-        function mascaraCPF(i) {
-            var v = i.value;
+function isEmailValid(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
 
-            if (isNaN(v[v.length - 1])) {
-                // Impede entrar outro caractere que não seja número
-                i.value = v.substring(0, v.length - 1);
+    function mascaraCPF(i) {
+        var v = i.value;
+
+        if (isNaN(v[v.length - 1])) {
+            // Impede entrar outro caractere que não seja número
+            i.value = v.substring(0, v.length - 1);
+            return;
+        }
+
+        i.setAttribute("maxlength", "14");
+        if (v.length == 3 || v.length == 7) i.value += ".";
+        if (v.length == 11) i.value += "-";
+    }
+
+    function goBack() {
+        window.history.back();
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const registrationForm = document.getElementById('registrationForm');
+
+        registrationForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Obtenha os valores do formulário
+            const nome = document.getElementById('nome').value;
+            const cpf = document.getElementById('cpf').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            // Crie um objeto para representar o usuário
+            const user = {
+                nome,
+                cpf,
+                email,
+                password,
+            };
+
+            if (confirmPassword != password) {
+                alert("Senhas diferentes");
                 return;
             }
 
-            i.setAttribute("maxlength", "14");
-            if (v.length == 3 || v.length == 7) i.value += ".";
-            if (v.length == 11) i.value += "-";
-        }
-
-        function goBack() {
-            window.history.back();
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const registrationForm = document.getElementById('registrationForm');
-
-            registrationForm.addEventListener('submit', function (event) {
-                event.preventDefault();
-
-                // Obtenha os valores do formulário
-                const nome = document.getElementById('nome').value;
-                const cpf = document.getElementById('cpf').value;
-                const email = document.getElementById('email').value;
-                const password = document.getElementById('password').value;
-                const confirmPassword = document.getElementById('confirmPassword').value;
-                // Crie um objeto para representar o usuário
-                const user = {
-                    nome,
-                    cpf,
-                    email,
-                    password,
-                };
-                if(confirmPassword != password){
-                    alert("Senhas diferentes");
-                    return;
-                }
-                // Armazene os dados do usuário no localStorage
-                localStorage.setItem('user', JSON.stringify(user));
-                // Redirecione para a página de login
-                window.location.href = 'login.html';
-            });
+            // Armazene os dados do usuário no localStorage
+            localStorage.setItem('user', JSON.stringify(user));
+            // Redirecione para a página de login
+            window.location.href = 'login.html';
         });
+    });
     </script>
 </body>
 </html>
