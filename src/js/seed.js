@@ -86,7 +86,7 @@ const seed = {
     {
     "id": "",
     "name": "Tela",
-    "compatibility": "";
+    "compatibility": "",
     "suplier": "",
     "quantity": "20",
     "price": "120"
@@ -94,7 +94,7 @@ const seed = {
     {
       "id": "",
       "name": "Tela",
-      "compatibility": "";
+      "compatibility": "",
       "suplier": "",
       "quantity": "20",
       "price": "120"
@@ -102,7 +102,7 @@ const seed = {
     {
       "id": "",
       "name": "Tela",
-      "compatibility": "";
+      "compatibility": "",
       "suplier": "",
       "quantity": "20",
       "price": "120"
@@ -110,7 +110,7 @@ const seed = {
     {
       "id": "",
       "name": "Tela",
-      "compatibility": "";
+      "compatibility": "",
       "suplier": "",
       "quantity": "20",
       "price": "120"

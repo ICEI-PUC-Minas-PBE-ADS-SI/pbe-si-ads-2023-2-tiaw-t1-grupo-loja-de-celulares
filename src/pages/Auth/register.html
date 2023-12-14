@@ -23,7 +23,7 @@
             </div>
             <div class="mb-3">
                 <label for="cpf" class="form-label">CPF</label>
-                <input type="text" class="form-control" id="cpf">
+                <input type="text" class="form-control" id="cpf" oninput="mascaraCPF(this)">
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
@@ -92,6 +92,21 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
     <script>
+
+        function mascaraCPF(i) {
+            var v = i.value;
+
+            if (isNaN(v[v.length - 1])) {
+                // Impede entrar outro caractere que não seja número
+                i.value = v.substring(0, v.length - 1);
+                return;
+            }
+
+            i.setAttribute("maxlength", "14");
+            if (v.length == 3 || v.length == 7) i.value += ".";
+            if (v.length == 11) i.value += "-";
+        }
+
         function goBack() {
             window.history.back();
         }
@@ -109,8 +124,6 @@
                 const password = document.getElementById('password').value;
                 const confirmPassword = document.getElementById('confirmPassword').value;
                 // Crie um objeto para representar o usuário
-
-
                 const user = {
                     nome,
                     cpf,
@@ -121,10 +134,8 @@
                     alert("Senhas diferentes");
                     return;
                 }
-                    
                 // Armazene os dados do usuário no localStorage
                 localStorage.setItem('user', JSON.stringify(user));
-
                 // Redirecione para a página de login
                 window.location.href = 'login.html';
             });
