@@ -82,6 +82,36 @@ const seed = {
       ],
     },
   ],
+  service: [
+    {
+      "Nomecliente": "Thales Andrade",
+      "aparelho": "Iphone XR",
+      "servico": "Troca de Bateria",
+      "data": "31/07/2023 21:19",
+      "status": "Em análise"
+    },
+    {
+      "Nomecliente": "Thales Andrade",
+      "aparelho": "Iphone XR",
+      "servico": "Troca de Bateria",
+      "data": "31/07/2023 21:19",
+      "status": "Em análise"
+    },
+    {
+      "Nomecliente": "Thales Andrade",
+      "aparelho": "Iphone XR",
+      "servico": "Troca de Bateria",
+      "data": "31/07/2023 21:19",
+      "status": "Em análise"
+    },
+    {
+      "Nomecliente": "Thales Andrade",
+      "aparelho": "Iphone XR",
+      "servico": "Troca de Bateria",
+      "data": "31/07/2023 21:19",
+      "status": "Em análise"
+    }
+  ],
   cellparts: [
     {
     "id": "",
