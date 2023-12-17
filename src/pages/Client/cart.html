@@ -47,7 +47,7 @@
               class="bi bi-person-circle text-white"
               style="font-size: 1.7rem"
             ></i>
-            <p class="text-white m-0">Leonardo Martins</p>
+            <p class="text-white m-0" id="name-user">Leonardo Martins</p>
           </div>
 
           <nav class="ms-auto justify-content-end d-flex gap-3">
@@ -347,6 +347,7 @@
           { priceTotal: 0, items: 0 }
         );
 
+        document.querySelector("#name-user").innerHTML = user.name
         document.querySelector("#cart-icon-container").innerHTML =
           user.cart.length;
         document.querySelector("#qtd-items-cart").innerHTML = data.items;
