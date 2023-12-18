@@ -25,89 +25,111 @@
         <img src="/src/assets/Images/logomelhor.png" height="100px" class="me-3" alt="" />
       </a>
 
-      <div style="width: 40%" class="d-none d-lg-block position-relative search-container">
-        <input type="text" class="form-control" name="" id="" placeholder="Pesquisar produtos"
-          style="border-radius: 1rem" />
-        <a href="/src/pages/Client/cart.html"
-          class="position-absolute btn bg-dark top-0 end-0 d-flex align-items-center justify-content-center">
-          <i class="bi bi-search text-white"></i>
-        </a>
-      </div>
+        <div
+          style="width: 40%"
+          class="d-none d-lg-block position-relative search-container"
+        >
+          <input
+            type="text"
+            class="form-control"
+            name=""
+            id=""
+            placeholder="Pesquisar produtos"
+            style="border-radius: 1rem"
+          />
+          <a
+            href="/src/pages/Client/cart.html"
+            class="position-absolute btn bg-dark top-0 end-0 d-flex align-items-center justify-content-center"
+          >
+            <i class="bi bi-search text-white"></i>
+          </a>
+        </div>
 
-      <div class="ms-3 ms-xl-5 d-none align-items-center gap-3 d-lg-flex justify-content-center" style="width: fit-content">
-        <i class="bi bi-person-circle text-white" style="font-size: 1.7rem"></i>
-        
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const user = JSON.parse(localStorage.getItem('user'));
-    
-                const authDiv = document.querySelector('.ms-3.ms-xl-5.d-none');
-                const welcomeText = document.createElement('p');
-                welcomeText.className = 'text-white m-0';
-    
-                if (user) {
-                    welcomeText.textContent = `Bem-vindo, ${user.nome}`;
-                    welcomeText.style.padding = '20px';
-                    authDiv.replaceWith(welcomeText);
-                } else {
-                    welcomeText.innerHTML = `
-                    <a href="/src/pages/Auth/login.html" class="fw-bold text-white" style="padding-left: 20px;">Login</a> /
-                    <a href="/src/pages/Auth/register.html" class="fw-bold text-white" style="padding-right: 20px;">Cadastro</a>
-                    `;
-                    authDiv.replaceWith(welcomeText);
-                }
-            });
-        </script>
-    </div>
-    
-    
+        <div
+          class="ms-3 ms-xl-5 d-none align-items-center gap-3 d-lg-flex justify-content-center"
+          style="width: fit-content"
+        >
+          <i
+            class="bi bi-person-circle text-white"
+            style="font-size: 1.7rem"
+          ></i>
+          <p class="text-white m-0" id="user-info-container">
+            <a href="/src/pages/Auth/login.html" class="fw-bold text-white"
+              >Login</a
+            >
+            /
 
-      <nav class="ms-auto justify-content-end d-flex gap-3">
-        <a class="position-relative text-end d-none d-xl-block cart-link"
-          href="https://www.instagram.com/alphacellbetim/" target="_blank">
-          <i class="bi bi-instagram text-white" style="font-size: 1.7rem !important"></i>
-        </a>
-        <a class="position-relative text-end d-none d-xl-block cart-link"
-          href="https://www.google.com.br/maps/place/Alpha+Cell+Betim/@-19.9681393,
-            -44.2024054,17z/data=!3m1!4b1!4m6!3m5!1s0xa6c350754611bb:0x65b5d6d67084244b!8m2!3d-19.9681444!4d-44.1998305!16s%2Fg%2F11fn64jp18?entry=ttu" target="_blank">
-          <i class="bi bi-geo-alt text-white" style="font-size: 1.7rem !important"></i>
-        </a>
-        <a class="position-relative text-end d-none d-lg-block cart-link" href="/src/pages/Client/cart.html">
-          <i class="bi bi-bag text-white" style="font-size: 1.7rem !important"></i>
-          <div
-            class="position-absolute bg-dark text-white d-flex justify-content-center align-items-center top-0 fw-semibold"
-            style="
+            <a href="/src/pages/Auth/register.html" class="fw-bold text-white"
+              >Cadastro</a
+            >
+          </p>
+        </div>
+
+        <nav class="ms-auto justify-content-end d-flex gap-3">
+          <a
+            class="position-relative text-end d-none d-xl-block cart-link"
+            href="https://www.instagram.com/alphacellbetim/"
+            target="_blank"
+          >
+            <i
+              class="bi bi-instagram text-white"
+              style="font-size: 1.7rem !important"
+            ></i>
+          </a>
+          <a
+            class="position-relative text-end d-none d-xl-block cart-link"
+            href="https://www.google.com.br/maps/place/Alpha+Cell+Betim/@-19.9681393,
+            -44.2024054,17z/data=!3m1!4b1!4m6!3m5!1s0xa6c350754611bb:0x65b5d6d67084244b!8m2!3d-19.9681444!4d-44.1998305!16s%2Fg%2F11fn64jp18?entry=ttu"
+            target="_blank"
+          >
+            <i
+              class="bi bi-geo-alt text-white"
+              style="font-size: 1.7rem !important"
+            ></i>
+          </a>
+          <a
+            class="position-relative text-end d-none d-lg-block cart-link"
+            href="/src/pages/Client/cart.html"
+          >
+            <i
+              class="bi bi-bag text-white"
+              style="font-size: 1.7rem !important"
+            ></i>
+            <div
+              class="position-absolute bg-dark text-white d-flex justify-content-center align-items-center top-0 fw-semibold"
+              style="
                 border-radius: 100%;
                 height: 20px;
                 width: 20px;
                 font-size: 10px;
                 right: -10px;
-              ">
-            0
-          </div>
-        </a>
-        <a href="/src/pages/Auth/login.html" class="d-none d-lg-block cart-link" id="logoutLink">
-          <i class="bi bi-box-arrow-in-left text-white" style="font-size: 1.9rem !important"></i>
-      </a>
-      
-      <script>
-          document.addEventListener('DOMContentLoaded', function () {
-              const logoutLink = document.getElementById('logoutLink');
-      
-              logoutLink.addEventListener('click', function () {
-                  // Limpar o localStorage ao clicar na seta
-                  localStorage.removeItem('user');
-              });
-          });
-      </script>
-      </nav>
+              "
+              id="count-cart"
+            >
+              0
+            </div>
+          </a>
+          <button
+            class="d-none d-lg-block cart-link btn m-0 p-0 border-0"
+            id="logout"
+          >
+            <i
+              class="bi bi-box-arrow-in-left text-white"
+              style="font-size: 1.9rem !important"
+            ></i>
+          </button>
+        </nav>
 
-      <button class="btn d-block d-lg-none p-0 border-0" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-        aria-controls="offcanvasRight">
-        <i class="bi bi-list text-white" style="font-size: 3rem"></i>
-      </button>
-    </div>
-  </header>
+        <button
+          class="btn d-block d-lg-none p-0 border-0"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasRight"
+          aria-controls="offcanvasRight"
+        >
+          <i class="bi bi-list text-white" style="font-size: 3rem"></i>
+        </button>
+      </div>
+    </header>
 
   <section class="mt-4 d-xl-none">
     <div class="container">
@@ -136,226 +158,120 @@
     </div>
   </section>
 
-  <main class="my-4">
-    <div class="container d-flex gap-4 align-items-start justify-content-center mx-auto">
-      <section class="filtros d-none d-xl-flex flex-column gap-4">
-        <div class="bg-white p-4 h-auto" data-aos="fade-right">
-          <h5>Categorias</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="">Todos <span>(12)</span></a>
-            </li>
-            <li>
-              <a href="">Fones <span>(12)</span></a>
-            </li>
-            <li>
-              <a href="">Smartphones <span>(12)</span></a>
-            </li>
-            <li>
-              <a href="">Capas <span>(12)</span></a>
-            </li>
-            <li>
-              <a href="">Periféricos <span>(12)</span></a>
-            </li>
-            <li>
-              <a href="">Outros <span>(12)</span></a>
-            </li>
-          </ul>
-        </div>
-        <div class="bg-white p-4 h-auto" data-aos="fade-right">
-          <h5>Categorias</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="">Todos <span>(12)</span></a>
-            </li>
-            <li>
-              <a href="">Fones <span>(12)</span></a>
-            </li>
-            <li>
-              <a href="">Smartphones <span>(12)</span></a>
-            </li>
-            <li>
-              <a href="">Capas <span>(12)</span></a>
-            </li>
-            <li>
-              <a href="">Periféricos <span>(12)</span></a>
-            </li>
-            <li>
-              <a href="">Outros <span>(12)</span></a>
-            </li>
-          </ul>
-        </div>
-        <div class="bg-white p-4 h-auto" data-aos="fade-right">
-          <h5>Categorias</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="">Todos <span>(12)</span></a>
-            </li>
-            <li>
-              <a href="">Fones <span>(12)</span></a>
-            </li>
-            <li>
-              <a href="">Smartphones <span>(12)</span></a>
-            </li>
-            <li>
-              <a href="">Capas <span>(12)</span></a>
-            </li>
-            <li>
-              <a href="">Periféricos <span>(12)</span></a>
-            </li>
-            <li>
-              <a href="">Outros <span>(12)</span></a>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <ul
-        class="list-unstyled row flex-wrap align-items-xl-start w-100 justify-content-center justify-content-xxl-end gap-3 gap-xl-0 gap-xxl-3">
-        <li class="product bg-white col-12 col-md-6 col-xl-4" data-aos="fade-up">
-          <div class="product-img-container overflow-hidden p-3">
-            <a href="/src/pages/Client/product.html">
-              <img src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg" alt=""
-                class="img-fluid" />
-            </a>
+    <main class="my-4">
+      <div
+        class="container d-flex gap-4 align-items-start justify-content-between w-100 mx-auto"
+      >
+        <section
+          class="filtros d-none d-xl-flex flex-column gap-4 w-100"
+          style="margin-right: auto !important"
+        >
+          <div class="bg-white p-4 h-auto" data-aos="fade-right">
+            <h5>Categorias</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="">Todos <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Fones <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Smartphones <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Capas <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Periféricos <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Outros <span>(12)</span></a>
+              </li>
+            </ul>
           </div>
-          <div class="d-flex flex-column justify-content-between product-content-container gap-3">
-            <span class="product-brand text-white"> Celular </span>
-            <h6 class="product-title m-0">Iphone 6s</h6>
-            <p class="product-description m-0">
-              O iPhone 6s é um smartphone desenvolvido pela Apple e lançado em
-              setembro de 2015.
-            </p>
-            <p class="product-price m-0">R$ 1800.00</p>
-            <button class="btn btn-sm btn-success" style="width: 70%;" onclick="addItemCart()">
-              Adicionar ao carrinho
-            </button>
+          <div class="bg-white p-4 h-auto" data-aos="fade-right">
+            <h5>Categorias</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="">Todos <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Fones <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Smartphones <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Capas <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Periféricos <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Outros <span>(12)</span></a>
+              </li>
+            </ul>
           </div>
-        </li>
-        <li class="product bg-white col-12 col-md-6 col-xl-4" data-aos="fade-up">
-          <div class="product-img-container overflow-hidden p-3">
-            <a href="/src/pages/Client/product.html">
-              <img src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg"
-                class="img-fluid" />
-            </a>
+          <div class="bg-white p-4 h-auto" data-aos="fade-right">
+            <h5>Categorias</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="">Todos <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Fones <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Smartphones <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Capas <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Periféricos <span>(12)</span></a>
+              </li>
+              <li>
+                <a href="">Outros <span>(12)</span></a>
+              </li>
+            </ul>
           </div>
-          <div class="d-flex flex-column justify-content-between product-content-container gap-3">
-            <span class="product-brand text-white"> Celular </span>
-            <h6 class="product-title m-0">Iphone 6s</h6>
-            <p class="product-description m-0">
-              O iPhone 6s é um smartphone desenvolvido pela Apple e lançado em
-              setembro de 2015.
-            </p>
-            <p class="product-price m-0">R$ 1800.00</p>
-            <button class="btn btn-sm btn-success" style="width: 70%;" onclick="addItemCart()">
-              Adicionar ao carrinho
-            </button>
-          </div>
-        </li>
-        <li class="product bg-white col-12 col-md-6 col-xl-4" data-aos="fade-up">
-          <div class="product-img-container overflow-hidden p-3">
-            <a href="/src/pages/Client/product.html">
-              <img src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg" alt=""
-                class="img-fluid" />
-            </a>
-          </div>
-          <div class="d-flex flex-column justify-content-between product-content-container gap-3">
-            <span class="product-brand text-white"> Celular </span>
-            <h6 class="product-title m-0">Iphone 6s</h6>
-            <p class="product-description m-0">
-              O iPhone 6s é um smartphone desenvolvido pela Apple e lançado em
-              setembro de 2015.
-            </p>
-            <p class="product-price m-0">R$ 1800.00</p>
-            <button class="btn btn-sm btn-success" style="width: 70%;" onclick="addItemCart()">
-              Adicionar ao carrinho
-            </button>
-          </div>
-        </li>
-        <li class="product bg-white col-12 col-md-6 col-xl-4" data-aos="fade-up">
-          <div class="product-img-container overflow-hidden p-3">
-            <a href="/src/pages/Client/product.html">
-              <img src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg" alt=""
-                class="img-fluid" />
-            </a>
-          </div>
-          <div class="d-flex flex-column justify-content-between product-content-container gap-3">
-            <span class="product-brand text-white"> Celular </span>
-            <h6 class="product-title m-0">Iphone 6s</h6>
-            <p class="product-description m-0">
-              O iPhone 6s é um smartphone desenvolvido pela Apple e lançado em
-              setembro de 2015.
-            </p>
-            <p class="product-price m-0">R$ 1800.00</p>
-            <button class="btn btn-sm btn-success" style="width: 70%;" style="width: 70%;" onclick="addItemCart()">
-              Adicionar ao carrinho
-            </button>
-          </div>
-        </li>
-        <li class="product bg-white col-12 col-md-6 col-xl-4" data-aos="fade-up">
-          <div class="product-img-container overflow-hidden p-3">
-            <a href="/src/pages/Client/product.html">
-              <img src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg"
-                class="img-fluid" />
-            </a>
-          </div>
-          <div class="d-flex flex-column justify-content-between product-content-container gap-3">
-            <span class="product-brand text-white"> Celular </span>
-            <h6 class="product-title m-0">Iphone 6s</h6>
-            <p class="product-description m-0">
-              O iPhone 6s é um smartphone desenvolvido pela Apple e lançado em
-              setembro de 2015.
-            </p>
-            <p class="product-price m-0">R$ 1800.00</p>
-            <button class="btn btn-sm btn-success" style="width: 70%;" onclick="addItemCart()">
-              Adicionar ao carrinho
-            </button>
-          </div>
-        </li>
-        <li class="product bg-white col-12 col-md-6 col-xl-4" data-aos="fade-up">
-          <div class="product-img-container overflow-hidden p-3">
-            <a href="/src/pages/Client/product.html">
-              <img src="https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg" alt=""
-                class="img-fluid" />
-            </a>
-          </div>
-          <div class="d-flex flex-column justify-content-between product-content-container gap-3">
-            <span class="product-brand text-white"> Celular </span>
-            <h6 class="product-title m-0">Iphone 6s</h6>
-            <p class="product-description m-0">
-              O iPhone 6s é um smartphone desenvolvido pela Apple e lançado em
-              setembro de 2015.
-            </p>
-            <p class="product-price m-0">R$ 1800.00</p>
-            <button class="btn btn-sm btn-success" style="width: 70%;" onclick="addItemCart()">
-              Adicionar ao carrinho
-            </button>
-          </div>
-        </li>
-
-      </ul>
-
+        </section>
+        <ul
+          class="list-unstyled row flex-wrap align-items-xl-start w-100 justify-content-center justify-content-xxl-end gap-3 gap-xl-0 gap-xxl-3"
+          id="productsLitst"
+        ></ul>
+      </div>
+    </main>
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">
+          Offcanvas right
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">...</div>
     </div>
-  </main>
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      ...
-    </div>
-  </div>
-  <style>
-    header {
-      background-color: rgb(251, 146, 54);
-    }
 
-    .search-container .btn {
-      height: 38px;
-      width: 40px;
-      border-radius: 0 1rem 1rem 0;
-      transition: opacity 300ms;
-    }
+    <style>
+      header {
+        background-color: rgb(251, 146, 54);
+      }
+      .search-container .btn {
+        height: 38px;
+        width: 40px;
+        border-radius: 0 1rem 1rem 0;
+        transition: opacity 300ms;
+      }
 
     .search-container .btn:hover {
       opacity: 0.8;
@@ -436,9 +352,10 @@
       color: #ffbe26;
     }
 
-    .filtros {
-      width: 300px;
-    }
+      .filtros {
+        width: 100%;
+        max-width: 300px;
+      }
 
     .cart-link {
       transition: all 300ms;
@@ -458,14 +375,7 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <script>
-    const tooltipTriggerList = document.querySelectorAll(
-      '[data-bs-toggle="tooltip"]'
-    );
-    const tooltipList = [...tooltipTriggerList].map(
-      (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
-    );
-    const addItemCart = () => {
+    <script>
       const Toast = Swal.mixin({
         toast: true,
         position: "top-end",
@@ -477,13 +387,13 @@
           toast.onmouseleave = Swal.resumeTimer;
         },
       });
-
-
-      Toast.fire({
-        icon: "success",
-        title: "Produto adicionado no carrinho.",
-      });
-    };
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
+ 
 
     AOS.init({
       // Global settings:
@@ -496,46 +406,47 @@
       debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
       throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
 
-      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-      offset: 120, // offset (in px) from the original trigger point
-      delay: 0, // values from 0 to 3000, with step 50ms
-      duration: 800, // values from 0 to 3000, with step 50ms
-      easing: "ease", // default easing for AOS animations
-      once: false, // whether animation should happen only once - while scrolling down
-      mirror: false, // whether elements should animate out while scrolling past them
-      anchorPlacement: "top-bottom",
-    });
-  </script>
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 800, // values from 0 to 3000, with step 50ms
+        easing: "ease", // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: "top-bottom",
+      });
+    </script>
 
-<footer class="bg-dark text-white mt-5">
-  <div class="container py-4">
-      <div class="row">
-          <!-- Informações de localização -->
-          <div class="col-md-4">
-              <h5>Localização</h5>
-              <p>Rua Rio de Janeiro, Centro, 437</p>
-              <p>Betim, Mg, CEP 32600-224</p>
-          </div>
-
-          <!-- Informações de contato -->
-          <div class="col-md-4">
-              <h5>Contato</h5>
-              <p>Whatsapp: (31) 998477520 só whatsapp</p>
-          </div>
-
-          <!-- Link para o Instagram -->
-          <div class="col-md-4">
-              <h5>Siga-nos</h5>
-              <a href="https://www.instagram.com/alphacellbetim/" target="_blank" class="text-white">
-                  <i class="bi bi-instagram"></i> @alphacellbetim
-              </a>
-             <p> <a href="https://web.facebook.com/AlphaCellBetim/?_rdc=1&_rdr" target="_blank" class="text-white">
-                <i class="bi bi-facebook"></i> Alpha Cell Betim 
-            </a></p>
+    <script src="src/js/seed.js"></script>
+    <script src="index.js"></script>
+    <footer class="bg-dark text-white mt-5">
+      <div class="container py-4">
+          <div class="row">
+              <!-- Informações de localização -->
+              <div class="col-md-4">
+                  <h5>Localização</h5>
+                  <p>Rua Rio de Janeiro, Centro, 437</p>
+                  <p>Betim, Mg, CEP 32600-224</p>
+              </div>
+    
+              <!-- Informações de contato -->
+              <div class="col-md-4">
+                  <h5>Contato</h5>
+                  <p><a href="https://wa.me/5531998477520?text=Alphacell" target="_blank" class="text-white">Whatsapp: (31) 99847-7520 só whatsapp</a></p>
+              </div>
+    
+              <!-- Link para o Instagram -->
+              <div class="col-md-4">
+                  <h5>Siga-nos</h5>
+                  <a href="https://www.instagram.com/alphacellbetim/" target="_blank" class="text-white">
+                      <i class="bi bi-instagram"></i> @alphacellbetim
+                  </a>
+                 <p> <a href="https://web.facebook.com/AlphaCellBetim/?_rdc=1&_rdr" target="_blank" class="text-white">
+                    <i class="bi bi-facebook"></i> Alpha Cell Betim 
+                </a></p>
+              </div>
           </div>
       </div>
-  </div>
-</footer>
-</body>
-
+    </footer>
+  </body>
 </html>

@@ -10,7 +10,10 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
 
     <title>Login</title>
   </head>
@@ -18,7 +21,10 @@
     <div class="tela">
       <a href="../../../index.html">
         <div>
-          <i class="bi bi-backspace" style="font-size: 2em; color: rgba(255, 94, 0, 0.986);"></i>
+          <i
+            class="bi bi-backspace"
+            style="font-size: 2em; color: rgba(255, 94, 0, 0.986)"
+          ></i>
         </div>
       </a>
       <h1>Entrar</h1>
@@ -98,7 +104,6 @@
         margin-top: 15px;
         text-align: left;
       }
-      
     </style>
 
     <script
@@ -108,9 +113,12 @@
     ></script>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../../js/seed.js"></script>
 
     <script>
       // Configuração do Toastfiy
+      const databaseName = "loja-de-celulares-database";
+      let db;
       const Toast = Swal.mixin({
         toast: true,
         position: "top-end",
@@ -125,27 +133,36 @@
 
       // Selecionando form e adicionando evento de submit do formulario
       document.querySelector("#login-form").addEventListener("submit", (e) => {
-
         // Impede que a pagina recarregue ao enviar o formulário
         e.preventDefault();
 
         // Pegando elementos do formualario
         const { email, password } = e.target.elements;
 
-        // Verificando se é o ADM
-        if (email.value === "adm@gmail.com" && password.value === "1234") {
-          window.location = "/src/pages/Adm/home.html";
+        let foundDb = localStorage.getItem(databaseName);
+
+        if (!foundDb) {
+          localStorage.setItem(databaseName, JSON.stringify(seed));
+
+          foundDb = localStorage.getItem(databaseName);
+        }
+        db = JSON.parse(foundDb);
+
+  
+        const userFound = db.users.find(
+          (user) =>
+            user.email === email.value && user.password === password.value
+        );
+
+        if (userFound) {
+          localStorage.setItem("userLoginId", userFound.id);
+
+          window.location = userFound.isAdm
+            ? "/src/pages/Adm/home.html"
+            : "/index.html";
           return;
         }
 
-        // (Cleber) 
-        const storedUser = JSON.parse(localStorage.getItem('user'));
-        if (storedUser && storedUser.email === email.value && storedUser.password === password.value) {
-          window.location = "/index.html"; // Redirecionar para a página do cliente
-          return;
-        }
-
-        // Caso o usuário não existir exibir esse toast como mensagem de erro 
         Toast.fire({
           icon: "error",
           title: "Dados inválidos por favor tente novamente.",

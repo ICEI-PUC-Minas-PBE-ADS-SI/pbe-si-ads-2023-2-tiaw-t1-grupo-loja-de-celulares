@@ -79,6 +79,7 @@
               ></i>
               <div
                 class="position-absolute bg-dark text-white d-flex justify-content-center align-items-center top-0 fw-semibold"
+                id="cart-icon-container"
                 style="
                   border-radius: 100%;
                   height: 20px;
@@ -109,9 +110,12 @@
         <div>
           <h2>Carrinho</h2>
           <p class="m-0">
-            Quantidade de itens no carrinho: <span class="fw-bolder">3</span>
+            Quantidade de itens no carrinho:
+            <span class="fw-bolder" id="qtd-items-cart">3</span>
           </p>
-          <p>Preço Total: <span class="fw-bolder">R$ 120</span></p>
+          <p>
+            Preço Total: <span class="fw-bolder" id="price-cart">R$ 120</span>
+          </p>
         </div>
         <div>
           <a href="/index.html" class="btn btn-outline-primary"
@@ -123,7 +127,7 @@
 
     <main class="container d-flex flex-column flex-lg-row gap-4">
       <div class="w-100">
-        <ul class="list-unstyled">
+        <ul class="list-unstyled d-flex gap-3 flex-column" id="cart-items" data-aos="fade-up">
           <li
             class="card p-2 px-3 d-flex align-items-center flex-row justify-content-between"
             data-aos="fade-up"
@@ -289,27 +293,183 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
+      const databaseName = "loja-de-celulares-database";
+      let db;
+      let userLoginId;
+      let userFound;
       const tooltipTriggerList = document.querySelectorAll(
         '[data-bs-toggle="tooltip"]'
       );
       const tooltipList = [...tooltipTriggerList].map(
         (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
       );
-      const addItemCart = () => {
-        const Toast = Swal.mixin({
-          toast: true,
-          position: "top-end",
-          showConfirmButton: false,
-          timer: 3000,
-          timerProgressBar: true,
-          didOpen: (toast) => {
-            toast.onmouseenter = Swal.stopTimer;
-            toast.onmouseleave = Swal.resumeTimer;
+
+      const initCart = () => {
+        userLoginId = localStorage.getItem("userLoginId");
+
+        if (!userLoginId) {
+          window.location = "/index.html";
+          return;
+        }
+
+        let foundDb = localStorage.getItem(databaseName);
+
+        if (!foundDb) {
+          localStorage.setItem(databaseName, JSON.stringify(seed));
+
+          foundDb = localStorage.getItem(databaseName);
+        }
+
+        db = JSON.parse(foundDb);
+
+        renderInfoCart(db.users.find((user) => user.id === userLoginId));
+      };
+
+      const renderInfoCart = (user) => {
+      
+  
+
+        const data = user.cart.reduce(
+          (acc, item) => {
+          
+
+            console.log(item.id);
+
+            let productFullInfo = db.stock.products.find(
+              (product) => product.id == item.id
+            );
+
+            acc.priceTotal += productFullInfo.price * item.quantity;
+            acc.items += item.quantity;
+
+            return acc;
           },
-        });
-        Toast.fire({
-          icon: "success",
-          title: "Produto adicionado no carrinho.",
+          { priceTotal: 0, items: 0 }
+        );
+
+        document.querySelector("#cart-icon-container").innerHTML =
+          user.cart.length;
+        document.querySelector("#qtd-items-cart").innerHTML = data.items;
+        document.querySelector("#price-cart").innerHTML =
+          "R$" + data.priceTotal;
+
+        renderCart(user.cart);
+      };
+
+      const increment = (id) => {
+        const idx = db.users.findIndex((user) => user.id === userLoginId);
+
+        db.users[idx].cart[
+          db.users[idx].cart.findIndex((cartItem) => cartItem.id === id)
+        ].quantity++;
+
+        document.querySelector("#product" + id).innerHTML = db.users[
+          idx
+        ].cart.findIndex((cartItem) => cartItem.id === id).quantity;
+
+        localStorage.setItem(databaseName, JSON.stringify(db));
+
+        userFound = JSON.parse(localStorage.getItem(databaseName)).users.find(
+          (user) => user.id === userLoginId
+        );
+
+        renderCart(userFound.cart);
+        renderInfoCart(db.users.find((user) => user.id === userLoginId));
+      };
+
+      const decrement = (id) => {
+        const idx = db.users.findIndex((user) => user.id === userLoginId);
+
+        let cartItemIdx = db.users[idx].cart.findIndex(
+          (cartItem) => cartItem.id === id
+        );
+
+        if (db.users[idx].cart[cartItemIdx].quantity >= 2) {
+          db.users[idx].cart[cartItemIdx].quantity--;
+          document.querySelector("#product" + id).innerHTML = db.users[
+            idx
+          ].cart.findIndex((cartItem) => cartItem.id === id).quantity;
+          localStorage.setItem(databaseName, JSON.stringify(db));
+
+          userFound = JSON.parse(localStorage.getItem(databaseName)).users.find(
+            (user) => user.id === userLoginId
+          );
+        }
+
+        renderCart(userFound.cart);
+        renderInfoCart(db.users.find((user) => user.id === userLoginId));
+      };
+
+      const deleteCartItem = (idProduct) => {
+        const idx = db.users.findIndex((user) => user.id === userLoginId);
+
+        let cartItemIdx = db.users[idx].cart.findIndex(
+          (cartItem) => cartItem.id == idProduct
+        );
+
+
+        db.users[idx].cart.splice(cartItemIdx, 1);
+
+        localStorage.setItem(databaseName, JSON.stringify(db));
+
+        userFound = JSON.parse(localStorage.getItem(databaseName)).users.find(
+          (user) => user.id === userLoginId
+        );
+
+        renderCart(userFound.cart);
+        renderInfoCart(db.users.find((user) => user.id === userLoginId));
+      };
+
+      const renderCart = (cart) => {
+        document.querySelector("#cart-items").innerHTML = "";
+
+        cart.forEach((item) => {
+          // console.log(db);
+
+          let productFullInfo = db.stock.products.find(
+            (product) => product.id == item.id
+          );
+          document.querySelector("#cart-items").innerHTML += `
+          <li
+          id="${"product" + productFullInfo.id}"
+            class="card p-2 px-3 d-flex align-items-center flex-row justify-content-between"
+
+          >
+            <div>
+              <h4 class="m-0">${productFullInfo.name}</h4>
+              <p class="m-0">R$ ${productFullInfo.price}</p>
+            </div>
+            <div class="d-flex align-items-center justify-content-center gap-1">
+              <h4 class="m-0" style="transform: translateY(3px)">${
+                item.quantity
+              }</h4>
+              <div
+                class="d-flex flex-column justify-content-center align-items-center"
+              >
+                <button class="btn p-0 d-flex border-0" onclick="event.stopPropagation(); increment('${
+                  item.id
+                }');">
+                  <i
+                    class="bi bi-caret-up m-0 p-0"
+                    style="font-size: 2rem; height: 32px"
+                  ></i>
+                </button>
+                <button class="btn p-0 d-flex border-0" onclick="event.stopPropagation(); decrement('${
+                  item.id
+                }');">
+                  <i
+                    class="bi bi-caret-down m-0 p-0 d-flex"
+                    style="font-size: 2rem; height: 32px"
+                  ></i>
+                </button>
+              </div>
+            </div>
+
+            <button class="btn border-0" onclick="deleteCartItem('${item.id}')">
+              <i class="bi bi-trash" style="font-size: 2rem"></i>
+            </button>
+          </li>
+          `;
         });
       };
 
@@ -333,35 +493,37 @@
         mirror: false, // whether elements should animate out while scrolling past them
         anchorPlacement: "top-bottom",
       });
+
+      initCart();
     </script>
-    <footer class="bg-dark text-white mt-5">
-      <div class="container py-4">
-          <div class="row">
-              <!-- Informações de localização -->
-              <div class="col-md-4">
-                  <h5>Localização</h5>
-                  <p>Rua Rio de Janeiro, Centro, 437</p>
-                  <p>Betim, MG, CEP 32600-224</p>
-              </div>
-    
-              <!-- Informações de contato -->
-              <div class="col-md-4">
-                  <h5>Contato</h5>
-                  <p>Whatsapp: (31) 998477520 só whatsapp</p>
-              </div>
-    
-              <!-- Link para o Instagram -->
-              <div class="col-md-4">
-                  <h5>Siga-nos</h5>
-                  <a href="https://www.instagram.com/alphacellbetim/" target="_blank" class="text-white">
-                      <i class="bi bi-instagram"></i> @alphacellbetim
-                  </a>
-                 <p> <a href="https://web.facebook.com/AlphaCellBetim/?_rdc=1&_rdr" target="_blank" class="text-white">
-                    <i class="bi bi-facebook"></i> Alpha Cell Betim 
-                </a></p>
+        <footer class="bg-dark text-white mt-5">
+          <div class="container py-4">
+              <div class="row">
+                  <!-- Informações de localização -->
+                  <div class="col-md-4">
+                      <h5>Localização</h5>
+                      <p>Rua Rio de Janeiro, Centro, 437</p>
+                      <p>Betim, Mg, CEP 32600-224</p>
+                  </div>
+        
+                  <!-- Informações de contato -->
+                  <div class="col-md-4">
+                      <h5>Contato</h5>
+                      <p><a href="https://wa.me/5531998477520?text=Alphacell" target="_blank" class="text-white">Whatsapp: (31) 99847-7520 só whatsapp</a></p>
+                  </div>
+        
+                  <!-- Link para o Instagram -->
+                  <div class="col-md-4">
+                      <h5>Siga-nos</h5>
+                      <a href="https://www.instagram.com/alphacellbetim/" target="_blank" class="text-white">
+                          <i class="bi bi-instagram"></i> @alphacellbetim
+                      </a>
+                     <p> <a href="https://web.facebook.com/AlphaCellBetim/?_rdc=1&_rdr" target="_blank" class="text-white">
+                        <i class="bi bi-facebook"></i> Alpha Cell Betim 
+                    </a></p>
+                  </div>
               </div>
           </div>
-      </div>
-    </footer>
+        </footer>
   </body>
 </html>

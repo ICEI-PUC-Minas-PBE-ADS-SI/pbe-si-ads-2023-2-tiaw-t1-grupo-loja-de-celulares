@@ -1,65 +1,74 @@
 const seed = {
   stock: {
-
     products: [
       {
-        "id": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
-        "name": "Produto teste",
-        "category" : "Capinha/Película",
-        "quantity": 50,
-        "brand": "Samsung",
-        "description": "",
-        "price": "120,00",
-        "img": "https://placehold.co/400"
+        id: "da39a3ee5",
+        name: "Iphone 6s",
+        category: "Celular",
+        brand: "Apple",
+        description:
+          "O iPhone 6s é um smartphone desenvolvido pela Apple e lançado em setembro de 2015.",
+        price: 1800,
+        img: "https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg",
       },
       {
-        "id": "da39a3ee5e6b4b0d3255bfef95601890afd8070",
-        "name": "Iphone 6s",
-        "category" : "Celular",
-        "quantity": 50,
-        "brand": "Apple",
-        "description": "",
-        "price": "1800,00",
-        "img": "https://tendinfo.com.br/image/cache/catalog/Produtos%202019/00%201052-400x400.jpg"
+        id: "akfjienqd",
+        name: "Iphone 11",
+        category: "Celular",
+        brand: "Apple",
+        description:
+          "O iPhone 11 é um smartphone desenvolvido pela Apple e lançado em setembro de 2019.",
+        price: 3400,
+        img: "https://i.ebayimg.com/images/g/xEwAAOSwv81kNc7l/s-l1600.jpg",
       },
       {
-        "id": "da39a3ee5e6b4b0d3255bfef95601890afd8070",
+        id: "12fffeeediuwjd",
+        name: "Iphone 14",
+        category: "Celular",
+        brand: "Apple",
+        description:
+          "O iPhone 14 é um smartphone desenvolvido pela Apple e lançado em setembro de 2019.",
+        price: 4400,
+        img: "https://i.ebayimg.com/images/g/ExQAAOSwOWJjKX34/s-l1600.jpg",
+      },
+      {
+        "id": "d4e5f6g7h",
         "name": "Caixa de Som Megaboom 3",
         "category" : "Caixa de som",
         "quantity": 50,
         "brand": "Ultimate Ears",
         "description": "",
-        "price": "465,20",
+        "price": 465,
         "img": "https://tendinfo.com.br/image/cache/catalog/0000001%20abril%202022/08.04%201-400x400.jpg"
       },
       {
-        "id": "da39a3ee5e6b4b0d3255bfef95601890afd8070",
+        "id": "e5f6g7h8i",
         "name": "CARTÃO DE MEMÓRIA 16GB",
         "category" : "Cartão de memória",
         "quantity": 50,
         "brand": "SanDisk",
         "description": "",
-        "price": "34,00",
+        "price": 34,
         "img": "https://tendinfo.com.br/image/cache/catalog/produtos/SDC4%20-%2016GB-400x400.jpg"
       },
       {
-        "id": "da39a3ee5e6b4b0d3255bfef95601890afd8070",
+        "id": "f6g7h8i9j",
         "name": "FONE DE OUVIDO MOD.SV5333",
         "category" : "Fone de ouvido",
         "quantity": 50,
         "brand": "One for All",
         "description": "",
-        "price": "48,53",
+        "price": 48,
         "img": "https://tendinfo.com.br/image/cache/catalog/produtos/sv5333-thumb-400x400.png"
       },
       {
-        "id": "da39a3ee5e6b4b0d3255bfef95601890afd8070",
+        "id": "g7h8i9j0k",
         "name": "URBEATS3 DEFIANT",
         "category" : "Fone de ouvido",
         "quantity": 50,
         "brand": "Beats by Dr. Dre",
         "description": "",
-        "price": "741,00",
+        "price": 741,
         "img": "https://tendinfo.com.br/image/cache/catalog/02823/0.100%20326-400x400.jpg"
       }
     ],
@@ -67,18 +76,22 @@ const seed = {
   users: [
     {
       id: "40bd001563085fc35165329ea1ff5c5ecbdbbeef",
-      name: "NOME DO TIO DO CLEBER",
+      email: "admin@gmail.com",
+      password: "1234",
+      name: "TIO DO CLEBER",
       isAdm: true,
     },
     {
       id: "7c4a8d09ca3762af61e59520943dc26494f8941b",
       name: "Leonardo",
+      email: "leo@gmail.com",
+      password: "1234",
       isAdm: false,
       cart: [
         {
-          "productId": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
-          "quantity": 2
-        }
+          id: "da39a3ee5",
+          quantity: 2,
+        },
       ],
     },
   ],
@@ -148,13 +161,3 @@ const seed = {
   ]
 };
 
-function salvarNoLocalStorage() {
-  localStorage.setItem('seedData', JSON.stringify(seed));
-}
-
-function recuperarDoLocalStorage() {
-  const seedData = localStorage.getItem('seedData');
-  if (seedData) {
-    seed = JSON.parse(seedData);
-  }
-}
