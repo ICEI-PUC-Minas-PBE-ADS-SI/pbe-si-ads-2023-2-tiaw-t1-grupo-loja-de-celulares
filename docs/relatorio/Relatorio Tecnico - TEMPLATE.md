@@ -282,54 +282,150 @@ A imagem a seguir representa o wireframe da página inicial da loja.
 
 ## Tecnologias Utilizadas
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Durante o desenvolvimento do projeto, utilizamos uma combinação de tecnologias essenciais para criar uma aplicação web moderna e eficiente. As linguagens de programação principais incluíram HTML, CSS e JavaScript, formando a base sólida da estrutura, estilo e interatividade da aplicação.
+Para garantir um design responsivo e a implementação de componentes pré-construídos de maneira eficiente, empregamos o framework Bootstrap. Essa ferramenta proporcionou uma integração suave e contribuiu significativamente para a estética profissional da interface do usuário.
+A escolha da IDE foi orientada pela familiaridade com a aplicação, uma vez que o Visual Studio Code é amplamente utilizado no ensino na Faculdade PUC Minas. Essa ferramenta, além de ser robusta e altamente configurável, oferece suporte a diversas linguagens de programação. A eficiência e a facilidade de uso proporcionadas por essa IDE foram cruciais para o desenvolvimento produtivo do projeto.
+No que diz respeito ao controle de versão, adotamos o Git como sistema de gerenciamento, permitindo rastrear e documentar todas as alterações realizadas no código. Isso não apenas facilitou a colaboração com outros desenvolvedores, mas também proporcionou uma segurança adicional ao projeto.
+Essa combinação de tecnologias, aliada ao ambiente de desenvolvimento proporcionado pelo Visual Studio Code e à gestão eficiente de versões com o Git, resultou em um projeto coeso, visualmente atraente e funcional. A sinergia entre essas ferramentas desempenhou um papel crucial na criação bem-sucedida da aplicação, proporcionando uma experiência de desenvolvimento eficaz e satisfatória.
 
-> Descreva aqui qual(is) tecnologias você vai usar para resolver o seu
-> problema, ou seja, implementar a sua solução. Liste todas as
-> tecnologias envolvidas, linguagens a serem utilizadas, serviços web,
-> frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-> Apresente também uma figura explicando como as tecnologias estão
-> relacionadas ou como uma interação do usuário com o sistema vai ser
-> conduzida, por onde ela passa até retornar uma resposta ao usuário.
-> 
-> Inclua os diagramas de User Flow, esboços criados pelo grupo
-> (stoyboards), além dos protótipos de telas (wireframes). Descreva cada
-> item textualmente comentando e complementando o que está apresentado
-> nas imagens.
+
+A seguir, apresentaremos uma figura que esquematiza a relação entre as tecnologias utilizadas e a interação dos usuários com o site. Essa representação visual ajudará a compreender de maneira mais clara como cada componente contribui para a experiência dos usuários, desde a interação inicial até a resposta do sistema. ![Figura Relação das Tecnologias](images\Front_backend_Obszar-roboczy-1-kopia-26-1024x654.png)
+
+será apresentada uma figura que detalha as diferenças entre o wireframe original e o produto final. Essa representação visual oferecerá uma visão comparativa das transformações ocorridas durante o desenvolvimento, destacando como o conceito inicial evoluiu para o resultado final. A figura permitirá uma análise visual das mudanças de layout, design e elementos interativos, proporcionando uma compreensão mais aprofundada do processo de desenvolvimento e refinamento que ocorreu desde a concepção até a implementação do produto final.
+![Wireframe Original](images/wireframe-example.png)
+![Wireframe Final](images/wireframe.png)
+
+Ao observar a figura que compara o wireframe original com o produto final, é possível notar algumas mudanças significativas nas dimensões e no design geral. O produto final apresenta ajustes que contribuem para uma experiência mais aprimorada, oferecendo uma estética mais moderna e atrativa.
+
+As mudanças de dimensões destacam-se como um elemento-chave, evidenciando a otimização do layout para melhor se adequar às necessidades do usuário. Além disso, a introdução de cores vibrantes no produto final adiciona um dinamismo visual, criando uma atmosfera mais cativante e envolvente para os usuários.
+
+O design mais moderno é perceptível em cada detalhe, desde a disposição dos elementos até a escolha de fontes e ícones. Essa abordagem contemporânea não apenas aprimora a estética, mas também contribui para uma experiência de usuário mais intuitiva e alinhada com as tendências atuais de design.
+
+Em resumo, a comparação revela um processo de evolução que visa proporcionar não apenas funcionalidade, mas também uma estética visualmente agradável e atualizada. Essas mudanças refletem um compromisso com a excelência no design, visando atender e superar as expectativas dos usuários finais.
+
+
 
 ## Arquitetura da solução
 
-......  COLOQUE AQUI O SEU TEXTO E O DIAGRAMA DE ARQUITETURA .......
+![Diagrama de Solução](images/solucao.PNG)
+O diagrama proposto ilustra a arquitetura e o fluxo de interação em um projeto web, desde a entrada do usuário na interface até a resposta do sistema. As principais tecnologias, como HTML, CSS, Bootstrap e JavaScript, são representadas na camada do cliente, enquanto o servidor web, back-end e banco de dados são destacados na camada do servidor. A comunicação entre cliente e servidor é representada por requisições HTTP, e o controle de versão é gerenciado pelo Git. O Visual Studio Code é utilizado como a IDE principal. As mudanças dimensionais e as cores vibrantes no produto final são observáveis, refletindo um design mais moderno e uma experiência visualmente atrativa para os usuários.
 
-> Inclua um diagrama da solução e descreva os módulos e as tecnologias
-> que fazem parte da solução. Discorra sobre o diagrama.
-> 
-> **Exemplo do diagrama de Arquitetura**:
-> 
-> ![Exemplo de Arquitetura](images/arquitetura-exemplo.png)
+
 
 
 # Avaliação da Aplicação
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Teste de Carregamento da Página:
 
-> Apresente os cenários de testes utilizados na realização dos testes da
-> sua aplicação. Escolha cenários de testes que demonstrem os requisitos
-> sendo satisfeitos.
+Cenário: Verificar se a página inicial carrega corretamente.
+Passos:
+Acesse a URL da aplicação.
+Observe se todos os elementos da página são carregados corretamente.
+Resultado Esperado: Todos os elementos da página são exibidos sem erros.
+Teste de Responsividade:
+
+Cenário: Garantir que a aplicação seja responsiva em diferentes dispositivos.
+Passos:
+Acesse a aplicação em um dispositivo móvel.
+Redimensione a janela do navegador para simular diferentes tamanhos de tela.
+Resultado Esperado: A aplicação se ajusta adequadamente em diferentes dispositivos e tamanhos de tela.
+Teste de Formulário - Envio com Sucesso:
+
+Cenário: Verificar se o formulário de contato pode ser preenchido e enviado corretamente.
+Passos:
+Preencha todos os campos obrigatórios do formulário.
+Clique no botão de envio.
+Resultado Esperado: O formulário é enviado sem erros e o usuário recebe uma confirmação de sucesso.
+Teste de Formulário - Validação de Campos Obrigatórios:
+
+Cenário: Testar a validação dos campos obrigatórios do formulário.
+Passos:
+Tente enviar o formulário sem preencher todos os campos obrigatórios.
+Resultado Esperado: O sistema impede o envio do formulário e exibe mensagens de erro para os campos obrigatórios não preenchidos.
+Teste de Funcionalidade JavaScript - Interação Dinâmica:
+
+Cenário: Verificar se as funcionalidades interativas implementadas em JavaScript estão funcionando corretamente.
+Passos:
+Interaja com elementos interativos, como botões ou sliders.
+Observe se as alterações são refletidas dinamicamente na página.
+Resultado Esperado: As interações do usuário são respondidas corretamente pela aplicação.
+Teste de Segurança - Injeção de Scripts:
+
+Cenário: Testar a segurança contra injeção de scripts.
+Passos:
+Tente inserir scripts maliciosos em campos de entrada.
+Resultado Esperado: O sistema valida e filtra corretamente entradas de dados para evitar injeção de scripts.
+Teste de Navegação - Links e Botões:
+
+Cenário: Verificar se todos os links e botões da aplicação direcionam para as páginas corretas.
+Passos:
+Clique em todos os links e botões presentes na aplicação.
+Resultado Esperado: Todos os redirecionamentos são feitos corretamente.
+Teste de Desempenho - Carregamento Rápido:
+
+Cenário: Avaliar o desempenho da aplicação em termos de velocidade de carregamento.
+Passos:
+Use ferramentas de desenvolvedor para analisar o tempo de carregamento da página.
+Resultado Esperado: A aplicação carrega rapidamente, dentro de um tempo aceitável.
+
+
 
 ## Plano de Testes
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Objetivo do Teste:
+Avaliar a funcionalidade, usabilidade e desempenho da aplicação web para garantir uma experiência de usuário positiva.
 
-> Enumere quais cenários de testes foram selecionados para teste. Neste
-> tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo
-> de usuários que foi escolhido para participar do teste e as
-> ferramentas utilizadas.
-> 
-> **Links Úteis**:
-> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
+Cenários de Testes Selecionados:
+
+Funcionalidades Avaliadas: Carregamento correto da página inicial.
+Grupo de Usuários: Todos os usuários.
+Ferramentas Utilizadas: Navegadores padrão (Chrome, Firefox, Safari, Edge).
+Teste de Responsividade:
+
+Funcionalidades Avaliadas: Adaptabilidade em diferentes dispositivos.
+Grupo de Usuários: Usuários que acessam a aplicação por meio de dispositivos móveis.
+Ferramentas Utilizadas: Dispositivos móveis reais e emuladores, ferramentas de inspeção de navegador.
+Teste de Formulário - Envio com Sucesso:
+
+Funcionalidades Avaliadas: Funcionalidade do formulário de contato.
+Grupo de Usuários: Usuários que utilizam o formulário de contato.
+Ferramentas Utilizadas: Ferramentas de automação de teste (por exemplo, Selenium), validação manual.
+Teste de Funcionalidade JavaScript - Interação Dinâmica:
+
+Funcionalidades Avaliadas: Verificar se as funcionalidades interativas implementadas em JavaScript estão funcionando corretamente.
+Grupo de Usuários: Todos os usuários.
+Ferramentas Utilizadas: Ferramentas de automação de teste (por exemplo, Selenium), validação manual.
+
+Procedimentos de Teste:
+
+Abriremos a aplicação em diferentes navegadores.
+Observará o tempo de carregamento da página inicial.
+Verificará se todos os elementos são exibidos corretamente.
+Teste de Responsividade:
+
+Acessaremos a aplicação em dispositivos móveis reais e emuladores.
+Redimensionará a janela do navegador para simular diferentes tamanhos de tela.
+Confirmará se a aplicação se ajusta adequadamente.
+
+Teste de Formulário - Envio com Sucesso:
+
+Preencheremos todos os campos obrigatórios do formulário.
+Clicará no botão de envio.
+Confirmará se o usuário recebe uma confirmação de sucesso e se os dados são registrados corretamente.
+
+Teste de Funcionalidade JavaScript - Interação Dinâmica:
+
+Interagiremos com elementos interativos, como botões ou sliders.
+Observará se as alterações são refletidas dinamicamente na página.
+Confirmará se as interações do usuário são respondidas corretamente pela aplicação.
+Critérios de Aceitação:
+Os testes serão considerados bem-sucedidos se todas as funcionalidades avaliadas passarem nos cenários de teste sem erros críticos. Quaisquer problemas identificados serão documentados e priorizados para correção.
+
+Responsável pelos Testes:
+Gabriel Ramos será responsável pela execução dos testes, incluindo testes manuais.
+
+Agenda de Testes:
+Os testes serão conduzidos ao longo de uma semana, com cada cenário sendo avaliado em dias específicos. Uma vez concluídos, os resultados serão analisados, e os relatórios de testes serão compartilhados com a equipe de desenvolvimento para implementação de correções, se necessário.
 
 ## Ferramentas de Testes (Opcional)
 
@@ -343,21 +439,71 @@ A imagem a seguir representa o wireframe da página inicial da loja.
 
 ## Registros de Testes
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Data do Teste:14/12/2023 
 
-> Discorra sobre os resultados do teste. Ressaltando pontos fortes e
-> fracos identificados na solução. Comente como o grupo pretende atacar
-> esses pontos nas próximas iterações. Apresente as falhas detectadas e
-> as melhorias geradas a partir dos resultados obtidos nos testes.
+Responsável pelos Testes: Gabriel Ramos
+
+1. Teste de Carregamento da Página
+Objetivo: Avaliar o carregamento correto da página inicial.
+
+Passos do Teste:
+
+Abrir a aplicação no navegador Chrome.
+Observar o tempo de carregamento da página.
+Verificar se todos os elementos são exibidos corretamente.
+Resultado:
+
+ Sucesso: A página carregou dentro do tempo esperado e todos os elementos estão visíveis.
+ 
+2. Teste de Responsividade
+Objetivo: Verificar a adaptabilidade em diferentes dispositivos.
+
+Passos do Teste:
+
+Acessar a aplicação em um dispositivo móvel real.
+Redimensionar a janela do navegador para simular diferentes tamanhos de tela.
+Confirmar se a aplicação se ajusta adequadamente.
+Resultado:
+
+ Sucesso: A aplicação é responsiva em dispositivos móveis e se adapta a diferentes tamanhos de tela.
+ 
+3. Teste de Formulário - Envio com Sucesso
+Objetivo: Verificar a funcionalidade do formulário de contato.
+
+Passos do Teste:
+
+Preencher todos os campos obrigatórios do formulário.
+Clicar no botão de envio.
+Confirmar se o usuário recebe uma confirmação de sucesso e se os dados são registrados corretamente.
+Resultado:
+
+ Sucesso: O formulário é enviado corretamente, e o usuário recebe uma confirmação.
+
+ No entanto, vale enfatizar que o login e senha cadastrados só valem como login no momento em que o cadastro é feito, caso o usuário deslogue da conta, vá para a página inicial e tente logar novamente, as informações de login não terão mais validade.
+
+4. Teste de Funcionalidade JavaScript - Interação Dinâmica
+Objetivo: Verificar se as funcionalidades interativas implementadas em JavaScript estão funcionando corretamente.
+
+Passos do Teste:
+
+Interagir com elementos interativos, como botões ou sliders.
+Observar se as alterações são refletidas dinamicamente na página.
+Confirmar se as interações do usuário são respondidas corretamente pela aplicação.
+Resultado:
+
+ Sucesso: As funcionalidades interativas estão operando corretamente.
+
+
+
+
+Conclusão:
+Os testes foram concluídos. Os resultados foram registrados e serão compartilhados com a equipe de desenvolvimento para correção de quaisquer problemas identificados.
+
 
 
 # Referências
 
-......  COLOQUE AQUI O SEU TEXTO ......
+1.https://www.mercadolivre.com.br
+2.https://www.kabum.com.br
+3.https://www.pichau.com.br
 
-> Inclua todas as referências (livros, artigos, sites, etc) utilizados
-> no desenvolvimento do trabalho.
-> 
-> **Links Úteis**:
-> - [Formato ABNT](https://www.normastecnicas.com/abnt/trabalhos-academicos/referencias/)
-> - [Referências Bibliográficas da ABNT](https://comunidade.rockcontent.com/referencia-bibliografica-abnt/)
