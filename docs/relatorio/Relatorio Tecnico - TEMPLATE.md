@@ -200,37 +200,15 @@ A imagem a seguir representa o wireframe da página inicial da loja.
 
  - Para atender à demanda de desenvolver múltiplas páginas web para o nosso projeto, tivemos uma conversa em equipe e decidimos que cada membro seria responsável por criar uma página. Essa abordagem não apenas poupou tempo, mas também permitiu a criação simultânea de todas as páginas. Além disso, estabelecemos reuniões semanais, geralmente às segundas-feiras, para debater ideias e manter o site atualizado. Esses encontros foram cruciais para o nosso progresso e colaboração constante.
 
-> Nesta parte do documento, você deve apresentar a metodologia 
-> adotada pelo grupo, descrevendo o processo de trabalho baseado nas metodologias ágeis, 
-> a divisão de papéis e tarefas, as ferramentas empregadas e como foi realizada a
-> gestão de configuração do projeto via GitHub.
->
-> Coloque detalhes sobre o processo de Design Thinking e a implementação do Framework Scrum seguido
-> pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar
-> o andamento do projeto, a execução das tarefas e o status de desenvolvimento
-> da solução.
-> 
-> **Links Úteis**:
-> - [Tutorial Trello](https://trello.com/b/8AygzjUA/tutorial-trello)
-> - [Gestão ágil de projetos com o Trello](https://www.youtube.com/watch?v=1o9BOMAKBRE)
-> - [Gerência de projetos - Trello com Scrum](https://www.youtube.com/watch?v=DHLA8X_ujwo)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
 
 ## Divisão de Papéis
 
  - Todos os membros do grupo assumiram papéis idênticos no projeto. Cada um foi encarregado da criação do código e outras tarefas ao longo de todo o desenvolvimento. Essa distribuição equitativa de responsabilidades garantiu uma colaboração integral e uma contribuição uniforme de cada membro para o sucesso do projeto. A única divisão realizada foi a de decidir quem iria fazer qual página. Segue abaixo a divisão:
  
 
-> Apresente a divisão de papéis e tarefas entre os membros do grupo.
->
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
-
 
 ## Ferramentas
 
-......  COLOQUE AQUI O SEU TEXTO - SIGA O EXEMPLO DA TABELA ABAIXO  ......
 
 | Ambiente  | Plataforma              |Link de Acesso |
 |-----------|-------------------------|---------------|
