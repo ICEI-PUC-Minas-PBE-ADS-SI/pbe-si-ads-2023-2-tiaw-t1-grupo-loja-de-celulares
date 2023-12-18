@@ -307,7 +307,7 @@ Em resumo, a comparação revela um processo de evolução que visa proporcionar
 
 ## Arquitetura da solução
 
-![Diagrama de Solução](images/solucao.PNG)
+![Diagrama de Solução].(images/solucao.jpeg)
 O diagrama proposto ilustra a arquitetura e o fluxo de interação em um projeto web, desde a entrada do usuário na interface até a resposta do sistema. As principais tecnologias, como HTML, CSS, Bootstrap e JavaScript, são representadas na camada do cliente, enquanto o servidor web, back-end e banco de dados são destacados na camada do servidor. A comunicação entre cliente e servidor é representada por requisições HTTP, e o controle de versão é gerenciado pelo Git. O Visual Studio Code é utilizado como a IDE principal. As mudanças dimensionais e as cores vibrantes no produto final são observáveis, refletindo um design mais moderno e uma experiência visualmente atrativa para os usuários.
 
 
